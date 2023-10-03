@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "audit_requests",
+  "info": {
+    "singularName": "audit-request",
+    "pluralName": "audit-requests",
+    "displayName": "Audit Request",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "body": {
+      "type": "richtext",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "rejected",
+        "accepted"
+      ],
+      "default": "new"
+    },
+    "notes": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "name": "department_representative",
+  "description": "Responsible for managing department content \n\n\n",
+  "type": "department_representative",
+  "permissions": [
+    {
+      "action": "api::album.album.find"
+    },
+    {
+      "action": "api::album.album.findOne"
+    },
+    {
+      "action": "api::announcement.announcement.find"
+    },
+    {
+      "action": "api::announcement.announcement.findOne"
+    },
+    {
+      "action": "api::avatar.avatar.get"
+    },
+    {
+      "action": "api::banner-slide.banner-slide.find"
+    },
+    {
+      "action": "api::banner-slide.banner-slide.findOne"
+    },
+    {
+      "action": "api::community.community.create"
+    },
+    {
+      "action": "api::community.community.createLocalization"
+    },
+    {
+      "action": "api::community.community.delete"
+    },
+    {
+      "action": "api::community.community.find"
+    },
+    {
+      "action": "api::community.community.findOne"
+    },
+    {
+      "action": "api::community.community.update"
+    },
+    {
+      "action": "api::cv.cv.create"
+    },
+    {
+      "action": "api::cv.cv.delete"
+    },
+    {
+      "action": "api::cv.cv.find"
+    },
+    {
+      "action": "api::cv.cv.findOne"
+    },
+    {
+      "action": "api::cv.cv.update"
+    },
+    {
+      "action": "api::department-document.department-document.find"
+    },
+    {
+      "action": "api::department-document.department-document.findOne"
+    },
+    {
+      "action": "api::department.department.find"
+    },
+    {
+      "action": "api::department.department.findOne"
+    },
+    {
+      "action": "api::document.document.find"
+    },
+    {
+      "action": "api::document.document.findOne"
+    },
+    {
+      "action": "api::event.event.find"
+    },
+    {
+      "action": "api::event.event.findOne"
+    },
+    {
+      "action": "api::faq.faq.find"
+    },
+    {
+      "action": "api::faq.faq.findOne"
+    },
+    {
+      "action": "api::form-application.form-application.find"
+    },
+    {
+      "action": "api::form-application.form-application.findOne"
+    },
+    {
+      "action": "api::form-type.form-type.find"
+    },
+    {
+      "action": "api::form-type.form-type.findOne"
+    },
+    {
+      "action": "api::home-page.home-page.find"
+    },
+    {
+      "action": "api::image.image.find"
+    },
+    {
+      "action": "api::image.image.findOne"
+    },
+    {
+      "action": "api::like.like.find"
+    },
+    {
+      "action": "api::like.like.findOne"
+    },
+    {
+      "action": "api::main-event.main-event.find"
+    },
+    {
+      "action": "api::main-event.main-event.findOne"
+    },
+    {
+      "action": "api::mention.mention.find"
+    },
+    {
+      "action": "api::mention.mention.findOne"
+    },
+    {
+      "action": "api::news-letter.news-letter.find"
+    },
+    {
+      "action": "api::news-letter.news-letter.findOne"
+    },
+    {
+      "action": "api::notification.notification.find"
+    },
+    {
+      "action": "api::notification.notification.findOne"
+    },
+    {
+      "action": "api::offer.offer.find"
+    },
+    {
+      "action": "api::offer.offer.findOne"
+    },
+    {
+      "action": "api::policy.policy.find"
+    },
+    {
+      "action": "api::policy.policy.findOne"
+    },
+    {
+      "action": "api::search.search.getSearchResults"
+    },
+    {
+      "action": "api::survey-application.survey-application.find"
+    },
+    {
+      "action": "api::survey-application.survey-application.findOne"
+    },
+    {
+      "action": "api::survey.survey.find"
+    },
+    {
+      "action": "api::survey.survey.findOne"
+    },
+    {
+      "action": "api::video.video.find"
+    },
+    {
+      "action": "api::video.video.findOne"
+    },
+    {
+      "action": "plugin::i18n.locales.listLocales"
+    },
+    {
+      "action": "plugin::users-permissions.user.me"
+    },
+    {
+      "action": "plugin::users-permissions.user.update"
+    }
+  ]
+}

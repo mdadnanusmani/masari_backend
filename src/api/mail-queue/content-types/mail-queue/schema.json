@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mail_queues",
+  "info": {
+    "singularName": "mail-queue",
+    "pluralName": "mail-queues",
+    "displayName": "mail-queue",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "notification",
+        "publication"
+      ]
+    },
+    "meta": {
+      "type": "json"
+    },
+    "finished_sending": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_pending": {
+      "type": "boolean",
+      "default": false
+    },
+    "identifier": {
+      "type": "string"
+    }
+  }
+}

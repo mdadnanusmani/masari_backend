@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_forms_select_options",
+  "info": {
+    "displayName": "selectOption",
+    "icon": "angle-double-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "uuid": {
+      "type": "string",
+      "unique": false
+    }
+  }
+}

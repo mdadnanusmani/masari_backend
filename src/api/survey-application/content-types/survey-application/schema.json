@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "survey_applications",
+  "info": {
+    "singularName": "survey-application",
+    "pluralName": "survey-applications",
+    "displayName": "survey application",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "survey": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::survey.survey",
+      "inversedBy": "survey_applications"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "answers": {
+      "type": "json"
+    }
+  }
+}

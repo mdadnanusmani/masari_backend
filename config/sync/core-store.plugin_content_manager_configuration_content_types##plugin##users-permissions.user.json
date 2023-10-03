@@ -1,0 +1,552 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::plugin::users-permissions.user",
+  "value": {
+    "uid": "plugin::users-permissions.user",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "username",
+      "defaultSortBy": "username",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "username": {
+        "edit": {
+          "label": "username",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "username",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "email": {
+        "edit": {
+          "label": "email",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "email",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "provider": {
+        "edit": {
+          "label": "provider",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "provider",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "password": {
+        "edit": {
+          "label": "password",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "password",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "resetPasswordToken": {
+        "edit": {
+          "label": "resetPasswordToken",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "resetPasswordToken",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "confirmationToken": {
+        "edit": {
+          "label": "confirmationToken",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "confirmationToken",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "confirmed": {
+        "edit": {
+          "label": "confirmed",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "confirmed",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "blocked": {
+        "edit": {
+          "label": "blocked",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "blocked",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "role": {
+        "edit": {
+          "label": "role",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "role",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "likes": {
+        "edit": {
+          "label": "likes",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "likes",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "mentions": {
+        "edit": {
+          "label": "mentions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "body"
+        },
+        "list": {
+          "label": "mentions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "department": {
+        "edit": {
+          "label": "department",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "title"
+        },
+        "list": {
+          "label": "department",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "mobilePhone": {
+        "edit": {
+          "label": "mobilePhone",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "mobilePhone",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "preferredLanguage": {
+        "edit": {
+          "label": "preferredLanguage",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "preferredLanguage",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "userPrincipalName": {
+        "edit": {
+          "label": "userPrincipalName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "userPrincipalName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "givenName": {
+        "edit": {
+          "label": "givenName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "givenName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "displayName": {
+        "edit": {
+          "label": "displayName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "displayName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "microsoft_id": {
+        "edit": {
+          "label": "microsoft_id",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "microsoft_id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "avatar": {
+        "edit": {
+          "label": "avatar",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "avatar",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "roles": {
+        "edit": {
+          "label": "roles",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "roles",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "cv": {
+        "edit": {
+          "label": "cv",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "cv",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "jobTitle": {
+        "edit": {
+          "label": "jobTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "jobTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "acceptedTerms": {
+        "edit": {
+          "label": "acceptedTerms",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "acceptedTerms",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "termsAcceptanceDate": {
+        "edit": {
+          "label": "termsAcceptanceDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "termsAcceptanceDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "legalAcceptanceDate": {
+        "edit": {
+          "label": "legalAcceptanceDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "legalAcceptanceDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "notifications": {
+        "edit": {
+          "label": "notifications",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "body"
+        },
+        "list": {
+          "label": "notifications",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "username",
+        "email",
+        "confirmed"
+      ],
+      "edit": [
+        [
+          {
+            "name": "username",
+            "size": 6
+          },
+          {
+            "name": "email",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "password",
+            "size": 6
+          },
+          {
+            "name": "confirmed",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "blocked",
+            "size": 4
+          },
+          {
+            "name": "mobilePhone",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "preferredLanguage",
+            "size": 6
+          },
+          {
+            "name": "userPrincipalName",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "givenName",
+            "size": 6
+          },
+          {
+            "name": "displayName",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "microsoft_id",
+            "size": 6
+          },
+          {
+            "name": "avatar",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "roles",
+            "size": 6
+          },
+          {
+            "name": "jobTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "role",
+            "size": 6
+          },
+          {
+            "name": "likes",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "mentions",
+            "size": 6
+          },
+          {
+            "name": "department",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "cv",
+            "size": 6
+          },
+          {
+            "name": "acceptedTerms",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "termsAcceptanceDate",
+            "size": 4
+          },
+          {
+            "name": "legalAcceptanceDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "notifications",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

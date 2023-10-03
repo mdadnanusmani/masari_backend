@@ -1,0 +1,268 @@
+{
+  "name": "internal_communication_representative",
+  "description": "Responsible for managing the overall portal content \n\n",
+  "type": "internal_communication_representative",
+  "permissions": [
+    {
+      "action": "api::album.album.create"
+    },
+    {
+      "action": "api::album.album.createLocalization"
+    },
+    {
+      "action": "api::album.album.delete"
+    },
+    {
+      "action": "api::album.album.find"
+    },
+    {
+      "action": "api::album.album.findOne"
+    },
+    {
+      "action": "api::album.album.update"
+    },
+    {
+      "action": "api::announcement.announcement.create"
+    },
+    {
+      "action": "api::announcement.announcement.createLocalization"
+    },
+    {
+      "action": "api::announcement.announcement.delete"
+    },
+    {
+      "action": "api::announcement.announcement.find"
+    },
+    {
+      "action": "api::announcement.announcement.findOne"
+    },
+    {
+      "action": "api::announcement.announcement.update"
+    },
+    {
+      "action": "api::avatar.avatar.get"
+    },
+    {
+      "action": "api::community.community.create"
+    },
+    {
+      "action": "api::community.community.createLocalization"
+    },
+    {
+      "action": "api::community.community.delete"
+    },
+    {
+      "action": "api::community.community.find"
+    },
+    {
+      "action": "api::community.community.findOne"
+    },
+    {
+      "action": "api::community.community.update"
+    },
+    {
+      "action": "api::department.department.create"
+    },
+    {
+      "action": "api::department.department.createLocalization"
+    },
+    {
+      "action": "api::department.department.delete"
+    },
+    {
+      "action": "api::department.department.find"
+    },
+    {
+      "action": "api::department.department.findOne"
+    },
+    {
+      "action": "api::department.department.update"
+    },
+    {
+      "action": "api::event.event.create"
+    },
+    {
+      "action": "api::event.event.createLocalization"
+    },
+    {
+      "action": "api::event.event.delete"
+    },
+    {
+      "action": "api::event.event.find"
+    },
+    {
+      "action": "api::event.event.findOne"
+    },
+    {
+      "action": "api::event.event.update"
+    },
+    {
+      "action": "api::home-page.home-page.createLocalization"
+    },
+    {
+      "action": "api::home-page.home-page.find"
+    },
+    {
+      "action": "api::home-page.home-page.update"
+    },
+    {
+      "action": "api::image.image.create"
+    },
+    {
+      "action": "api::image.image.createLocalization"
+    },
+    {
+      "action": "api::image.image.delete"
+    },
+    {
+      "action": "api::image.image.find"
+    },
+    {
+      "action": "api::image.image.findOne"
+    },
+    {
+      "action": "api::image.image.update"
+    },
+    {
+      "action": "api::like.like.create"
+    },
+    {
+      "action": "api::like.like.delete"
+    },
+    {
+      "action": "api::like.like.find"
+    },
+    {
+      "action": "api::like.like.findOne"
+    },
+    {
+      "action": "api::like.like.update"
+    },
+    {
+      "action": "api::mention.mention.create"
+    },
+    {
+      "action": "api::mention.mention.delete"
+    },
+    {
+      "action": "api::mention.mention.find"
+    },
+    {
+      "action": "api::mention.mention.findOne"
+    },
+    {
+      "action": "api::mention.mention.update"
+    },
+    {
+      "action": "api::news-letter.news-letter.create"
+    },
+    {
+      "action": "api::news-letter.news-letter.createLocalization"
+    },
+    {
+      "action": "api::news-letter.news-letter.find"
+    },
+    {
+      "action": "api::news-letter.news-letter.findOne"
+    },
+    {
+      "action": "api::news-letter.news-letter.update"
+    },
+    {
+      "action": "api::offer.offer.create"
+    },
+    {
+      "action": "api::offer.offer.createLocalization"
+    },
+    {
+      "action": "api::offer.offer.delete"
+    },
+    {
+      "action": "api::offer.offer.find"
+    },
+    {
+      "action": "api::offer.offer.findOne"
+    },
+    {
+      "action": "api::offer.offer.update"
+    },
+    {
+      "action": "api::policy.policy.create"
+    },
+    {
+      "action": "api::policy.policy.createLocalization"
+    },
+    {
+      "action": "api::policy.policy.find"
+    },
+    {
+      "action": "api::policy.policy.findOne"
+    },
+    {
+      "action": "api::policy.policy.update"
+    },
+    {
+      "action": "api::search.search.getSearchResults"
+    },
+    {
+      "action": "api::video.video.create"
+    },
+    {
+      "action": "api::video.video.createLocalization"
+    },
+    {
+      "action": "api::video.video.find"
+    },
+    {
+      "action": "api::video.video.findOne"
+    },
+    {
+      "action": "api::video.video.update"
+    },
+    {
+      "action": "plugin::content-type-builder.components.getComponents"
+    },
+    {
+      "action": "plugin::content-type-builder.content-types.getContentType"
+    },
+    {
+      "action": "plugin::content-type-builder.content-types.getContentTypes"
+    },
+    {
+      "action": "plugin::email.email.send"
+    },
+    {
+      "action": "plugin::i18n.locales.listLocales"
+    },
+    {
+      "action": "plugin::upload.content-api.destroy"
+    },
+    {
+      "action": "plugin::upload.content-api.findOne"
+    },
+    {
+      "action": "plugin::upload.content-api.upload"
+    },
+    {
+      "action": "plugin::users-permissions.permissions.getPermissions"
+    },
+    {
+      "action": "plugin::users-permissions.role.find"
+    },
+    {
+      "action": "plugin::users-permissions.role.findOne"
+    },
+    {
+      "action": "plugin::users-permissions.user.find"
+    },
+    {
+      "action": "plugin::users-permissions.user.findOne"
+    },
+    {
+      "action": "plugin::users-permissions.user.me"
+    },
+    {
+      "action": "plugin::users-permissions.user.update"
+    }
+  ]
+}

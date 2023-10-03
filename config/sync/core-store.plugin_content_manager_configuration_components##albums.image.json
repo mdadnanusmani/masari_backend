@@ -1,0 +1,117 @@
+{
+  "key": "plugin_content_manager_configuration_components::albums.image",
+  "value": {
+    "uid": "albums.image",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "mentions": {
+        "edit": {
+          "label": "mentions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "body"
+        },
+        "list": {
+          "label": "mentions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "likes": {
+        "edit": {
+          "label": "likes",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "identifier"
+        },
+        "list": {
+          "label": "likes",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "media": {
+        "edit": {
+          "label": "media",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "media",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "is_proprietary": {
+        "edit": {
+          "label": "is_proprietary",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "is_proprietary",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "mentions",
+        "likes",
+        "media"
+      ],
+      "edit": [
+        [
+          {
+            "name": "mentions",
+            "size": 6
+          },
+          {
+            "name": "likes",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "media",
+            "size": 6
+          },
+          {
+            "name": "is_proprietary",
+            "size": 4
+          }
+        ]
+      ]
+    },
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

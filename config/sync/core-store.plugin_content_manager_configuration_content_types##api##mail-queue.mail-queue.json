@@ -1,0 +1,164 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::mail-queue.mail-queue",
+  "value": {
+    "uid": "api::mail-queue.mail-queue",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "identifier",
+      "defaultSortBy": "identifier",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "type": {
+        "edit": {
+          "label": "type",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "type",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "meta": {
+        "edit": {
+          "label": "meta",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "meta",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "finished_sending": {
+        "edit": {
+          "label": "finished_sending",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "finished_sending",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "is_pending": {
+        "edit": {
+          "label": "is_pending",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "is_pending",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "identifier": {
+        "edit": {
+          "label": "identifier",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "identifier",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "type",
+        "finished_sending",
+        "is_pending"
+      ],
+      "edit": [
+        [
+          {
+            "name": "type",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "meta",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "finished_sending",
+            "size": 4
+          },
+          {
+            "name": "is_pending",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "identifier",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_forms_check_box_groups",
+  "info": {
+    "displayName": "CheckBox Group",
+    "icon": "check-square",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title_ar": {
+      "type": "text",
+      "required": true
+    },
+    "options_ar": {
+      "type": "component",
+      "repeatable": true,
+      "component": "forms.select-option"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "uuid": {
+      "type": "string",
+      "unique": false
+    },
+    "title_en": {
+      "type": "text"
+    },
+    "options_en": {
+      "type": "component",
+      "repeatable": true,
+      "component": "forms.select-option"
+    }
+  }
+}

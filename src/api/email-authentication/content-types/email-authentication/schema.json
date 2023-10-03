@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "email_authentications",
+  "info": {
+    "singularName": "email-authentication",
+    "pluralName": "email-authentications",
+    "displayName": "Email Authentication",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "from": {
+      "type": "email",
+      "required": true
+    },
+    "port": {
+      "type": "integer",
+      "default": 587
+    },
+    "host": {
+      "type": "string",
+      "default": "smtp.office365.com"
+    },
+    "password": {
+      "type": "customField",
+      "customField": "plugin::custom-password.custom-password"
+    }
+  }
+}

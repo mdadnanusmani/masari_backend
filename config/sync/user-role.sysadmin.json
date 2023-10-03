@@ -1,0 +1,574 @@
+{
+  "name": "sysadmin",
+  "description": "admin who can access anything and everything",
+  "type": "sysadmin",
+  "permissions": [
+    {
+      "action": "api::album.album.create"
+    },
+    {
+      "action": "api::album.album.createLocalization"
+    },
+    {
+      "action": "api::album.album.delete"
+    },
+    {
+      "action": "api::album.album.find"
+    },
+    {
+      "action": "api::album.album.findOne"
+    },
+    {
+      "action": "api::album.album.update"
+    },
+    {
+      "action": "api::announcement.announcement.create"
+    },
+    {
+      "action": "api::announcement.announcement.createLocalization"
+    },
+    {
+      "action": "api::announcement.announcement.delete"
+    },
+    {
+      "action": "api::announcement.announcement.find"
+    },
+    {
+      "action": "api::announcement.announcement.findOne"
+    },
+    {
+      "action": "api::announcement.announcement.update"
+    },
+    {
+      "action": "api::audit-request.audit-request.create"
+    },
+    {
+      "action": "api::audit-request.audit-request.delete"
+    },
+    {
+      "action": "api::audit-request.audit-request.find"
+    },
+    {
+      "action": "api::audit-request.audit-request.findOne"
+    },
+    {
+      "action": "api::audit-request.audit-request.update"
+    },
+    {
+      "action": "api::avatar.avatar.get"
+    },
+    {
+      "action": "api::banner-slide.banner-slide.create"
+    },
+    {
+      "action": "api::banner-slide.banner-slide.delete"
+    },
+    {
+      "action": "api::banner-slide.banner-slide.find"
+    },
+    {
+      "action": "api::banner-slide.banner-slide.findOne"
+    },
+    {
+      "action": "api::banner-slide.banner-slide.update"
+    },
+    {
+      "action": "api::community.community.create"
+    },
+    {
+      "action": "api::community.community.createLocalization"
+    },
+    {
+      "action": "api::community.community.delete"
+    },
+    {
+      "action": "api::community.community.find"
+    },
+    {
+      "action": "api::community.community.findOne"
+    },
+    {
+      "action": "api::community.community.update"
+    },
+    {
+      "action": "api::cv.cv.create"
+    },
+    {
+      "action": "api::cv.cv.delete"
+    },
+    {
+      "action": "api::cv.cv.find"
+    },
+    {
+      "action": "api::cv.cv.findOne"
+    },
+    {
+      "action": "api::cv.cv.update"
+    },
+    {
+      "action": "api::department-category.department-category.create"
+    },
+    {
+      "action": "api::department-category.department-category.createLocalization"
+    },
+    {
+      "action": "api::department-category.department-category.delete"
+    },
+    {
+      "action": "api::department-category.department-category.find"
+    },
+    {
+      "action": "api::department-category.department-category.findOne"
+    },
+    {
+      "action": "api::department-category.department-category.update"
+    },
+    {
+      "action": "api::department-document.department-document.create"
+    },
+    {
+      "action": "api::department-document.department-document.createLocalization"
+    },
+    {
+      "action": "api::department-document.department-document.delete"
+    },
+    {
+      "action": "api::department-document.department-document.find"
+    },
+    {
+      "action": "api::department-document.department-document.findOne"
+    },
+    {
+      "action": "api::department-document.department-document.update"
+    },
+    {
+      "action": "api::department.department.create"
+    },
+    {
+      "action": "api::department.department.createLocalization"
+    },
+    {
+      "action": "api::department.department.delete"
+    },
+    {
+      "action": "api::department.department.find"
+    },
+    {
+      "action": "api::department.department.findOne"
+    },
+    {
+      "action": "api::department.department.update"
+    },
+    {
+      "action": "api::document.document.create"
+    },
+    {
+      "action": "api::document.document.createLocalization"
+    },
+    {
+      "action": "api::document.document.delete"
+    },
+    {
+      "action": "api::document.document.find"
+    },
+    {
+      "action": "api::document.document.findOne"
+    },
+    {
+      "action": "api::document.document.update"
+    },
+    {
+      "action": "api::event.event.create"
+    },
+    {
+      "action": "api::event.event.createLocalization"
+    },
+    {
+      "action": "api::event.event.delete"
+    },
+    {
+      "action": "api::event.event.find"
+    },
+    {
+      "action": "api::event.event.findOne"
+    },
+    {
+      "action": "api::event.event.update"
+    },
+    {
+      "action": "api::faq.faq.create"
+    },
+    {
+      "action": "api::faq.faq.createLocalization"
+    },
+    {
+      "action": "api::faq.faq.delete"
+    },
+    {
+      "action": "api::faq.faq.find"
+    },
+    {
+      "action": "api::faq.faq.findOne"
+    },
+    {
+      "action": "api::faq.faq.update"
+    },
+    {
+      "action": "api::form-application.form-application.create"
+    },
+    {
+      "action": "api::form-application.form-application.delete"
+    },
+    {
+      "action": "api::form-application.form-application.find"
+    },
+    {
+      "action": "api::form-application.form-application.findOne"
+    },
+    {
+      "action": "api::form-application.form-application.update"
+    },
+    {
+      "action": "api::form-type.form-type.create"
+    },
+    {
+      "action": "api::form-type.form-type.createLocalization"
+    },
+    {
+      "action": "api::form-type.form-type.delete"
+    },
+    {
+      "action": "api::form-type.form-type.find"
+    },
+    {
+      "action": "api::form-type.form-type.findOne"
+    },
+    {
+      "action": "api::form-type.form-type.update"
+    },
+    {
+      "action": "api::greeting-card.greeting-card.create"
+    },
+    {
+      "action": "api::greeting-card.greeting-card.createLocalization"
+    },
+    {
+      "action": "api::greeting-card.greeting-card.delete"
+    },
+    {
+      "action": "api::greeting-card.greeting-card.find"
+    },
+    {
+      "action": "api::greeting-card.greeting-card.findOne"
+    },
+    {
+      "action": "api::greeting-card.greeting-card.update"
+    },
+    {
+      "action": "api::home-page.home-page.createLocalization"
+    },
+    {
+      "action": "api::home-page.home-page.delete"
+    },
+    {
+      "action": "api::home-page.home-page.find"
+    },
+    {
+      "action": "api::home-page.home-page.update"
+    },
+    {
+      "action": "api::image.image.create"
+    },
+    {
+      "action": "api::image.image.createLocalization"
+    },
+    {
+      "action": "api::image.image.delete"
+    },
+    {
+      "action": "api::image.image.find"
+    },
+    {
+      "action": "api::image.image.findOne"
+    },
+    {
+      "action": "api::image.image.update"
+    },
+    {
+      "action": "api::like.like.create"
+    },
+    {
+      "action": "api::like.like.delete"
+    },
+    {
+      "action": "api::like.like.find"
+    },
+    {
+      "action": "api::like.like.findOne"
+    },
+    {
+      "action": "api::like.like.update"
+    },
+    {
+      "action": "api::main-event.main-event.create"
+    },
+    {
+      "action": "api::main-event.main-event.createLocalization"
+    },
+    {
+      "action": "api::main-event.main-event.delete"
+    },
+    {
+      "action": "api::main-event.main-event.find"
+    },
+    {
+      "action": "api::main-event.main-event.findOne"
+    },
+    {
+      "action": "api::main-event.main-event.update"
+    },
+    {
+      "action": "api::mention.mention.create"
+    },
+    {
+      "action": "api::mention.mention.delete"
+    },
+    {
+      "action": "api::mention.mention.find"
+    },
+    {
+      "action": "api::mention.mention.findOne"
+    },
+    {
+      "action": "api::mention.mention.update"
+    },
+    {
+      "action": "api::news-letter.news-letter.create"
+    },
+    {
+      "action": "api::news-letter.news-letter.createLocalization"
+    },
+    {
+      "action": "api::news-letter.news-letter.delete"
+    },
+    {
+      "action": "api::news-letter.news-letter.find"
+    },
+    {
+      "action": "api::news-letter.news-letter.findOne"
+    },
+    {
+      "action": "api::news-letter.news-letter.update"
+    },
+    {
+      "action": "api::notification.notification.create"
+    },
+    {
+      "action": "api::notification.notification.delete"
+    },
+    {
+      "action": "api::notification.notification.find"
+    },
+    {
+      "action": "api::notification.notification.findOne"
+    },
+    {
+      "action": "api::notification.notification.update"
+    },
+    {
+      "action": "api::offer.offer.create"
+    },
+    {
+      "action": "api::offer.offer.createLocalization"
+    },
+    {
+      "action": "api::offer.offer.delete"
+    },
+    {
+      "action": "api::offer.offer.find"
+    },
+    {
+      "action": "api::offer.offer.findOne"
+    },
+    {
+      "action": "api::offer.offer.update"
+    },
+    {
+      "action": "api::policy.policy.create"
+    },
+    {
+      "action": "api::policy.policy.createLocalization"
+    },
+    {
+      "action": "api::policy.policy.delete"
+    },
+    {
+      "action": "api::policy.policy.find"
+    },
+    {
+      "action": "api::policy.policy.findOne"
+    },
+    {
+      "action": "api::policy.policy.update"
+    },
+    {
+      "action": "api::search.search.getSearchResults"
+    },
+    {
+      "action": "api::survey-application.survey-application.create"
+    },
+    {
+      "action": "api::survey-application.survey-application.delete"
+    },
+    {
+      "action": "api::survey-application.survey-application.find"
+    },
+    {
+      "action": "api::survey-application.survey-application.findOne"
+    },
+    {
+      "action": "api::survey-application.survey-application.update"
+    },
+    {
+      "action": "api::survey.survey.create"
+    },
+    {
+      "action": "api::survey.survey.createLocalization"
+    },
+    {
+      "action": "api::survey.survey.delete"
+    },
+    {
+      "action": "api::survey.survey.find"
+    },
+    {
+      "action": "api::survey.survey.findOne"
+    },
+    {
+      "action": "api::survey.survey.update"
+    },
+    {
+      "action": "api::tour.tour.find"
+    },
+    {
+      "action": "api::video.video.create"
+    },
+    {
+      "action": "api::video.video.createLocalization"
+    },
+    {
+      "action": "api::video.video.delete"
+    },
+    {
+      "action": "api::video.video.find"
+    },
+    {
+      "action": "api::video.video.findOne"
+    },
+    {
+      "action": "api::video.video.update"
+    },
+    {
+      "action": "plugin::content-type-builder.components.getComponent"
+    },
+    {
+      "action": "plugin::content-type-builder.components.getComponents"
+    },
+    {
+      "action": "plugin::content-type-builder.content-types.getContentType"
+    },
+    {
+      "action": "plugin::content-type-builder.content-types.getContentTypes"
+    },
+    {
+      "action": "plugin::editorjs.editorjs.byFile"
+    },
+    {
+      "action": "plugin::editorjs.editorjs.byURL"
+    },
+    {
+      "action": "plugin::editorjs.editorjs.link"
+    },
+    {
+      "action": "plugin::email.email.send"
+    },
+    {
+      "action": "plugin::i18n.locales.listLocales"
+    },
+    {
+      "action": "plugin::upload.content-api.destroy"
+    },
+    {
+      "action": "plugin::upload.content-api.find"
+    },
+    {
+      "action": "plugin::upload.content-api.findOne"
+    },
+    {
+      "action": "plugin::upload.content-api.upload"
+    },
+    {
+      "action": "plugin::users-permissions.auth.callback"
+    },
+    {
+      "action": "plugin::users-permissions.auth.changePassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.connect"
+    },
+    {
+      "action": "plugin::users-permissions.auth.emailConfirmation"
+    },
+    {
+      "action": "plugin::users-permissions.auth.forgotPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.register"
+    },
+    {
+      "action": "plugin::users-permissions.auth.resetPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.sendEmailConfirmation"
+    },
+    {
+      "action": "plugin::users-permissions.permissions.getPermissions"
+    },
+    {
+      "action": "plugin::users-permissions.role.createRole"
+    },
+    {
+      "action": "plugin::users-permissions.role.deleteRole"
+    },
+    {
+      "action": "plugin::users-permissions.role.find"
+    },
+    {
+      "action": "plugin::users-permissions.role.findOne"
+    },
+    {
+      "action": "plugin::users-permissions.role.updateRole"
+    },
+    {
+      "action": "plugin::users-permissions.user.count"
+    },
+    {
+      "action": "plugin::users-permissions.user.create"
+    },
+    {
+      "action": "plugin::users-permissions.user.destroy"
+    },
+    {
+      "action": "plugin::users-permissions.user.find"
+    },
+    {
+      "action": "plugin::users-permissions.user.findOne"
+    },
+    {
+      "action": "plugin::users-permissions.user.me"
+    },
+    {
+      "action": "plugin::users-permissions.user.update"
+    }
+  ]
+}

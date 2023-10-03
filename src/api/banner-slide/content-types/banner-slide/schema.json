@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banner_slides",
+  "info": {
+    "singularName": "banner-slide",
+    "pluralName": "banner-slides",
+    "displayName": "Banner Slide",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "disable": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "expires_at": {
+      "type": "date"
+    },
+    "url": {
+      "type": "text"
+    }
+  }
+}

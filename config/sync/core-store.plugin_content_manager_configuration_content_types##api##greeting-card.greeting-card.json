@@ -1,0 +1,238 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::greeting-card.greeting-card",
+  "value": {
+    "uid": "api::greeting-card.greeting-card",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "title": {
+        "edit": {
+          "label": "title",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "media": {
+        "edit": {
+          "label": "media",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "media",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "textSize": {
+        "edit": {
+          "label": "textSize",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "textSize",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "textColor": {
+        "edit": {
+          "label": "textColor",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "textColor",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "textWeight": {
+        "edit": {
+          "label": "textWeight",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "textWeight",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "xAxis": {
+        "edit": {
+          "label": "xAxis",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "xAxis",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "yAxis": {
+        "edit": {
+          "label": "yAxis",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "yAxis",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "leftSpace": {
+        "edit": {
+          "label": "leftSpace",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "leftSpace",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "topSpace": {
+        "edit": {
+          "label": "topSpace",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "topSpace",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "createdAt",
+        "updatedAt",
+        "title"
+      ],
+      "edit": [
+        [
+          {
+            "name": "title",
+            "size": 6
+          },
+          {
+            "name": "media",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "textSize",
+            "size": 6
+          },
+          {
+            "name": "textColor",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "textWeight",
+            "size": 6
+          },
+          {
+            "name": "xAxis",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "yAxis",
+            "size": 6
+          },
+          {
+            "name": "leftSpace",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "topSpace",
+            "size": 4
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

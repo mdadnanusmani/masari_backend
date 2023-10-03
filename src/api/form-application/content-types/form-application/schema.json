@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "form_applications",
+  "info": {
+    "singularName": "form-application",
+    "pluralName": "form-applications",
+    "displayName": "form application",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "form_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::form-type.form-type"
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "rejected",
+        "accepted"
+      ],
+      "default": "new"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "notes": {
+      "type": "text"
+    }
+  }
+}

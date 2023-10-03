@@ -1,0 +1,60 @@
+{
+  "name": "bsf-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "develop:admin": "strapi develop --watch-admin",
+    "start:staging": "dotenv -e .env.staging -v NODE_ENV=staging strapi start",
+    "start:prod": "dotenv -e .env.production -v NODE_ENV=production strapi build && strapi start",
+    "start": "dotenv -e .env.production -v NODE_ENV=production strapi build && strapi start",
+    "build:staging": "dotenv -e .env.staging -v NODE_ENV=staging  strapi build ",
+    "build": "strapi build",
+    "config:dump:dev": "strapi config:dump -p -f config.dev.json",
+    "config:restore:dev": "strapi config:restore -f config.dev.json -s replace",
+    "config:dump:prod": "NODE_ENV=production strapi config:dump -p -f config.prod.json",
+    "config:restore:prod": "NODE_ENV=production strapi config:restore -f config.prod.json -s replace",
+    "strapi": "strapi"
+  },
+  "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.8",
+    "dotenv-cli": "^6.0.0",
+    "react-refresh": "^0.14.0"
+  },
+  "dependencies": {
+    "@purest/providers": "^1.0.4",
+    "@strapi/plugin-documentation": "^4.10.7",
+    "@strapi/plugin-graphql": "^4.10.7",
+    "@strapi/plugin-i18n": "^4.10.7",
+    "@strapi/plugin-users-permissions": "^4.10.7",
+    "@strapi/provider-email-nodemailer": "^4.6.2",
+    "@strapi/strapi": "^4.10.7",
+    "better-sqlite3": "7.6.2",
+    "meilisearch": "^0.31.1",
+    "mime-types": "^2.1.35",
+    "pg": "^8.8.0",
+    "purest": "^4.0.2",
+    "socket.io": "^4.5.4",
+    "strapi-plugin-config-sync": "^1.0.4",
+    "strapi-plugin-email-designer": "^2.1.2",
+    "strapi-plugin-import-export-entries": "^1.19.3",
+    "strapi-plugin-local-image-sharp": "^1.2.1",
+    "strapi-plugin-meilisearch": "^0.9.1",
+    "strapi-plugin-publisher": "^1.1.4",
+    "strapi-plugin-react-editorjs": "^2.0.2",
+    "strapio": "^3.0.2"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "a9abe0c3-c515-4ca9-af9d-7226e30fac5a"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "lost-packages": {},
+  "license": "MIT"
+}

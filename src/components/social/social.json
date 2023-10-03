@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_social_socials",
+  "info": {
+    "displayName": "social",
+    "icon": "air-freshener",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "like": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::like.like"
+    }
+  }
+}

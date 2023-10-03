@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_forms_two_options",
+  "info": {
+    "displayName": "two-options",
+    "icon": "network-wired",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title_ar": {
+      "type": "text",
+      "required": true
+    },
+    "options_ar": {
+      "type": "component",
+      "repeatable": true,
+      "component": "forms.select-option",
+      "max": 2,
+      "min": 2
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "uuid": {
+      "type": "string",
+      "unique": false
+    },
+    "title_en": {
+      "type": "string"
+    },
+    "options_en": {
+      "type": "component",
+      "repeatable": true,
+      "component": "forms.select-option"
+    }
+  }
+}

@@ -1,0 +1,200 @@
+# These are some examples of commonly ignored file patterns.
+# You should customize this list as applicable to your project.
+# Learn more about .gitignore:
+#     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+
+# Node artifact files
+node_modules/
+build/
+
+# Compiled Python bytecode
+*.py[cod]
+
+# Maven
+target/
+build 
+# JetBrains IDE
+.idea/
+
+# Unit test reports
+TEST*.xml
+
+# Applications
+*.app
+*.war
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
+
+#env
+.env
+.env.staging
+.env.production
+.env.qa
+public/uploads
+#sqlite
+.temp/
+#cache
+.cache
+.tmp/data.db
+src/extensions/documentation/documentation/*
+.strapi-updater.json
+src/extensions/documentation/public/index.html
+public/avatars/
+ecosystem.config.js
+
+
+############################
+# OS X
+############################
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+.Spotlight-V100
+.Trashes
+._*
+
+############################
+# Linux
+############################
+
+*~
+
+############################
+# Windows
+############################
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+############################
+# Packages
+############################
+
+*.7z
+*.csv
+*.dat
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.seed
+*.so
+*.swo
+*.swp
+*.swn
+*.swm
+*.out
+*.pid
+
+############################
+# Logs and databases
+############################
+
+.tmp
+*.log
+*.sql
+!.github/workflows/db/**/*.sql
+*.sqlite
+
+############################
+# Misc.
+############################
+
+*#
+.idea
+nbproject
+.eslintcache
+
+############################
+# Node.js
+############################
+
+lib-cov
+lcov.info
+pids
+logs
+results
+build
+node_modules
+.node_history
+package-lock.json
+**/package-lock.json
+!docs/package-lock.json
+*.heapsnapshot
+
+############################
+# Tests
+############################
+
+test-apps
+coverage
+
+############################
+# Documentation
+############################
+
+dist
+
+############################
+# Builds
+############################
+
+packages/generators/app/files/public/
+schema.graphql
+
+############################
+# Example app
+############################
+
+.dev
+# *.cache
+
+############################
+# Visual Studio Code
+############################
+
+.vscode/
+!.vscode/settings.json
+front-workspace.code-workspace
+.yarnrc
+
+############################
+# Yarn
+############################
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+############################
+# Playwright
+############################
+playwright-report
+test-results
+!e2e/data/*.tar

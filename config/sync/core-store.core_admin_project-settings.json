@@ -1,0 +1,18 @@
+{
+  "key": "core_admin_project-settings",
+  "value": {
+    "menuLogo": {
+      "name": "MicrosoftTeams-image (7).png",
+      "hash": "Microsoft_Teams_image_7_02be70fa31",
+      "url": "/uploads/Microsoft_Teams_image_7_02be70fa31.png",
+      "width": 29,
+      "height": 29,
+      "ext": ".png",
+      "size": 1.14,
+      "provider": "local"
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

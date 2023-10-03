@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_forms_progresses",
+  "info": {
+    "displayName": "progress",
+    "icon": "terminal",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "min": {
+      "type": "decimal",
+      "default": 0,
+      "max": 100,
+      "min": 0
+    },
+    "title_ar": {
+      "type": "text",
+      "required": true
+    },
+    "max": {
+      "type": "decimal"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "uuid": {
+      "type": "string"
+    },
+    "title_en": {
+      "type": "text"
+    }
+  }
+}

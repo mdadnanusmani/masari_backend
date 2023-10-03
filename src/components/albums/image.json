@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_albums_images",
+  "info": {
+    "displayName": "image",
+    "icon": "archive",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "mentions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mention.mention"
+    },
+    "likes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::like.like"
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "is_proprietary": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

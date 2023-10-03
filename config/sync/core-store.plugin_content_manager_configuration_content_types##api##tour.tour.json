@@ -1,0 +1,124 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::tour.tour",
+  "value": {
+    "uid": "api::tour.tour",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "termsAndConditions": {
+        "edit": {
+          "label": "termsAndConditions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "termsAndConditions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "employeeCodeOfConduct": {
+        "edit": {
+          "label": "employeeCodeOfConduct",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "employeeCodeOfConduct",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "cyberSecurityAgreement": {
+        "edit": {
+          "label": "cyberSecurityAgreement",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "cyberSecurityAgreement",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "createdAt",
+        "updatedAt",
+        "termsAndConditions"
+      ],
+      "edit": [
+        [
+          {
+            "name": "termsAndConditions",
+            "size": 6
+          },
+          {
+            "name": "employeeCodeOfConduct",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "cyberSecurityAgreement",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
