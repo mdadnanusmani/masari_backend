@@ -73,6 +73,42 @@
       "action": "api::banner-slide.banner-slide.update"
     },
     {
+      "action": "api::benefit-categories.benefit-categories.create"
+    },
+    {
+      "action": "api::benefit-categories.benefit-categories.createLocalization"
+    },
+    {
+      "action": "api::benefit-categories.benefit-categories.delete"
+    },
+    {
+      "action": "api::benefit-categories.benefit-categories.find"
+    },
+    {
+      "action": "api::benefit-categories.benefit-categories.findOne"
+    },
+    {
+      "action": "api::benefit-categories.benefit-categories.update"
+    },
+    {
+      "action": "api::benefit.benefit.create"
+    },
+    {
+      "action": "api::benefit.benefit.createLocalization"
+    },
+    {
+      "action": "api::benefit.benefit.delete"
+    },
+    {
+      "action": "api::benefit.benefit.find"
+    },
+    {
+      "action": "api::benefit.benefit.findOne"
+    },
+    {
+      "action": "api::benefit.benefit.update"
+    },
+    {
       "action": "api::community.community.create"
     },
     {

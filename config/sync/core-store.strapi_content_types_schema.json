@@ -2563,15 +2563,6 @@
           "type": "string",
           "required": true
         },
-        "body": {
-          "pluginOptions": {
-            "i18n": {
-              "localized": true
-            }
-          },
-          "type": "richtext",
-          "required": true
-        },
         "attachements": {
           "type": "media",
           "multiple": true,
@@ -2606,6 +2597,14 @@
             }
           },
           "type": "string"
+        },
+        "body": {
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          },
+          "type": "richtext"
         },
         "createdAt": {
           "type": "datetime"
@@ -2696,15 +2695,6 @@
             "type": "string",
             "required": true
           },
-          "body": {
-            "pluginOptions": {
-              "i18n": {
-                "localized": true
-              }
-            },
-            "type": "richtext",
-            "required": true
-          },
           "attachements": {
             "type": "media",
             "multiple": true,
@@ -2739,6 +2729,14 @@
               }
             },
             "type": "string"
+          },
+          "body": {
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            },
+            "type": "richtext"
           }
         },
         "kind": "collectionType"
@@ -2953,6 +2951,358 @@
       "uid": "api::banner-slide.banner-slide",
       "apiName": "banner-slide",
       "globalId": "BannerSlide",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::benefit.benefit": {
+      "kind": "collectionType",
+      "collectionName": "benefits",
+      "info": {
+        "singularName": "benefit",
+        "pluralName": "benefits",
+        "displayName": "Benefit",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "attributes": {
+        "media": {
+          "type": "media",
+          "multiple": true,
+          "required": false,
+          "allowedTypes": [
+            "images",
+            "files",
+            "videos",
+            "audios"
+          ],
+          "pluginOptions": {
+            "i18n": {
+              "localized": false
+            }
+          }
+        },
+        "link": {
+          "pluginOptions": {
+            "i18n": {
+              "localized": false
+            }
+          },
+          "type": "string"
+        },
+        "benefit_category": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::benefit-categories.benefit-categories",
+          "inversedBy": "benefits"
+        },
+        "price": {
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          },
+          "type": "string"
+        },
+        "title": {
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          },
+          "type": "string"
+        },
+        "body": {
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          },
+          "type": "text"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "localizations": {
+          "writable": true,
+          "private": false,
+          "configurable": false,
+          "visible": false,
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::benefit.benefit"
+        },
+        "locale": {
+          "writable": true,
+          "private": false,
+          "configurable": false,
+          "visible": false,
+          "type": "string"
+        }
+      },
+      "__schema__": {
+        "collectionName": "benefits",
+        "info": {
+          "singularName": "benefit",
+          "pluralName": "benefits",
+          "displayName": "Benefit",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
+        "attributes": {
+          "media": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": [
+              "images",
+              "files",
+              "videos",
+              "audios"
+            ],
+            "pluginOptions": {
+              "i18n": {
+                "localized": false
+              }
+            }
+          },
+          "link": {
+            "pluginOptions": {
+              "i18n": {
+                "localized": false
+              }
+            },
+            "type": "string"
+          },
+          "benefit_category": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::benefit-categories.benefit-categories",
+            "inversedBy": "benefits"
+          },
+          "price": {
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            },
+            "type": "string"
+          },
+          "title": {
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            },
+            "type": "string"
+          },
+          "body": {
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            },
+            "type": "text"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "benefit",
+      "connection": "default",
+      "uid": "api::benefit.benefit",
+      "apiName": "benefit",
+      "globalId": "Benefit",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::benefit-categories.benefit-categories": {
+      "kind": "collectionType",
+      "collectionName": "benefits_categories",
+      "info": {
+        "singularName": "benefit-categories",
+        "pluralName": "benefits-categories",
+        "displayName": "Benefit Categories",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "attributes": {
+        "title": {
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          },
+          "type": "string"
+        },
+        "icon": {
+          "allowedTypes": [
+            "images"
+          ],
+          "type": "media",
+          "multiple": true,
+          "pluginOptions": {
+            "i18n": {
+              "localized": false
+            }
+          }
+        },
+        "benefits": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::benefit.benefit",
+          "mappedBy": "benefit_category"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "localizations": {
+          "writable": true,
+          "private": false,
+          "configurable": false,
+          "visible": false,
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::benefit-categories.benefit-categories"
+        },
+        "locale": {
+          "writable": true,
+          "private": false,
+          "configurable": false,
+          "visible": false,
+          "type": "string"
+        }
+      },
+      "__schema__": {
+        "collectionName": "benefits_categories",
+        "info": {
+          "singularName": "benefit-categories",
+          "pluralName": "benefits-categories",
+          "displayName": "Benefit Categories",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
+        "attributes": {
+          "title": {
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            },
+            "type": "string"
+          },
+          "icon": {
+            "allowedTypes": [
+              "images"
+            ],
+            "type": "media",
+            "multiple": true,
+            "pluginOptions": {
+              "i18n": {
+                "localized": false
+              }
+            }
+          },
+          "benefits": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::benefit.benefit",
+            "mappedBy": "benefit_category"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "benefit-categories",
+      "connection": "default",
+      "uid": "api::benefit-categories.benefit-categories",
+      "apiName": "benefit-categories",
+      "globalId": "BenefitCategories",
       "actions": {},
       "lifecycles": {}
     },
@@ -5972,6 +6322,14 @@
           "maxLength": 120,
           "required": true
         },
+        "link": {
+          "type": "string",
+          "pluginOptions": {
+            "i18n": {
+              "localized": false
+            }
+          }
+        },
         "image": {
           "type": "media",
           "multiple": false,
@@ -6025,14 +6383,6 @@
             }
           },
           "type": "boolean"
-        },
-        "link": {
-          "pluginOptions": {
-            "i18n": {
-              "localized": true
-            }
-          },
-          "type": "string"
         },
         "createdAt": {
           "type": "datetime"
@@ -6110,6 +6460,14 @@
             "maxLength": 120,
             "required": true
           },
+          "link": {
+            "type": "string",
+            "pluginOptions": {
+              "i18n": {
+                "localized": false
+              }
+            }
+          },
           "image": {
             "type": "media",
             "multiple": false,
@@ -6163,14 +6521,6 @@
               }
             },
             "type": "boolean"
-          },
-          "link": {
-            "pluginOptions": {
-              "i18n": {
-                "localized": true
-              }
-            },
-            "type": "string"
           }
         },
         "kind": "collectionType"
