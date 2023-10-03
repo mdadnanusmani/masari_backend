@@ -8,8 +8,8 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "title",
-      "defaultSortBy": "id",
-      "defaultSortOrder": "DESC"
+      "defaultSortBy": "title",
+      "defaultSortOrder": "ASC"
     },
     "metadatas": {
       "id": {
@@ -168,9 +168,15 @@
         ],
         [
           {
-            "name": "attachements",
+            "name": "link",
             "size": 6
           },
+          {
+            "name": "attachements",
+            "size": 6
+          }
+        ],
+        [
           {
             "name": "is_mailable",
             "size": 4
@@ -179,10 +185,6 @@
         [
           {
             "name": "department",
-            "size": 6
-          },
-          {
-            "name": "link",
             "size": 6
           }
         ]

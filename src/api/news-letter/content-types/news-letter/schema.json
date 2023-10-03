@@ -26,6 +26,14 @@
       "maxLength": 120,
       "required": true
     },
+    "link":{
+	"type":"string",
+    	"pluginOptions":{
+		"i18n":{
+		"localized":false
+		}
+	}	
+    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -79,14 +87,6 @@
         }
       },
       "type": "boolean"
-    },
-    "link": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
     }
   }
 }

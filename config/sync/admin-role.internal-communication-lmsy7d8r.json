@@ -1,7 +1,7 @@
 {
   "name": "Internal Communication",
-  "code": "internal-communication-ln7bvbiu",
-  "description": "Created October 1st, 2023",
+  "code": "internal-communication-lmsy7d8r",
+  "description": "Created September 21st, 2023",
   "permissions": [
     {
       "action": "plugin::content-manager.explorer.create",
@@ -89,11 +89,11 @@
         "fields": [
           "media",
           "title",
-          "body",
           "attachements",
           "is_mailable",
           "department",
-          "link"
+          "link",
+          "body"
         ],
         "locales": [
           "en",
@@ -131,11 +131,11 @@
         "fields": [
           "media",
           "title",
-          "body",
           "attachements",
           "is_mailable",
           "department",
-          "link"
+          "link",
+          "body"
         ],
         "locales": [
           "en",
@@ -151,11 +151,11 @@
         "fields": [
           "media",
           "title",
-          "body",
           "attachements",
           "is_mailable",
           "department",
-          "link"
+          "link",
+          "body"
         ],
         "locales": [
           "en",
@@ -211,6 +211,155 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::benefit-categories.benefit-categories",
+      "properties": {
+        "fields": [
+          "title",
+          "icon",
+          "benefits"
+        ],
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::benefit-categories.benefit-categories",
+      "properties": {
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::benefit-categories.benefit-categories",
+      "properties": {
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::benefit-categories.benefit-categories",
+      "properties": {
+        "fields": [
+          "title",
+          "icon",
+          "benefits"
+        ],
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::benefit-categories.benefit-categories",
+      "properties": {
+        "fields": [
+          "title",
+          "icon",
+          "benefits"
+        ],
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::benefit.benefit",
+      "properties": {
+        "fields": [
+          "media",
+          "link",
+          "benefit_category",
+          "price",
+          "title",
+          "body"
+        ],
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::benefit.benefit",
+      "properties": {
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::benefit.benefit",
+      "properties": {
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::benefit.benefit",
+      "properties": {
+        "fields": [
+          "media",
+          "link",
+          "benefit_category",
+          "price",
+          "title",
+          "body"
+        ],
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::benefit.benefit",
+      "properties": {
+        "fields": [
+          "media",
+          "link",
+          "benefit_category",
+          "price",
+          "title",
+          "body"
+        ],
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::community.community",
       "properties": {
         "fields": [
@@ -287,109 +436,17 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
-      "subject": "api::department.department",
-      "properties": {
-        "fields": [
-          "title",
-          "users",
-          "code",
-          "about",
-          "representative_name",
-          "representative_avatar",
-          "representative_title",
-          "representative_word",
-          "department_category",
-          "slug",
-          "sort",
-          "children",
-          "parent",
-          "announcements"
-        ],
-        "locales": [
-          "en",
-          "ar"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.delete",
-      "subject": "api::department.department",
-      "properties": {
-        "locales": [
-          "en",
-          "ar"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.read",
-      "subject": "api::department.department",
-      "properties": {
-        "fields": [
-          "title",
-          "users",
-          "code",
-          "about",
-          "representative_name",
-          "representative_avatar",
-          "representative_title",
-          "representative_word",
-          "department_category",
-          "slug",
-          "sort",
-          "children",
-          "parent",
-          "announcements"
-        ],
-        "locales": [
-          "en",
-          "ar"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.update",
-      "subject": "api::department.department",
-      "properties": {
-        "fields": [
-          "title",
-          "users",
-          "code",
-          "about",
-          "representative_name",
-          "representative_avatar",
-          "representative_title",
-          "representative_word",
-          "department_category",
-          "slug",
-          "sort",
-          "children",
-          "parent",
-          "announcements"
-        ],
-        "locales": [
-          "en",
-          "ar"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.create",
       "subject": "api::news-letter.news-letter",
       "properties": {
         "fields": [
           "title",
+          "link",
           "image",
           "slug",
           "status",
           "likes",
           "mentions",
-          "is_mailable",
-          "link"
+          "is_mailable"
         ],
         "locales": [
           "en",
@@ -426,13 +483,13 @@
       "properties": {
         "fields": [
           "title",
+          "link",
           "image",
           "slug",
           "status",
           "likes",
           "mentions",
-          "is_mailable",
-          "link"
+          "is_mailable"
         ],
         "locales": [
           "en",
@@ -447,13 +504,13 @@
       "properties": {
         "fields": [
           "title",
+          "link",
           "image",
           "slug",
           "status",
           "likes",
           "mentions",
-          "is_mailable",
-          "link"
+          "is_mailable"
         ],
         "locales": [
           "en",
