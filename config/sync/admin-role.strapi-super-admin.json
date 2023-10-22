@@ -93,7 +93,8 @@
           "is_mailable",
           "department",
           "link",
-          "body"
+          "body",
+          "comments"
         ],
         "locales": [
           "en",
@@ -135,7 +136,8 @@
           "is_mailable",
           "department",
           "link",
-          "body"
+          "body",
+          "comments"
         ],
         "locales": [
           "en",
@@ -155,7 +157,8 @@
           "is_mailable",
           "department",
           "link",
-          "body"
+          "body",
+          "comments"
         ],
         "locales": [
           "en",
@@ -396,6 +399,57 @@
         "locales": [
           "en",
           "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::comment.comment",
+      "properties": {
+        "fields": [
+          "message",
+          "user",
+          "mentioned_users",
+          "announcement"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::comment.comment",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::comment.comment",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::comment.comment",
+      "properties": {
+        "fields": [
+          "message",
+          "user",
+          "mentioned_users",
+          "announcement"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::comment.comment",
+      "properties": {
+        "fields": [
+          "message",
+          "user",
+          "mentioned_users",
+          "announcement"
         ]
       },
       "conditions": []
@@ -670,7 +724,6 @@
           "title",
           "users",
           "code",
-          "about",
           "representative_name",
           "representative_avatar",
           "representative_title",
@@ -680,7 +733,8 @@
           "sort",
           "children",
           "parent",
-          "announcements"
+          "announcements",
+          "about"
         ],
         "locales": [
           "en",
@@ -708,7 +762,6 @@
           "title",
           "users",
           "code",
-          "about",
           "representative_name",
           "representative_avatar",
           "representative_title",
@@ -718,7 +771,8 @@
           "sort",
           "children",
           "parent",
-          "announcements"
+          "announcements",
+          "about"
         ],
         "locales": [
           "en",
@@ -735,7 +789,6 @@
           "title",
           "users",
           "code",
-          "about",
           "representative_name",
           "representative_avatar",
           "representative_title",
@@ -745,7 +798,8 @@
           "sort",
           "children",
           "parent",
-          "announcements"
+          "announcements",
+          "about"
         ],
         "locales": [
           "en",
@@ -1989,7 +2043,8 @@
         "fields": [
           "termsAndConditions",
           "employeeCodeOfConduct",
-          "cyberSecurityAgreement"
+          "cyberSecurityAgreement",
+          "DiversityandInclusion"
         ]
       },
       "conditions": []
@@ -2013,7 +2068,8 @@
         "fields": [
           "termsAndConditions",
           "employeeCodeOfConduct",
-          "cyberSecurityAgreement"
+          "cyberSecurityAgreement",
+          "DiversityandInclusion"
         ]
       },
       "conditions": []
@@ -2025,7 +2081,8 @@
         "fields": [
           "termsAndConditions",
           "employeeCodeOfConduct",
-          "cyberSecurityAgreement"
+          "cyberSecurityAgreement",
+          "DiversityandInclusion"
         ]
       },
       "conditions": []
@@ -2322,7 +2379,9 @@
           "acceptedTerms",
           "termsAcceptanceDate",
           "legalAcceptanceDate",
-          "notifications"
+          "notifications",
+          "comment",
+          "Hr_Survey"
         ]
       },
       "conditions": []
@@ -2363,7 +2422,9 @@
           "acceptedTerms",
           "termsAcceptanceDate",
           "legalAcceptanceDate",
-          "notifications"
+          "notifications",
+          "comment",
+          "Hr_Survey"
         ]
       },
       "conditions": []
@@ -2398,7 +2459,9 @@
           "acceptedTerms",
           "termsAcceptanceDate",
           "legalAcceptanceDate",
-          "notifications"
+          "notifications",
+          "comment",
+          "Hr_Survey"
         ]
       },
       "conditions": []

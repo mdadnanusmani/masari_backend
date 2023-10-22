@@ -8,8 +8,8 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "title",
-      "defaultSortBy": "title",
-      "defaultSortOrder": "ASC"
+      "defaultSortBy": "id",
+      "defaultSortOrder": "DESC"
     },
     "metadatas": {
       "id": {
@@ -122,12 +122,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "media",
-        "title",
-        "likes"
-      ],
       "edit": [
         [
           {
@@ -155,6 +149,12 @@
             "size": 6
           }
         ]
+      ],
+      "list": [
+        "id",
+        "media",
+        "title",
+        "likes"
       ]
     }
   },

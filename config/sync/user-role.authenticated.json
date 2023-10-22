@@ -103,6 +103,21 @@
       "action": "api::benefit.benefit.update"
     },
     {
+      "action": "api::comment.comment.create"
+    },
+    {
+      "action": "api::comment.comment.delete"
+    },
+    {
+      "action": "api::comment.comment.find"
+    },
+    {
+      "action": "api::comment.comment.findOne"
+    },
+    {
+      "action": "api::comment.comment.update"
+    },
+    {
       "action": "api::community.community.create"
     },
     {

@@ -1,15 +1,15 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::tour.tour",
+  "key": "plugin_content_manager_configuration_content_types::api::comment.comment",
   "value": {
-    "uid": "api::tour.tour",
+    "uid": "api::comment.comment",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "id",
+      "mainField": "message",
       "defaultSortBy": "id",
-      "defaultSortOrder": "ASC"
+      "defaultSortOrder": "DESC"
     },
     "metadatas": {
       "id": {
@@ -20,60 +20,63 @@
           "sortable": true
         }
       },
-      "termsAndConditions": {
+      "message": {
         "edit": {
-          "label": "termsAndConditions",
+          "label": "message",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "termsAndConditions",
+          "label": "message",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "user": {
+        "edit": {
+          "label": "user",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "user",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "mentioned_users": {
+        "edit": {
+          "label": "mentioned_users",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "mentioned_users",
           "searchable": false,
           "sortable": false
         }
       },
-      "employeeCodeOfConduct": {
+      "announcement": {
         "edit": {
-          "label": "employeeCodeOfConduct",
+          "label": "announcement",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "title"
         },
         "list": {
-          "label": "employeeCodeOfConduct",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "cyberSecurityAgreement": {
-        "edit": {
-          "label": "cyberSecurityAgreement",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "cyberSecurityAgreement",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "DiversityandInclusion": {
-        "edit": {
-          "label": "DiversityandInclusion",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "DiversityandInclusion",
-          "searchable": false,
-          "sortable": false
+          "label": "announcement",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -106,33 +109,33 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "createdAt",
-        "updatedAt",
-        "termsAndConditions"
-      ],
       "edit": [
         [
           {
-            "name": "termsAndConditions",
+            "name": "message",
             "size": 6
           },
           {
-            "name": "employeeCodeOfConduct",
+            "name": "user",
             "size": 6
           }
         ],
         [
           {
-            "name": "cyberSecurityAgreement",
+            "name": "announcement",
             "size": 6
           },
           {
-            "name": "DiversityandInclusion",
+            "name": "mentioned_users",
             "size": 6
           }
         ]
+      ],
+      "list": [
+        "id",
+        "message",
+        "user",
+        "mentioned_users"
       ]
     }
   },
