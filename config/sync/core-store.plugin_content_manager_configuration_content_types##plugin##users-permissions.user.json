@@ -390,6 +390,35 @@
           "sortable": false
         }
       },
+      "comment": {
+        "edit": {
+          "label": "comment",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "message"
+        },
+        "list": {
+          "label": "comment",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "Hr_Survey": {
+        "edit": {
+          "label": "Hr_Survey",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Hr_Survey",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -541,6 +570,16 @@
           {
             "name": "notifications",
             "size": 6
+          },
+          {
+            "name": "comment",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "Hr_Survey",
+            "size": 4
           }
         ]
       ]

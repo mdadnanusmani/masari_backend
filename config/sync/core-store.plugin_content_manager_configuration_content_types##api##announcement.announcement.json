@@ -48,20 +48,6 @@
           "sortable": true
         }
       },
-      "body": {
-        "edit": {
-          "label": "body",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "body",
-          "searchable": false,
-          "sortable": false
-        }
-      },
       "attachements": {
         "edit": {
           "label": "attachements",
@@ -119,6 +105,35 @@
           "sortable": true
         }
       },
+      "body": {
+        "edit": {
+          "label": "body",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "body",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "comments": {
+        "edit": {
+          "label": "comments",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "message"
+        },
+        "list": {
+          "label": "comments",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -149,6 +164,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "media",
+        "title",
+        "attachements"
+      ],
       "edit": [
         [
           {
@@ -186,14 +207,12 @@
           {
             "name": "department",
             "size": 6
+          },
+          {
+            "name": "comments",
+            "size": 6
           }
         ]
-      ],
-      "list": [
-        "id",
-        "media",
-        "title",
-        "attachements"
       ]
     }
   },

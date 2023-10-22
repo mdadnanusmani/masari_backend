@@ -9,8 +9,7 @@
     "displayName": "User"
   },
   "options": {
-    "draftAndPublish": false,
-    "timestamps": true
+    "draftAndPublish": false
   },
   "attributes": {
     "username": {
@@ -127,6 +126,16 @@
       "relation": "manyToMany",
       "target": "api::notification.notification",
       "inversedBy": "users_who_reads"
+    },
+    "comment": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::comment.comment",
+      "inversedBy": "mentioned_users"
+    },
+    "Hr_Survey": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

@@ -1968,8 +1968,7 @@
         "displayName": "User"
       },
       "options": {
-        "draftAndPublish": false,
-        "timestamps": true
+        "draftAndPublish": false
       },
       "attributes": {
         "username": {
@@ -2087,6 +2086,16 @@
           "target": "api::notification.notification",
           "inversedBy": "users_who_reads"
         },
+        "comment": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::comment.comment",
+          "inversedBy": "mentioned_users"
+        },
+        "Hr_Survey": {
+          "type": "boolean",
+          "default": false
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -2139,8 +2148,7 @@
           "displayName": "User"
         },
         "options": {
-          "draftAndPublish": false,
-          "timestamps": true
+          "draftAndPublish": false
         },
         "attributes": {
           "username": {
@@ -2257,6 +2265,16 @@
             "relation": "manyToMany",
             "target": "api::notification.notification",
             "inversedBy": "users_who_reads"
+          },
+          "comment": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::comment.comment",
+            "inversedBy": "mentioned_users"
+          },
+          "Hr_Survey": {
+            "type": "boolean",
+            "default": false
           }
         },
         "kind": "collectionType"
@@ -2606,6 +2624,12 @@
           },
           "type": "richtext"
         },
+        "comments": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::comment.comment",
+          "mappedBy": "announcement"
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -2737,6 +2761,12 @@
               }
             },
             "type": "richtext"
+          },
+          "comments": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::comment.comment",
+            "mappedBy": "announcement"
           }
         },
         "kind": "collectionType"
@@ -3306,6 +3336,120 @@
       "actions": {},
       "lifecycles": {}
     },
+    "api::comment.comment": {
+      "kind": "collectionType",
+      "collectionName": "comments",
+      "info": {
+        "singularName": "comment",
+        "pluralName": "comments",
+        "displayName": "Comment",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "message": {
+          "type": "string",
+          "required": true
+        },
+        "user": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "plugin::users-permissions.user"
+        },
+        "mentioned_users": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "plugin::users-permissions.user",
+          "mappedBy": "comment"
+        },
+        "announcement": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::announcement.announcement",
+          "inversedBy": "comments"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "comments",
+        "info": {
+          "singularName": "comment",
+          "pluralName": "comments",
+          "displayName": "Comment",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "message": {
+            "type": "string",
+            "required": true
+          },
+          "user": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "plugin::users-permissions.user"
+          },
+          "mentioned_users": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "plugin::users-permissions.user",
+            "mappedBy": "comment"
+          },
+          "announcement": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::announcement.announcement",
+            "inversedBy": "comments"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "comment",
+      "connection": "default",
+      "uid": "api::comment.comment",
+      "apiName": "comment",
+      "globalId": "Comment",
+      "actions": {},
+      "lifecycles": {}
+    },
     "api::community.community": {
       "kind": "collectionType",
       "collectionName": "communities",
@@ -3631,15 +3775,6 @@
           "required": true,
           "unique": false
         },
-        "about": {
-          "pluginOptions": {
-            "i18n": {
-              "localized": true
-            }
-          },
-          "type": "richtext",
-          "required": false
-        },
         "representative_name": {
           "pluginOptions": {
             "i18n": {
@@ -3718,6 +3853,14 @@
           "relation": "oneToMany",
           "target": "api::announcement.announcement",
           "mappedBy": "department"
+        },
+        "about": {
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          },
+          "type": "text"
         },
         "createdAt": {
           "type": "datetime"
@@ -3804,15 +3947,6 @@
             "required": true,
             "unique": false
           },
-          "about": {
-            "pluginOptions": {
-              "i18n": {
-                "localized": true
-              }
-            },
-            "type": "richtext",
-            "required": false
-          },
           "representative_name": {
             "pluginOptions": {
               "i18n": {
@@ -3891,6 +4025,14 @@
             "relation": "oneToMany",
             "target": "api::announcement.announcement",
             "mappedBy": "department"
+          },
+          "about": {
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            },
+            "type": "text"
           }
         },
         "kind": "collectionType"
@@ -6581,7 +6723,7 @@
           "type": "relation",
           "relation": "manyToMany",
           "target": "plugin::users-permissions.user",
-          "inversedBy": "notifications"
+          "mappedBy": "notifications"
         },
         "createdAt": {
           "type": "datetime"
@@ -6656,7 +6798,7 @@
             "type": "relation",
             "relation": "manyToMany",
             "target": "plugin::users-permissions.user",
-            "inversedBy": "notifications"
+            "mappedBy": "notifications"
           }
         },
         "kind": "collectionType"
@@ -7365,13 +7507,22 @@
           ]
         },
         "employeeCodeOfConduct": {
+          "type": "media",
+          "multiple": false,
+          "required": false,
           "allowedTypes": [
             "files"
-          ],
-          "type": "media",
-          "multiple": false
+          ]
         },
         "cyberSecurityAgreement": {
+          "type": "media",
+          "multiple": false,
+          "required": false,
+          "allowedTypes": [
+            "files"
+          ]
+        },
+        "DiversityandInclusion": {
           "allowedTypes": [
             "files"
           ],
@@ -7433,13 +7584,22 @@
             ]
           },
           "employeeCodeOfConduct": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
             "allowedTypes": [
               "files"
-            ],
-            "type": "media",
-            "multiple": false
+            ]
           },
           "cyberSecurityAgreement": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+              "files"
+            ]
+          },
+          "DiversityandInclusion": {
             "allowedTypes": [
               "files"
             ],
