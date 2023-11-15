@@ -436,6 +436,98 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::department.department",
+      "properties": {
+        "fields": [
+          "title",
+          "users",
+          "code",
+          "representative_name",
+          "representative_avatar",
+          "representative_title",
+          "representative_word",
+          "department_category",
+          "slug",
+          "sort",
+          "children",
+          "parent",
+          "announcements",
+          "about"
+        ],
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::department.department",
+      "properties": {
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::department.department",
+      "properties": {
+        "fields": [
+          "title",
+          "users",
+          "code",
+          "representative_name",
+          "representative_avatar",
+          "representative_title",
+          "representative_word",
+          "department_category",
+          "slug",
+          "sort",
+          "children",
+          "parent",
+          "announcements",
+          "about"
+        ],
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::department.department",
+      "properties": {
+        "fields": [
+          "title",
+          "users",
+          "code",
+          "representative_name",
+          "representative_avatar",
+          "representative_title",
+          "representative_word",
+          "department_category",
+          "slug",
+          "sort",
+          "children",
+          "parent",
+          "announcements",
+          "about"
+        ],
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::news-letter.news-letter",
       "properties": {
         "fields": [
@@ -525,10 +617,8 @@
       "properties": {
         "fields": [
           "title",
-          "body",
           "media",
-          "is_mailable",
-          "pinned"
+          "description"
         ],
         "locales": [
           "en",
@@ -565,10 +655,8 @@
       "properties": {
         "fields": [
           "title",
-          "body",
           "media",
-          "is_mailable",
-          "pinned"
+          "description"
         ],
         "locales": [
           "en",
@@ -583,10 +671,84 @@
       "properties": {
         "fields": [
           "title",
-          "body",
           "media",
-          "is_mailable",
-          "pinned"
+          "description"
+        ],
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::video.video",
+      "properties": {
+        "fields": [
+          "media",
+          "title",
+          "likes",
+          "mentions",
+          "is_proprietary"
+        ],
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::video.video",
+      "properties": {
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::video.video",
+      "properties": {
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::video.video",
+      "properties": {
+        "fields": [
+          "media",
+          "title",
+          "likes",
+          "mentions",
+          "is_proprietary"
+        ],
+        "locales": [
+          "en",
+          "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::video.video",
+      "properties": {
+        "fields": [
+          "media",
+          "title",
+          "likes",
+          "mentions",
+          "is_proprietary"
         ],
         "locales": [
           "en",

@@ -3005,7 +3005,7 @@
         "media": {
           "type": "media",
           "multiple": true,
-          "required": false,
+          "required": true,
           "allowedTypes": [
             "images",
             "files",
@@ -3046,7 +3046,8 @@
               "localized": true
             }
           },
-          "type": "string"
+          "type": "string",
+          "required": true
         },
         "body": {
           "pluginOptions": {
@@ -3125,7 +3126,7 @@
           "media": {
             "type": "media",
             "multiple": true,
-            "required": false,
+            "required": true,
             "allowedTypes": [
               "images",
               "files",
@@ -3166,7 +3167,8 @@
                 "localized": true
               }
             },
-            "type": "string"
+            "type": "string",
+            "required": true
           },
           "body": {
             "pluginOptions": {
@@ -6845,7 +6847,7 @@
             }
           },
           "type": "richtext",
-          "required": true
+          "required": false
         },
         "media": {
           "type": "media",
@@ -6877,6 +6879,14 @@
           },
           "type": "boolean",
           "default": false
+        },
+        "description": {
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          },
+          "type": "text"
         },
         "createdAt": {
           "type": "datetime"
@@ -6959,7 +6969,7 @@
               }
             },
             "type": "richtext",
-            "required": true
+            "required": false
           },
           "media": {
             "type": "media",
@@ -6991,6 +7001,14 @@
             },
             "type": "boolean",
             "default": false
+          },
+          "description": {
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            },
+            "type": "text"
           }
         },
         "kind": "collectionType"

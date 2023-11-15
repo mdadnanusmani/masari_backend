@@ -1772,7 +1772,8 @@
           "body",
           "media",
           "is_mailable",
-          "pinned"
+          "pinned",
+          "description"
         ],
         "locales": [
           "en",
@@ -1812,7 +1813,8 @@
           "body",
           "media",
           "is_mailable",
-          "pinned"
+          "pinned",
+          "description"
         ],
         "locales": [
           "en",
@@ -1830,7 +1832,8 @@
           "body",
           "media",
           "is_mailable",
-          "pinned"
+          "pinned",
+          "description"
         ],
         "locales": [
           "en",
