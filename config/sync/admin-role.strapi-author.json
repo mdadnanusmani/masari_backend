@@ -326,7 +326,8 @@
           "media",
           "link",
           "benefit_category",
-          "body"
+          "body",
+          "title"
         ],
         "locales": [
           "en",
@@ -365,7 +366,8 @@
           "media",
           "link",
           "benefit_category",
-          "body"
+          "body",
+          "title"
         ],
         "locales": [
           "en",
@@ -382,7 +384,8 @@
           "media",
           "link",
           "benefit_category",
-          "body"
+          "body",
+          "title"
         ],
         "locales": [
           "en",

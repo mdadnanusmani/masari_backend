@@ -166,10 +166,11 @@
       "subject": "api::benefit.benefit",
       "properties": {
         "fields": [
-          "body",
           "media",
           "link",
-          "benefit_category"
+          "benefit_category",
+          "body",
+          "title"
         ],
         "locales": [
           "en",
@@ -183,10 +184,11 @@
       "subject": "api::benefit.benefit",
       "properties": {
         "fields": [
-          "body",
           "media",
           "link",
-          "benefit_category"
+          "benefit_category",
+          "body",
+          "title"
         ],
         "locales": [
           "en",
