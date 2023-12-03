@@ -2096,6 +2096,10 @@
           "type": "boolean",
           "default": false
         },
+        "Ethical_Awareness": {
+          "type": "boolean",
+          "default": false
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -2273,6 +2277,10 @@
             "inversedBy": "mentioned_users"
           },
           "Hr_Survey": {
+            "type": "boolean",
+            "default": false
+          },
+          "Ethical_Awareness": {
             "type": "boolean",
             "default": false
           }
@@ -7541,6 +7549,14 @@
           ]
         },
         "DiversityandInclusion": {
+          "type": "media",
+          "multiple": false,
+          "required": false,
+          "allowedTypes": [
+            "files"
+          ]
+        },
+        "EthicalAwareness": {
           "allowedTypes": [
             "files"
           ],
@@ -7618,6 +7634,14 @@
             ]
           },
           "DiversityandInclusion": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+              "files"
+            ]
+          },
+          "EthicalAwareness": {
             "allowedTypes": [
               "files"
             ],

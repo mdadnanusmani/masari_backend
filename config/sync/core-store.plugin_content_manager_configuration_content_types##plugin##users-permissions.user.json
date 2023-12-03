@@ -419,6 +419,20 @@
           "sortable": true
         }
       },
+      "Ethical_Awareness": {
+        "edit": {
+          "label": "Ethical_Awareness",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Ethical_Awareness",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -579,6 +593,10 @@
         [
           {
             "name": "Hr_Survey",
+            "size": 4
+          },
+          {
+            "name": "Ethical_Awareness",
             "size": 4
           }
         ]

@@ -2047,7 +2047,8 @@
           "termsAndConditions",
           "employeeCodeOfConduct",
           "cyberSecurityAgreement",
-          "DiversityandInclusion"
+          "DiversityandInclusion",
+          "EthicalAwareness"
         ]
       },
       "conditions": []
@@ -2072,7 +2073,8 @@
           "termsAndConditions",
           "employeeCodeOfConduct",
           "cyberSecurityAgreement",
-          "DiversityandInclusion"
+          "DiversityandInclusion",
+          "EthicalAwareness"
         ]
       },
       "conditions": []
@@ -2085,7 +2087,8 @@
           "termsAndConditions",
           "employeeCodeOfConduct",
           "cyberSecurityAgreement",
-          "DiversityandInclusion"
+          "DiversityandInclusion",
+          "EthicalAwareness"
         ]
       },
       "conditions": []
@@ -2384,7 +2387,8 @@
           "legalAcceptanceDate",
           "notifications",
           "comment",
-          "Hr_Survey"
+          "Hr_Survey",
+          "Ethical_Awareness"
         ]
       },
       "conditions": []
@@ -2427,7 +2431,8 @@
           "legalAcceptanceDate",
           "notifications",
           "comment",
-          "Hr_Survey"
+          "Hr_Survey",
+          "Ethical_Awareness"
         ]
       },
       "conditions": []
@@ -2464,7 +2469,8 @@
           "legalAcceptanceDate",
           "notifications",
           "comment",
-          "Hr_Survey"
+          "Hr_Survey",
+          "Ethical_Awareness"
         ]
       },
       "conditions": []

@@ -76,6 +76,20 @@
           "sortable": false
         }
       },
+      "EthicalAwareness": {
+        "edit": {
+          "label": "EthicalAwareness",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "EthicalAwareness",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -130,6 +144,12 @@
           },
           {
             "name": "DiversityandInclusion",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "EthicalAwareness",
             "size": 6
           }
         ]
