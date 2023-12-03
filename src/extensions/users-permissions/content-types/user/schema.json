@@ -136,6 +136,10 @@
     "Hr_Survey": {
       "type": "boolean",
       "default": false
+    },
+    "Ethical_Awareness": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
