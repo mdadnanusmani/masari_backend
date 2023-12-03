@@ -37,6 +37,14 @@
       ]
     },
     "DiversityandInclusion": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "EthicalAwareness": {
       "allowedTypes": [
         "files"
       ],
