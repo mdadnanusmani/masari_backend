@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "approvals",
+  "info": {
+    "singularName": "approval",
+    "pluralName": "approvals",
+    "displayName": "Approval"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "request": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::request.request",
+      "inversedBy": "approvals"
+    },
+    "approved_by_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "approvals"
+    },
+    "approval_status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Approved",
+        "Rejected"
+      ]
+    },
+    "comments": {
+      "type": "richtext"
+    },
+    "approved_at": {
+      "type": "datetime"
+    }
+  }
+}

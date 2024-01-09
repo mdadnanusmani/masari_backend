@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "status_logs",
+  "info": {
+    "singularName": "status-log",
+    "pluralName": "status-logs",
+    "displayName": "StatusLog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "request": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::request.request",
+      "inversedBy": "status_logs"
+    },
+    "old_status": {
+      "type": "enumeration",
+      "enum": [
+        "Raised",
+        "Under Review",
+        "Adjustments Needed",
+        "Approved",
+        "Completed",
+        "Closed"
+      ]
+    },
+    "new_status": {
+      "type": "enumeration",
+      "enum": [
+        "Raised",
+        "Under Review",
+        "Adjustments Needed",
+        "Approved",
+        "Completed",
+        "Closed"
+      ]
+    },
+    "changed_by_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "status_logs"
+    },
+    "changed_at": {
+      "type": "datetime"
+    }
+  }
+}

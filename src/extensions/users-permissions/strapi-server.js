@@ -43,6 +43,9 @@ module.exports = (plugin) => {
       _.get(ctx, "query.callback") ||
       _.get(ctx, "session.grant.dynamic.callback") ||
       grantConfig[provider].callback;
+	   console.log( _.get(ctx, "query.callback")  , "  _.get(ctx, \"query.callback\") ")
+	      console.log( _.get(ctx, "session.grant.dynamic.callback") , "  _.get(ctx, \"session.grant.dynamic.callback\") ")
+	      console.log( grantConfig[provider].callback , " grantConfig[provider].callback ")
     grantConfig[provider].redirect_uri = strapi
       .plugin("users-permissions")
       .service("providers")
@@ -74,7 +77,7 @@ module.exports = (plugin) => {
     const user = await strapi.entityService.findOne(
       `plugin::users-permissions.user`,
       ctx.state.user.id,
-      { populate: ['role', 'department', 'cv', 'cv.media'] }
+      { populate: ['role', 'department', 'cv', 'cv.media','process_role','process_role.process_step'] }
     );
     ctx.body = sanitizeOutput(user);
   }

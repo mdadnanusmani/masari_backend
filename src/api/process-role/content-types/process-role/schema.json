@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "process_roles",
+  "info": {
+    "singularName": "process-role",
+    "pluralName": "process-roles",
+    "displayName": "ProcessRole",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "process_role"
+    },
+    "process": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::process.process",
+      "mappedBy": "process_role"
+    },
+    "process_step": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::process-step.process-step",
+      "mappedBy": "process_role"
+    }
+  }
+}
