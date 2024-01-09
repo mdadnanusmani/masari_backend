@@ -1,15 +1,15 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::document.document",
+  "key": "plugin_content_manager_configuration_content_types::api::process-role.process-role",
   "value": {
-    "uid": "api::document.document",
+    "uid": "api::process-role.process-role",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "title",
+      "mainField": "id",
       "defaultSortBy": "id",
-      "defaultSortOrder": "DESC"
+      "defaultSortOrder": "ASC"
     },
     "metadatas": {
       "id": {
@@ -20,86 +20,47 @@
           "sortable": true
         }
       },
-      "title": {
+      "user": {
         "edit": {
-          "label": "title",
+          "label": "user",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "username"
         },
         "list": {
-          "label": "title",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "document": {
-        "edit": {
-          "label": "document",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "document",
+          "label": "user",
           "searchable": false,
           "sortable": false
         }
       },
-      "thumbnail": {
+      "process": {
         "edit": {
-          "label": "thumbnail",
+          "label": "process",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "process_name"
         },
         "list": {
-          "label": "thumbnail",
+          "label": "process",
           "searchable": false,
           "sortable": false
         }
       },
-      "roles": {
+      "process_step": {
         "edit": {
-          "label": "roles",
+          "label": "process_step",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "name"
         },
         "list": {
-          "label": "roles",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "category": {
-        "edit": {
-          "label": "category",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "category",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "policy": {
-        "edit": {
-          "label": "policy",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "policy",
+          "label": "process_step",
           "searchable": true,
           "sortable": true
         }
@@ -134,43 +95,28 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "user",
+        "process"
+      ],
       "edit": [
         [
           {
-            "name": "title",
-            "size": 6
-          },
-          {
-            "name": "document",
+            "name": "user",
             "size": 6
           }
         ],
         [
           {
-            "name": "thumbnail",
+            "name": "process",
             "size": 6
           },
           {
-            "name": "roles",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "category",
-            "size": 6
-          },
-          {
-            "name": "policy",
+            "name": "process_step",
             "size": 6
           }
         ]
-      ],
-      "list": [
-        "id",
-        "title",
-        "document",
-        "thumbnail"
       ]
     }
   },

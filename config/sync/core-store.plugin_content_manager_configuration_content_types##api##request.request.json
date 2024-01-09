@@ -1,14 +1,14 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::department.department",
+  "key": "plugin_content_manager_configuration_content_types::api::request.request",
   "value": {
-    "uid": "api::department.department",
+    "uid": "api::request.request",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "title",
-      "defaultSortBy": "title",
+      "mainField": "category",
+      "defaultSortBy": "category",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -20,210 +20,9 @@
           "sortable": true
         }
       },
-      "title": {
+      "process": {
         "edit": {
-          "label": "title",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "title",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "users": {
-        "edit": {
-          "label": "users",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "username"
-        },
-        "list": {
-          "label": "users",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "code": {
-        "edit": {
-          "label": "code",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "code",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "representative_name": {
-        "edit": {
-          "label": "representative_name",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "representative_name",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "representative_avatar": {
-        "edit": {
-          "label": "representative_avatar",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "representative_avatar",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "representative_title": {
-        "edit": {
-          "label": "representative_title",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "representative_title",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "representative_word": {
-        "edit": {
-          "label": "representative_word",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "representative_word",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "department_category": {
-        "edit": {
-          "label": "department_category",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "title"
-        },
-        "list": {
-          "label": "department_category",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "slug": {
-        "edit": {
-          "label": "slug",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "slug",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "sort": {
-        "edit": {
-          "label": "sort",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "sort",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "children": {
-        "edit": {
-          "label": "children",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "title"
-        },
-        "list": {
-          "label": "children",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "parent": {
-        "edit": {
-          "label": "parent",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "title"
-        },
-        "list": {
-          "label": "parent",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "announcements": {
-        "edit": {
-          "label": "announcements",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "title"
-        },
-        "list": {
-          "label": "announcements",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "about": {
-        "edit": {
-          "label": "about",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "about",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "processes": {
-        "edit": {
-          "label": "processes",
+          "label": "process",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -231,9 +30,268 @@
           "mainField": "process_name"
         },
         "list": {
-          "label": "processes",
+          "label": "process",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "user": {
+        "edit": {
+          "label": "user",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "user",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "category": {
+        "edit": {
+          "label": "category",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "category",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "type": {
+        "edit": {
+          "label": "type",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "type",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "summary": {
+        "edit": {
+          "label": "summary",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "summary",
           "searchable": false,
           "sortable": false
+        }
+      },
+      "objectives": {
+        "edit": {
+          "label": "objectives",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "objectives",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "draft": {
+        "edit": {
+          "label": "draft",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "draft",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "target_audience": {
+        "edit": {
+          "label": "target_audience",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "target_audience",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "preferred_date": {
+        "edit": {
+          "label": "preferred_date",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "preferred_date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "status": {
+        "edit": {
+          "label": "status",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "status_logs": {
+        "edit": {
+          "label": "status_logs",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "status_logs",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "request_adjustments": {
+        "edit": {
+          "label": "request_adjustments",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "request_adjustments",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "approvals": {
+        "edit": {
+          "label": "approvals",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "approvals",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "request_announcements": {
+        "edit": {
+          "label": "request_announcements",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "request_announcements",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "other_target_audience": {
+        "edit": {
+          "label": "other_target_audience",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "other_target_audience",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "attachements": {
+        "edit": {
+          "label": "attachements",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "attachements",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "process_step": {
+        "edit": {
+          "label": "process_step",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "process_step",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "partners": {
+        "edit": {
+          "label": "partners",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "partners",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "assigned_to": {
+        "edit": {
+          "label": "assigned_to",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "assigned_to",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -268,86 +326,108 @@
     "layouts": {
       "list": [
         "id",
-        "title",
-        "createdAt",
-        "users"
+        "process",
+        "user",
+        "category"
       ],
       "edit": [
         [
           {
-            "name": "title",
+            "name": "process",
             "size": 6
           },
           {
-            "name": "code",
+            "name": "user",
             "size": 6
           }
         ],
         [
           {
-            "name": "about",
+            "name": "category",
+            "size": 6
+          },
+          {
+            "name": "type",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "summary",
             "size": 12
           }
         ],
         [
           {
-            "name": "representative_name",
-            "size": 6
-          },
-          {
-            "name": "representative_avatar",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "representative_title",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "representative_word",
+            "name": "objectives",
             "size": 12
           }
         ],
         [
           {
-            "name": "slug",
-            "size": 6
-          },
+            "name": "draft",
+            "size": 12
+          }
+        ],
+        [
           {
-            "name": "sort",
+            "name": "target_audience",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "partners",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "preferred_date",
             "size": 4
-          }
-        ],
-        [
-          {
-            "name": "users",
-            "size": 6
           },
           {
-            "name": "department_category",
+            "name": "status",
             "size": 6
           }
         ],
         [
           {
-            "name": "children",
+            "name": "status_logs",
             "size": 6
           },
           {
-            "name": "parent",
+            "name": "request_adjustments",
             "size": 6
           }
         ],
         [
           {
-            "name": "announcements",
+            "name": "approvals",
             "size": 6
           },
           {
-            "name": "processes",
+            "name": "request_announcements",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "other_target_audience",
+            "size": 6
+          },
+          {
+            "name": "attachements",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "process_step",
+            "size": 6
+          },
+          {
+            "name": "assigned_to",
             "size": 6
           }
         ]

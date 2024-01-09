@@ -1,7 +1,7 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::tour.tour",
+  "key": "plugin_content_manager_configuration_content_types::api::status-log.status-log",
   "value": {
-    "uid": "api::tour.tour",
+    "uid": "api::status-log.status-log",
     "settings": {
       "bulkable": true,
       "filterable": true,
@@ -20,88 +20,76 @@
           "sortable": true
         }
       },
-      "termsAndConditions": {
+      "request": {
         "edit": {
-          "label": "termsAndConditions",
+          "label": "request",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "category"
         },
         "list": {
-          "label": "termsAndConditions",
-          "searchable": false,
-          "sortable": false
+          "label": "request",
+          "searchable": true,
+          "sortable": true
         }
       },
-      "employeeCodeOfConduct": {
+      "old_status": {
         "edit": {
-          "label": "employeeCodeOfConduct",
+          "label": "old_status",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "employeeCodeOfConduct",
-          "searchable": false,
-          "sortable": false
+          "label": "old_status",
+          "searchable": true,
+          "sortable": true
         }
       },
-      "cyberSecurityAgreement": {
+      "new_status": {
         "edit": {
-          "label": "cyberSecurityAgreement",
+          "label": "new_status",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "cyberSecurityAgreement",
-          "searchable": false,
-          "sortable": false
+          "label": "new_status",
+          "searchable": true,
+          "sortable": true
         }
       },
-      "DiversityandInclusion": {
+      "changed_by_user": {
         "edit": {
-          "label": "DiversityandInclusion",
+          "label": "changed_by_user",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "username"
         },
         "list": {
-          "label": "DiversityandInclusion",
-          "searchable": false,
-          "sortable": false
+          "label": "changed_by_user",
+          "searchable": true,
+          "sortable": true
         }
       },
-      "EthicalAwareness": {
+      "changed_at": {
         "edit": {
-          "label": "EthicalAwareness",
+          "label": "changed_at",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "EthicalAwareness",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "CyberSecurity": {
-        "edit": {
-          "label": "CyberSecurity",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "CyberSecurity",
-          "searchable": false,
-          "sortable": false
+          "label": "changed_at",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -136,38 +124,34 @@
     "layouts": {
       "list": [
         "id",
-        "createdAt",
-        "updatedAt",
-        "termsAndConditions"
+        "request",
+        "old_status",
+        "new_status"
       ],
       "edit": [
         [
           {
-            "name": "termsAndConditions",
+            "name": "request",
             "size": 6
           },
           {
-            "name": "employeeCodeOfConduct",
+            "name": "old_status",
             "size": 6
           }
         ],
         [
           {
-            "name": "cyberSecurityAgreement",
+            "name": "new_status",
             "size": 6
           },
           {
-            "name": "DiversityandInclusion",
+            "name": "changed_by_user",
             "size": 6
           }
         ],
         [
           {
-            "name": "EthicalAwareness",
-            "size": 6
-          },
-          {
-            "name": "CyberSecurity",
+            "name": "changed_at",
             "size": 6
           }
         ]

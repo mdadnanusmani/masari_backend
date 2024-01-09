@@ -433,6 +433,110 @@
           "sortable": true
         }
       },
+      "process_role": {
+        "edit": {
+          "label": "process_role",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "process_role",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "requests": {
+        "edit": {
+          "label": "requests",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "category"
+        },
+        "list": {
+          "label": "requests",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "status_logs": {
+        "edit": {
+          "label": "status_logs",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "status_logs",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "request_adjustments": {
+        "edit": {
+          "label": "request_adjustments",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "request_adjustments",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "approvals": {
+        "edit": {
+          "label": "approvals",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "approvals",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "cyber_security": {
+        "edit": {
+          "label": "cyber_security",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "cyber_security",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "request_assigned": {
+        "edit": {
+          "label": "request_assigned",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "category"
+        },
+        "list": {
+          "label": "request_assigned",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -598,6 +702,42 @@
           {
             "name": "Ethical_Awareness",
             "size": 4
+          }
+        ],
+        [
+          {
+            "name": "process_role",
+            "size": 6
+          },
+          {
+            "name": "requests",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "status_logs",
+            "size": 6
+          },
+          {
+            "name": "request_adjustments",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "approvals",
+            "size": 6
+          },
+          {
+            "name": "cyber_security",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "request_assigned",
+            "size": 6
           }
         ]
       ]

@@ -169,6 +169,60 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::approval.approval",
+      "properties": {
+        "fields": [
+          "request",
+          "approved_by_user",
+          "approval_status",
+          "comments",
+          "approved_at"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::approval.approval",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::approval.approval",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::approval.approval",
+      "properties": {
+        "fields": [
+          "request",
+          "approved_by_user",
+          "approval_status",
+          "comments",
+          "approved_at"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::approval.approval",
+      "properties": {
+        "fields": [
+          "request",
+          "approved_by_user",
+          "approval_status",
+          "comments",
+          "approved_at"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::audit-request.audit-request",
       "properties": {
         "fields": [
@@ -734,7 +788,8 @@
           "children",
           "parent",
           "announcements",
-          "about"
+          "about",
+          "processes"
         ],
         "locales": [
           "en",
@@ -772,7 +827,8 @@
           "children",
           "parent",
           "announcements",
-          "about"
+          "about",
+          "processes"
         ],
         "locales": [
           "en",
@@ -799,7 +855,8 @@
           "children",
           "parent",
           "announcements",
-          "about"
+          "about",
+          "processes"
         ],
         "locales": [
           "en",
@@ -1914,6 +1971,408 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::process-role.process-role",
+      "properties": {
+        "fields": [
+          "user",
+          "process",
+          "process_step"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::process-role.process-role",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::process-role.process-role",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::process-role.process-role",
+      "properties": {
+        "fields": [
+          "user",
+          "process",
+          "process_step"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::process-role.process-role",
+      "properties": {
+        "fields": [
+          "user",
+          "process",
+          "process_step"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::process-step.process-step",
+      "properties": {
+        "fields": [
+          "name",
+          "process",
+          "process_role"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::process-step.process-step",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::process-step.process-step",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::process-step.process-step",
+      "properties": {
+        "fields": [
+          "name",
+          "process",
+          "process_role"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::process-step.process-step",
+      "properties": {
+        "fields": [
+          "name",
+          "process",
+          "process_role"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::process.process",
+      "properties": {
+        "fields": [
+          "process_name",
+          "description",
+          "process_role",
+          "requests",
+          "department",
+          "process_steps"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::process.process",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::process.process",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::process.process",
+      "properties": {
+        "fields": [
+          "process_name",
+          "description",
+          "process_role",
+          "requests",
+          "department",
+          "process_steps"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::process.process",
+      "properties": {
+        "fields": [
+          "process_name",
+          "description",
+          "process_role",
+          "requests",
+          "department",
+          "process_steps"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::request-adjustment.request-adjustment",
+      "properties": {
+        "fields": [
+          "request",
+          "adjusted_by_user",
+          "adjustment_details",
+          "adjusted_at"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::request-adjustment.request-adjustment",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::request-adjustment.request-adjustment",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::request-adjustment.request-adjustment",
+      "properties": {
+        "fields": [
+          "request",
+          "adjusted_by_user",
+          "adjustment_details",
+          "adjusted_at"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::request-adjustment.request-adjustment",
+      "properties": {
+        "fields": [
+          "request",
+          "adjusted_by_user",
+          "adjustment_details",
+          "adjusted_at"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::request-announcement.request-announcement",
+      "properties": {
+        "fields": [
+          "request",
+          "announcement_details",
+          "announced_at"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::request-announcement.request-announcement",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::request-announcement.request-announcement",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::request-announcement.request-announcement",
+      "properties": {
+        "fields": [
+          "request",
+          "announcement_details",
+          "announced_at"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::request-announcement.request-announcement",
+      "properties": {
+        "fields": [
+          "request",
+          "announcement_details",
+          "announced_at"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::request.request",
+      "properties": {
+        "fields": [
+          "process",
+          "user",
+          "category",
+          "type",
+          "summary",
+          "objectives",
+          "draft",
+          "target_audience",
+          "preferred_date",
+          "status",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "request_announcements",
+          "other_target_audience",
+          "attachements",
+          "process_step",
+          "partners",
+          "assigned_to"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::request.request",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::request.request",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::request.request",
+      "properties": {
+        "fields": [
+          "process",
+          "user",
+          "category",
+          "type",
+          "summary",
+          "objectives",
+          "draft",
+          "target_audience",
+          "preferred_date",
+          "status",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "request_announcements",
+          "other_target_audience",
+          "attachements",
+          "process_step",
+          "partners",
+          "assigned_to"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::request.request",
+      "properties": {
+        "fields": [
+          "process",
+          "user",
+          "category",
+          "type",
+          "summary",
+          "objectives",
+          "draft",
+          "target_audience",
+          "preferred_date",
+          "status",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "request_announcements",
+          "other_target_audience",
+          "attachements",
+          "process_step",
+          "partners",
+          "assigned_to"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::status-log.status-log",
+      "properties": {
+        "fields": [
+          "request",
+          "old_status",
+          "new_status",
+          "changed_by_user",
+          "changed_at"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::status-log.status-log",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::status-log.status-log",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::status-log.status-log",
+      "properties": {
+        "fields": [
+          "request",
+          "old_status",
+          "new_status",
+          "changed_by_user",
+          "changed_at"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::status-log.status-log",
+      "properties": {
+        "fields": [
+          "request",
+          "old_status",
+          "new_status",
+          "changed_by_user",
+          "changed_at"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::survey-application.survey-application",
       "properties": {
         "fields": [
@@ -2048,7 +2507,8 @@
           "employeeCodeOfConduct",
           "cyberSecurityAgreement",
           "DiversityandInclusion",
-          "EthicalAwareness"
+          "EthicalAwareness",
+          "CyberSecurity"
         ]
       },
       "conditions": []
@@ -2074,7 +2534,8 @@
           "employeeCodeOfConduct",
           "cyberSecurityAgreement",
           "DiversityandInclusion",
-          "EthicalAwareness"
+          "EthicalAwareness",
+          "CyberSecurity"
         ]
       },
       "conditions": []
@@ -2088,7 +2549,8 @@
           "employeeCodeOfConduct",
           "cyberSecurityAgreement",
           "DiversityandInclusion",
-          "EthicalAwareness"
+          "EthicalAwareness",
+          "CyberSecurity"
         ]
       },
       "conditions": []
@@ -2388,7 +2850,14 @@
           "notifications",
           "comment",
           "Hr_Survey",
-          "Ethical_Awareness"
+          "Ethical_Awareness",
+          "process_role",
+          "requests",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "cyber_security",
+          "request_assigned"
         ]
       },
       "conditions": []
@@ -2432,7 +2901,14 @@
           "notifications",
           "comment",
           "Hr_Survey",
-          "Ethical_Awareness"
+          "Ethical_Awareness",
+          "process_role",
+          "requests",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "cyber_security",
+          "request_assigned"
         ]
       },
       "conditions": []
@@ -2470,7 +2946,14 @@
           "notifications",
           "comment",
           "Hr_Survey",
-          "Ethical_Awareness"
+          "Ethical_Awareness",
+          "process_role",
+          "requests",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "cyber_security",
+          "request_assigned"
         ]
       },
       "conditions": []

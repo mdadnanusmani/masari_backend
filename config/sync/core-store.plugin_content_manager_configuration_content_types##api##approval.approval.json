@@ -1,7 +1,7 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::tour.tour",
+  "key": "plugin_content_manager_configuration_content_types::api::approval.approval",
   "value": {
-    "uid": "api::tour.tour",
+    "uid": "api::approval.approval",
     "settings": {
       "bulkable": true,
       "filterable": true,
@@ -20,88 +20,76 @@
           "sortable": true
         }
       },
-      "termsAndConditions": {
+      "request": {
         "edit": {
-          "label": "termsAndConditions",
+          "label": "request",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "category"
+        },
+        "list": {
+          "label": "request",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "approved_by_user": {
+        "edit": {
+          "label": "approved_by_user",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "approved_by_user",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "approval_status": {
+        "edit": {
+          "label": "approval_status",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "termsAndConditions",
+          "label": "approval_status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "comments": {
+        "edit": {
+          "label": "comments",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "comments",
           "searchable": false,
           "sortable": false
         }
       },
-      "employeeCodeOfConduct": {
+      "approved_at": {
         "edit": {
-          "label": "employeeCodeOfConduct",
+          "label": "approved_at",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "employeeCodeOfConduct",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "cyberSecurityAgreement": {
-        "edit": {
-          "label": "cyberSecurityAgreement",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "cyberSecurityAgreement",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "DiversityandInclusion": {
-        "edit": {
-          "label": "DiversityandInclusion",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "DiversityandInclusion",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "EthicalAwareness": {
-        "edit": {
-          "label": "EthicalAwareness",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "EthicalAwareness",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "CyberSecurity": {
-        "edit": {
-          "label": "CyberSecurity",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "CyberSecurity",
-          "searchable": false,
-          "sortable": false
+          "label": "approved_at",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -136,38 +124,36 @@
     "layouts": {
       "list": [
         "id",
-        "createdAt",
-        "updatedAt",
-        "termsAndConditions"
+        "request",
+        "approved_by_user",
+        "approval_status"
       ],
       "edit": [
         [
           {
-            "name": "termsAndConditions",
+            "name": "request",
             "size": 6
           },
           {
-            "name": "employeeCodeOfConduct",
+            "name": "approved_by_user",
             "size": 6
           }
         ],
         [
           {
-            "name": "cyberSecurityAgreement",
-            "size": 6
-          },
-          {
-            "name": "DiversityandInclusion",
+            "name": "approval_status",
             "size": 6
           }
         ],
         [
           {
-            "name": "EthicalAwareness",
-            "size": 6
-          },
+            "name": "comments",
+            "size": 12
+          }
+        ],
+        [
           {
-            "name": "CyberSecurity",
+            "name": "approved_at",
             "size": 6
           }
         ]

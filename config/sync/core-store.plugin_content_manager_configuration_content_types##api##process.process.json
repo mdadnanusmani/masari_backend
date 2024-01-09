@@ -1,14 +1,14 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::tour.tour",
+  "key": "plugin_content_manager_configuration_content_types::api::process.process",
   "value": {
-    "uid": "api::tour.tour",
+    "uid": "api::process.process",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "id",
-      "defaultSortBy": "id",
+      "mainField": "process_name",
+      "defaultSortBy": "process_name",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -20,86 +20,90 @@
           "sortable": true
         }
       },
-      "termsAndConditions": {
+      "process_name": {
         "edit": {
-          "label": "termsAndConditions",
+          "label": "process_name",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "termsAndConditions",
+          "label": "process_name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "description",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "description",
           "searchable": false,
           "sortable": false
         }
       },
-      "employeeCodeOfConduct": {
+      "process_role": {
         "edit": {
-          "label": "employeeCodeOfConduct",
+          "label": "process_role",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "id"
         },
         "list": {
-          "label": "employeeCodeOfConduct",
+          "label": "process_role",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "requests": {
+        "edit": {
+          "label": "requests",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "category"
+        },
+        "list": {
+          "label": "requests",
           "searchable": false,
           "sortable": false
         }
       },
-      "cyberSecurityAgreement": {
+      "department": {
         "edit": {
-          "label": "cyberSecurityAgreement",
+          "label": "department",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "title"
         },
         "list": {
-          "label": "cyberSecurityAgreement",
-          "searchable": false,
-          "sortable": false
+          "label": "department",
+          "searchable": true,
+          "sortable": true
         }
       },
-      "DiversityandInclusion": {
+      "process_steps": {
         "edit": {
-          "label": "DiversityandInclusion",
+          "label": "process_steps",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "name"
         },
         "list": {
-          "label": "DiversityandInclusion",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "EthicalAwareness": {
-        "edit": {
-          "label": "EthicalAwareness",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "EthicalAwareness",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "CyberSecurity": {
-        "edit": {
-          "label": "CyberSecurity",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "CyberSecurity",
+          "label": "process_steps",
           "searchable": false,
           "sortable": false
         }
@@ -136,38 +140,40 @@
     "layouts": {
       "list": [
         "id",
+        "process_name",
         "createdAt",
-        "updatedAt",
-        "termsAndConditions"
+        "updatedAt"
       ],
       "edit": [
         [
           {
-            "name": "termsAndConditions",
-            "size": 6
-          },
-          {
-            "name": "employeeCodeOfConduct",
+            "name": "process_name",
             "size": 6
           }
         ],
         [
           {
-            "name": "cyberSecurityAgreement",
+            "name": "description",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "process_role",
             "size": 6
           },
           {
-            "name": "DiversityandInclusion",
+            "name": "requests",
             "size": 6
           }
         ],
         [
           {
-            "name": "EthicalAwareness",
+            "name": "department",
             "size": 6
           },
           {
-            "name": "CyberSecurity",
+            "name": "process_steps",
             "size": 6
           }
         ]

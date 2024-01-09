@@ -40,6 +40,21 @@
       "action": "api::announcement.announcement.update"
     },
     {
+      "action": "api::approval.approval.create"
+    },
+    {
+      "action": "api::approval.approval.delete"
+    },
+    {
+      "action": "api::approval.approval.find"
+    },
+    {
+      "action": "api::approval.approval.findOne"
+    },
+    {
+      "action": "api::approval.approval.update"
+    },
+    {
       "action": "api::audit-request.audit-request.create"
     },
     {
@@ -463,7 +478,112 @@
       "action": "api::policy.policy.update"
     },
     {
+      "action": "api::process-role.process-role.create"
+    },
+    {
+      "action": "api::process-role.process-role.delete"
+    },
+    {
+      "action": "api::process-role.process-role.find"
+    },
+    {
+      "action": "api::process-role.process-role.findOne"
+    },
+    {
+      "action": "api::process-role.process-role.update"
+    },
+    {
+      "action": "api::process-step.process-step.create"
+    },
+    {
+      "action": "api::process-step.process-step.delete"
+    },
+    {
+      "action": "api::process-step.process-step.find"
+    },
+    {
+      "action": "api::process-step.process-step.findOne"
+    },
+    {
+      "action": "api::process-step.process-step.update"
+    },
+    {
+      "action": "api::process.process.create"
+    },
+    {
+      "action": "api::process.process.delete"
+    },
+    {
+      "action": "api::process.process.find"
+    },
+    {
+      "action": "api::process.process.findOne"
+    },
+    {
+      "action": "api::process.process.update"
+    },
+    {
+      "action": "api::request-adjustment.request-adjustment.create"
+    },
+    {
+      "action": "api::request-adjustment.request-adjustment.delete"
+    },
+    {
+      "action": "api::request-adjustment.request-adjustment.find"
+    },
+    {
+      "action": "api::request-adjustment.request-adjustment.findOne"
+    },
+    {
+      "action": "api::request-adjustment.request-adjustment.update"
+    },
+    {
+      "action": "api::request-announcement.request-announcement.create"
+    },
+    {
+      "action": "api::request-announcement.request-announcement.delete"
+    },
+    {
+      "action": "api::request-announcement.request-announcement.find"
+    },
+    {
+      "action": "api::request-announcement.request-announcement.findOne"
+    },
+    {
+      "action": "api::request-announcement.request-announcement.update"
+    },
+    {
+      "action": "api::request.request.create"
+    },
+    {
+      "action": "api::request.request.delete"
+    },
+    {
+      "action": "api::request.request.find"
+    },
+    {
+      "action": "api::request.request.findOne"
+    },
+    {
+      "action": "api::request.request.update"
+    },
+    {
       "action": "api::search.search.getSearchResults"
+    },
+    {
+      "action": "api::status-log.status-log.create"
+    },
+    {
+      "action": "api::status-log.status-log.delete"
+    },
+    {
+      "action": "api::status-log.status-log.find"
+    },
+    {
+      "action": "api::status-log.status-log.findOne"
+    },
+    {
+      "action": "api::status-log.status-log.update"
     },
     {
       "action": "api::survey-application.survey-application.create"

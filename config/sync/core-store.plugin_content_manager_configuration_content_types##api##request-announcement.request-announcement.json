@@ -1,15 +1,15 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::document.document",
+  "key": "plugin_content_manager_configuration_content_types::api::request-announcement.request-announcement",
   "value": {
-    "uid": "api::document.document",
+    "uid": "api::request-announcement.request-announcement",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "title",
+      "mainField": "id",
       "defaultSortBy": "id",
-      "defaultSortOrder": "DESC"
+      "defaultSortOrder": "ASC"
     },
     "metadatas": {
       "id": {
@@ -20,86 +20,45 @@
           "sortable": true
         }
       },
-      "title": {
+      "request": {
         "edit": {
-          "label": "title",
+          "label": "request",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "category"
         },
         "list": {
-          "label": "title",
+          "label": "request",
           "searchable": true,
           "sortable": true
         }
       },
-      "document": {
+      "announcement_details": {
         "edit": {
-          "label": "document",
+          "label": "announcement_details",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "document",
+          "label": "announcement_details",
           "searchable": false,
           "sortable": false
         }
       },
-      "thumbnail": {
+      "announced_at": {
         "edit": {
-          "label": "thumbnail",
+          "label": "announced_at",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "thumbnail",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "roles": {
-        "edit": {
-          "label": "roles",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "roles",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "category": {
-        "edit": {
-          "label": "category",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "category",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "policy": {
-        "edit": {
-          "label": "policy",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "policy",
+          "label": "announced_at",
           "searchable": true,
           "sortable": true
         }
@@ -134,43 +93,31 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "request",
+        "announced_at",
+        "createdAt"
+      ],
       "edit": [
         [
           {
-            "name": "title",
-            "size": 6
-          },
-          {
-            "name": "document",
+            "name": "request",
             "size": 6
           }
         ],
         [
           {
-            "name": "thumbnail",
-            "size": 6
-          },
-          {
-            "name": "roles",
-            "size": 6
+            "name": "announcement_details",
+            "size": 12
           }
         ],
         [
           {
-            "name": "category",
-            "size": 6
-          },
-          {
-            "name": "policy",
+            "name": "announced_at",
             "size": 6
           }
         ]
-      ],
-      "list": [
-        "id",
-        "title",
-        "document",
-        "thumbnail"
       ]
     }
   },
