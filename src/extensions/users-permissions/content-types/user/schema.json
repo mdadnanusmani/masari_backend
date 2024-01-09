@@ -140,6 +140,46 @@
     "Ethical_Awareness": {
       "type": "boolean",
       "default": false
+    },
+    "process_role": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::process-role.process-role",
+      "mappedBy": "user"
+    },
+    "requests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::request.request",
+      "mappedBy": "user"
+    },
+    "status_logs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::status-log.status-log",
+      "mappedBy": "changed_by_user"
+    },
+    "request_adjustments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::request-adjustment.request-adjustment",
+      "mappedBy": "adjusted_by_user"
+    },
+    "approvals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::approval.approval",
+      "mappedBy": "approved_by_user"
+    },
+    "cyber_security": {
+      "type": "boolean",
+      "default": false
+    },
+    "request_assigned": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::request.request",
+      "mappedBy": "assigned_to"
     }
   }
 }

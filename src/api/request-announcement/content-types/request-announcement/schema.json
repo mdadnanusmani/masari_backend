@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "request_announcements",
+  "info": {
+    "singularName": "request-announcement",
+    "pluralName": "request-announcements",
+    "displayName": "RequestAnnouncement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "request": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::request.request",
+      "inversedBy": "request_announcements"
+    },
+    "announcement_details": {
+      "type": "richtext"
+    },
+    "announced_at": {
+      "type": "datetime"
+    }
+  }
+}

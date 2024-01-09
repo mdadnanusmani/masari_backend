@@ -127,6 +127,12 @@
         }
       },
       "type": "text"
+    },
+    "processes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::process.process",
+      "mappedBy": "department"
     }
   }
 }

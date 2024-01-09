@@ -1,0 +1,115 @@
+{
+  "kind": "collectionType",
+  "collectionName": "requests",
+  "info": {
+    "singularName": "request",
+    "pluralName": "requests",
+    "displayName": "Request",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "process": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::process.process",
+      "inversedBy": "requests"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "requests"
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "summary": {
+      "type": "richtext"
+    },
+    "objectives": {
+      "type": "richtext"
+    },
+    "draft": {
+      "type": "richtext"
+    },
+    "target_audience": {
+      "type": "string"
+    },
+    "preferred_date": {
+      "type": "date"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "New",
+        "Raised",
+        "Under Review",
+        "Adjustments Needed",
+        "Approved",
+        "Completed",
+        "Closed"
+      ]
+    },
+    "status_logs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::status-log.status-log",
+      "mappedBy": "request"
+    },
+    "request_adjustments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::request-adjustment.request-adjustment",
+      "mappedBy": "request"
+    },
+    "approvals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::approval.approval",
+      "mappedBy": "request"
+    },
+    "request_announcements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::request-announcement.request-announcement",
+      "mappedBy": "request"
+    },
+    "other_target_audience": {
+      "type": "string"
+    },
+    "attachements": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "process_step": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::process-step.process-step"
+    },
+    "partners": {
+      "type": "text"
+    },
+    "assigned_to": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "request_assigned"
+    }
+  }
+}

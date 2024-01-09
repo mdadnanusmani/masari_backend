@@ -56,7 +56,7 @@ module.exports = [
       method: ['GET'],
       // credentials: true,
       // origin: ['*']
-      origin: ['http://localhost:8000', 'http://localhost:1337', 'http://localhost:3000', 'https://stage-api-masari.sbf.gov.sa', 'https://stage-masari.sbf.gov.sa', 'https://masari.sbf.gov.sa', "https://backend.mstage.pas.sa", 'https://backend.masari.sbf.gov.sa', 'https://backend-masari.sbf.gov.sa', 'https://prod-masari.sbf.gov.sa']
+      origin: ['https://backendmasari-riyadhalmasar.msappproxy.net','http://localhost:8000', 'http://localhost:1337', 'http://localhost:3000', 'https://stage-api-masari.sbf.gov.sa', 'https://stage-masari.sbf.gov.sa', 'https://masari.sbf.gov.sa', "https://backend.mstage.pas.sa", 'https://backend.masari.sbf.gov.sa', 'https://backend-masari.sbf.gov.sa', 'https://prod-masari.sbf.gov.sa']
     }
   },
   {

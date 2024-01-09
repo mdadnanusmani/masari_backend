@@ -45,6 +45,14 @@
       ]
     },
     "EthicalAwareness": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "CyberSecurity": {
       "allowedTypes": [
         "files"
       ],

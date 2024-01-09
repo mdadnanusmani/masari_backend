@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "request_adjustments",
+  "info": {
+    "singularName": "request-adjustment",
+    "pluralName": "request-adjustments",
+    "displayName": "RequestAdjustment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "request": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::request.request",
+      "inversedBy": "request_adjustments"
+    },
+    "adjusted_by_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "request_adjustments"
+    },
+    "adjustment_details": {
+      "type": "richtext"
+    },
+    "adjusted_at": {
+      "type": "datetime"
+    }
+  }
+}
