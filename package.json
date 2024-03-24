@@ -30,6 +30,7 @@
     "@strapi/plugin-users-permissions": "^4.10.7",
     "@strapi/provider-email-nodemailer": "^4.6.2",
     "@strapi/strapi": "^4.10.7",
+    "axios": "^1.6.7",
     "better-sqlite3": "7.6.2",
     "meilisearch": "^0.31.1",
     "mime-types": "^2.1.35",

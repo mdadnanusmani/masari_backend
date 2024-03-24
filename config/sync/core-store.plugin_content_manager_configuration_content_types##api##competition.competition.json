@@ -1,0 +1,240 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::competition.competition",
+  "value": {
+    "uid": "api::competition.competition",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "ProjectName",
+      "defaultSortBy": "ProjectName",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "ProjectName": {
+        "edit": {
+          "label": "ProjectName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ProjectName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "BidOpeningDate": {
+        "edit": {
+          "label": "BidOpeningDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "BidOpeningDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "QueriesDeadline": {
+        "edit": {
+          "label": "QueriesDeadline",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "QueriesDeadline",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "BidClosingDate": {
+        "edit": {
+          "label": "BidClosingDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "BidClosingDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "ContactEmail": {
+        "edit": {
+          "label": "ContactEmail",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ContactEmail",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "ProjectBrief": {
+        "edit": {
+          "label": "ProjectBrief",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ProjectBrief",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "Status": {
+        "edit": {
+          "label": "Status",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "Location": {
+        "edit": {
+          "label": "Location",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Location",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "NoteToSupplier": {
+        "edit": {
+          "label": "NoteToSupplier",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "NoteToSupplier",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "ProjectName",
+        "BidOpeningDate",
+        "QueriesDeadline"
+      ],
+      "edit": [
+        [
+          {
+            "name": "ProjectName",
+            "size": 6
+          },
+          {
+            "name": "BidOpeningDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "QueriesDeadline",
+            "size": 4
+          },
+          {
+            "name": "BidClosingDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "ContactEmail",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "ProjectBrief",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "Status",
+            "size": 4
+          },
+          {
+            "name": "Location",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "NoteToSupplier",
+            "size": 12
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

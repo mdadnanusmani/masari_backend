@@ -180,6 +180,18 @@
       "relation": "oneToOne",
       "target": "api::request.request",
       "mappedBy": "assigned_to"
+    },
+    "legal_advice_requests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::legal-advice-request.legal-advice-request",
+      "mappedBy": "users"
+    },
+    "legal_advice_request_assigned": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::legal-advice-request.legal-advice-request",
+      "mappedBy": "assigned_to"
     }
   }
 }

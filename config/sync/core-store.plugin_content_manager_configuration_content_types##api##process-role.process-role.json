@@ -35,9 +35,9 @@
           "sortable": false
         }
       },
-      "process": {
+      "processes": {
         "edit": {
-          "label": "process",
+          "label": "processes",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -45,9 +45,9 @@
           "mainField": "process_name"
         },
         "list": {
-          "label": "process",
-          "searchable": false,
-          "sortable": false
+          "label": "processes",
+          "searchable": true,
+          "sortable": true
         }
       },
       "process_step": {
@@ -61,6 +61,20 @@
         },
         "list": {
           "label": "process_step",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
           "searchable": true,
           "sortable": true
         }
@@ -95,13 +109,12 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "user",
-        "process"
-      ],
       "edit": [
         [
+          {
+            "name": "name",
+            "size": 6
+          },
           {
             "name": "user",
             "size": 6
@@ -109,14 +122,20 @@
         ],
         [
           {
-            "name": "process",
+            "name": "process_step",
             "size": 6
           },
           {
-            "name": "process_step",
+            "name": "processes",
             "size": 6
           }
         ]
+      ],
+      "list": [
+        "id",
+        "user",
+        "processes",
+        "name"
       ]
     }
   },

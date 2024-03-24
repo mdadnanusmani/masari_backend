@@ -18,17 +18,20 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "process_role"
     },
-    "process": {
+    "processes": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::process.process",
-      "mappedBy": "process_role"
+      "inversedBy": "process_role"
     },
     "process_step": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::process-step.process-step",
       "mappedBy": "process_role"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }

@@ -1,6 +1,8 @@
 
 
-module.exports = ({ env }) => ({
+module.exports = ({ env }) => {
+console.log('SMTP Host:', env('SMTP_HOST', 'smtp.office365.com'));
+	return {
     'import-export-entries': {
         enabled: true,
     },
@@ -55,15 +57,16 @@ module.exports = ({ env }) => ({
             provider: 'nodemailer',
             providerOptions: {
                 host: env('SMTP_HOST', 'smtp.office365.com'),
-                port: env('SMTP_PORT', 25),
+                port: env('SMTP_PORT', 587),
                 auth: {
-                    user: env('SMTP_USERNAME', ''),
-                    pass: env('SMTP_PASSWORD', ''),
+                    user: env('SMTP_USERNAME', 'info@sbf.gov.sa'),
+                    pass: env('SMTP_PASSWORD', 'Mm@w795$'),
                 },
+		    secure:false,
             },
             settings: {
-                defaultFrom: '',
-                defaultReplyTo: '',
+		      defaultFrom: 'info@sbf.gov.sa',
+  defaultReplyTo: 'info@sbf.gov.sa',
             },
         },
     },
@@ -112,4 +115,4 @@ module.exports = ({ env }) => ({
 
 
     },
-});
+}};

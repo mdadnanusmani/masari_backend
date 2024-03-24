@@ -134,6 +134,20 @@
           "sortable": false
         }
       },
+      "documents": {
+        "edit": {
+          "label": "documents",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "documents",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -210,6 +224,12 @@
           },
           {
             "name": "comments",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "documents",
             "size": 6
           }
         ]

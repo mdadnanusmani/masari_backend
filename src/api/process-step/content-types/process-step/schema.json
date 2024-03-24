@@ -4,7 +4,8 @@
   "info": {
     "singularName": "process-step",
     "pluralName": "process-steps",
-    "displayName": "ProcessStep"
+    "displayName": "ProcessStep",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,9 +23,42 @@
     },
     "process_role": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::process-role.process-role",
       "inversedBy": "process_step"
+    },
+    "stepType": {
+      "type": "string"
+    },
+    "yes": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::process-step.process-step"
+    },
+    "no": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::process-step.process-step"
+    },
+    "process_step_notifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::process-step-notification.process-step-notification",
+      "mappedBy": "process_step"
+    },
+    "approval_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "statusName": {
+      "type": "string"
+    },
+    "read_fields": {
+      "type": "json"
+    },
+    "write_fields": {
+      "type": "json"
     }
   }
 }

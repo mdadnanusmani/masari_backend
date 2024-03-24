@@ -104,6 +104,20 @@
           "sortable": true
         }
       },
+      "attachments": {
+        "edit": {
+          "label": "attachments",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "attachments",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -134,6 +148,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "title",
+        "media",
+        "createdAt"
+      ],
       "edit": [
         [
           {
@@ -166,13 +186,13 @@
             "name": "description",
             "size": 6
           }
+        ],
+        [
+          {
+            "name": "attachments",
+            "size": 6
+          }
         ]
-      ],
-      "list": [
-        "id",
-        "title",
-        "media",
-        "createdAt"
       ]
     }
   },

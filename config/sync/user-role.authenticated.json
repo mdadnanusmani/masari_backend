@@ -355,6 +355,21 @@
       "action": "api::image.image.update"
     },
     {
+      "action": "api::legal-advice-request.legal-advice-request.create"
+    },
+    {
+      "action": "api::legal-advice-request.legal-advice-request.delete"
+    },
+    {
+      "action": "api::legal-advice-request.legal-advice-request.find"
+    },
+    {
+      "action": "api::legal-advice-request.legal-advice-request.findOne"
+    },
+    {
+      "action": "api::legal-advice-request.legal-advice-request.update"
+    },
+    {
       "action": "api::like.like.create"
     },
     {
@@ -472,6 +487,9 @@
       "action": "api::policy.policy.update"
     },
     {
+      "action": "api::process-mail.process-mail.sendEmail"
+    },
+    {
       "action": "api::process-role.process-role.create"
     },
     {
@@ -485,6 +503,33 @@
     },
     {
       "action": "api::process-role.process-role.update"
+    },
+    {
+      "action": "api::process-step-notification.process-step-notification.create"
+    },
+    {
+      "action": "api::process-step-notification.process-step-notification.delete"
+    },
+    {
+      "action": "api::process-step-notification.process-step-notification.find"
+    },
+    {
+      "action": "api::process-step-notification.process-step-notification.findOne"
+    },
+    {
+      "action": "api::process-step-notification.process-step-notification.update"
+    },
+    {
+      "action": "api::process-step.process-step.create"
+    },
+    {
+      "action": "api::process-step.process-step.find"
+    },
+    {
+      "action": "api::process-step.process-step.findOne"
+    },
+    {
+      "action": "api::process-step.process-step.update"
     },
     {
       "action": "api::process.process.create"
@@ -548,6 +593,15 @@
     },
     {
       "action": "api::search.search.getSearchResults"
+    },
+    {
+      "action": "api::session.session.delete"
+    },
+    {
+      "action": "api::session.session.find"
+    },
+    {
+      "action": "api::session.session.update"
     },
     {
       "action": "api::status-log.status-log.create"

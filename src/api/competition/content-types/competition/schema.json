@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "competitions",
+  "info": {
+    "singularName": "competition",
+    "pluralName": "competitions",
+    "displayName": "competition"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ProjectName": {
+      "type": "string"
+    },
+    "BidOpeningDate": {
+      "type": "date"
+    },
+    "QueriesDeadline": {
+      "type": "date"
+    },
+    "BidClosingDate": {
+      "type": "date"
+    },
+    "ContactEmail": {
+      "type": "richtext"
+    },
+    "ProjectBrief": {
+      "type": "richtext"
+    },
+    "Status": {
+      "type": "boolean"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "NoteToSupplier": {
+      "type": "richtext"
+    }
+  }
+}
