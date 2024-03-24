@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "process_step_notifications",
+  "info": {
+    "singularName": "process-step-notification",
+    "pluralName": "process-step-notifications",
+    "displayName": "ProcessStepNotification",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "custom_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "process_step": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::process-step.process-step",
+      "inversedBy": "process_step_notifications"
+    },
+    "notify_before_creation": {
+      "type": "boolean"
+    },
+    "notify_after_creation": {
+      "type": "boolean"
+    },
+    "notify_requester": {
+      "type": "boolean"
+    },
+    "notify_process_step_process_role": {
+      "type": "boolean"
+    },
+    "notify_my_custom_user": {
+      "type": "boolean"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "template": {
+      "type": "text"
+    }
+  }
+}

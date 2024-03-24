@@ -22,6 +22,12 @@
     },
     "announced_at": {
       "type": "datetime"
+    },
+    "legal_advice_request": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::legal-advice-request.legal-advice-request",
+      "inversedBy": "request_announcements"
     }
   }
 }

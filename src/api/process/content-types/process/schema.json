@@ -19,12 +19,6 @@
     "description": {
       "type": "richtext"
     },
-    "process_role": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::process-role.process-role",
-      "inversedBy": "process"
-    },
     "requests": {
       "type": "relation",
       "relation": "oneToMany",
@@ -42,6 +36,24 @@
       "relation": "oneToMany",
       "target": "api::process-step.process-step",
       "mappedBy": "process"
+    },
+    "fields": {
+      "type": "json"
+    },
+    "legal_advice_requests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::legal-advice-request.legal-advice-request",
+      "mappedBy": "process"
+    },
+    "process_role": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::process-role.process-role",
+      "mappedBy": "processes"
+    },
+    "complete_field": {
+      "type": "json"
     }
   }
 }

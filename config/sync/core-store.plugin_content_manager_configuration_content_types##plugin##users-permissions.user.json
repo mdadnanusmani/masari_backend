@@ -537,6 +537,36 @@
           "sortable": true
         }
       },
+      "legal_advice_requests": {
+        "edit": {
+          "label": "legal_advice_requests",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "requestType"
+        },
+        "list": {
+          "label": "legal_advice_requests",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "legal_advice_request_assigned": {
+        "edit": {
+          "label": "legal_advice_request_assigned",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "requestType"
+        },
+        "list": {
+          "label": "legal_advice_request_assigned",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -737,6 +767,16 @@
         [
           {
             "name": "request_assigned",
+            "size": 6
+          },
+          {
+            "name": "legal_advice_requests",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "legal_advice_request_assigned",
             "size": 6
           }
         ]

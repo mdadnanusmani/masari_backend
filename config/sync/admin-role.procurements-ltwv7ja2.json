@@ -1,0 +1,73 @@
+{
+  "name": "Procurements",
+  "code": "procurements-ltwv7ja2",
+  "description": "Created March 18th, 2024",
+  "permissions": [
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::competition.competition",
+      "properties": {
+        "fields": [
+          "ProjectName",
+          "BidOpeningDate",
+          "QueriesDeadline",
+          "BidClosingDate",
+          "ContactEmail",
+          "ProjectBrief",
+          "Status",
+          "Location",
+          "NoteToSupplier"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::competition.competition",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::competition.competition",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::competition.competition",
+      "properties": {
+        "fields": [
+          "ProjectName",
+          "BidOpeningDate",
+          "QueriesDeadline",
+          "BidClosingDate",
+          "ContactEmail",
+          "ProjectBrief",
+          "Status",
+          "Location",
+          "NoteToSupplier"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::competition.competition",
+      "properties": {
+        "fields": [
+          "ProjectName",
+          "BidOpeningDate",
+          "QueriesDeadline",
+          "BidClosingDate",
+          "ContactEmail",
+          "ProjectBrief",
+          "Status",
+          "Location",
+          "NoteToSupplier"
+        ]
+      },
+      "conditions": []
+    }
+  ]
+}

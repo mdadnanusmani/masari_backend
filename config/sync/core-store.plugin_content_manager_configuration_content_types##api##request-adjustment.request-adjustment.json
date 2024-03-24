@@ -78,6 +78,21 @@
           "sortable": true
         }
       },
+      "legal_advice_request": {
+        "edit": {
+          "label": "legal_advice_request",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "requestType"
+        },
+        "list": {
+          "label": "legal_advice_request",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -134,6 +149,10 @@
         [
           {
             "name": "adjusted_at",
+            "size": 6
+          },
+          {
+            "name": "legal_advice_request",
             "size": 6
           }
         ]

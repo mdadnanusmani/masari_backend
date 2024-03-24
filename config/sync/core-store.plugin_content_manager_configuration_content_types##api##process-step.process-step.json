@@ -8,7 +8,7 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "name",
-      "defaultSortBy": "name",
+      "defaultSortBy": "id",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -60,8 +60,124 @@
         },
         "list": {
           "label": "process_role",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "stepType": {
+        "edit": {
+          "label": "stepType",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "stepType",
           "searchable": true,
           "sortable": true
+        }
+      },
+      "yes": {
+        "edit": {
+          "label": "yes",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "yes",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "no": {
+        "edit": {
+          "label": "no",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "no",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "process_step_notifications": {
+        "edit": {
+          "label": "process_step_notifications",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "process_step_notifications",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "approval_users": {
+        "edit": {
+          "label": "approval_users",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "approval_users",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "statusName": {
+        "edit": {
+          "label": "statusName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "statusName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "read_fields": {
+        "edit": {
+          "label": "read_fields",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "read_fields",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "write_fields": {
+        "edit": {
+          "label": "write_fields",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "write_fields",
+          "searchable": false,
+          "sortable": false
         }
       },
       "createdAt": {
@@ -94,12 +210,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "name",
-        "process",
-        "process_role"
-      ],
       "edit": [
         [
           {
@@ -115,8 +225,56 @@
           {
             "name": "process_role",
             "size": 6
+          },
+          {
+            "name": "stepType",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "yes",
+            "size": 6
+          },
+          {
+            "name": "no",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "process_step_notifications",
+            "size": 6
+          },
+          {
+            "name": "approval_users",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "statusName",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "read_fields",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "write_fields",
+            "size": 12
           }
         ]
+      ],
+      "list": [
+        "id",
+        "name",
+        "process",
+        "process_role"
       ]
     }
   },

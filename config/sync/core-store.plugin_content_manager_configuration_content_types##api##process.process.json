@@ -48,21 +48,6 @@
           "sortable": false
         }
       },
-      "process_role": {
-        "edit": {
-          "label": "process_role",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "id"
-        },
-        "list": {
-          "label": "process_role",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "requests": {
         "edit": {
           "label": "requests",
@@ -104,6 +89,64 @@
         },
         "list": {
           "label": "process_steps",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "fields": {
+        "edit": {
+          "label": "fields",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "fields",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "legal_advice_requests": {
+        "edit": {
+          "label": "legal_advice_requests",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "requestType"
+        },
+        "list": {
+          "label": "legal_advice_requests",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "process_role": {
+        "edit": {
+          "label": "process_role",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "process_role",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "complete_field": {
+        "edit": {
+          "label": "complete_field",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "complete_field",
           "searchable": false,
           "sortable": false
         }
@@ -175,6 +218,24 @@
           {
             "name": "process_steps",
             "size": 6
+          }
+        ],
+        [
+          {
+            "name": "fields",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "legal_advice_requests",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "complete_field",
+            "size": 12
           }
         ]
       ]
