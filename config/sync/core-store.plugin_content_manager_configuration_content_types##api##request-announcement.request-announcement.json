@@ -1,0 +1,146 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::request-announcement.request-announcement",
+  "value": {
+    "uid": "api::request-announcement.request-announcement",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "request": {
+        "edit": {
+          "label": "request",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "category"
+        },
+        "list": {
+          "label": "request",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "announcement_details": {
+        "edit": {
+          "label": "announcement_details",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "announcement_details",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "announced_at": {
+        "edit": {
+          "label": "announced_at",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "announced_at",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "legal_advice_request": {
+        "edit": {
+          "label": "legal_advice_request",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "requestType"
+        },
+        "list": {
+          "label": "legal_advice_request",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "request",
+        "announced_at",
+        "createdAt"
+      ],
+      "edit": [
+        [
+          {
+            "name": "request",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "announcement_details",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "announced_at",
+            "size": 6
+          },
+          {
+            "name": "legal_advice_request",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

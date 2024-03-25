@@ -2100,6 +2100,58 @@
           "type": "boolean",
           "default": false
         },
+        "process_role": {
+          "type": "relation",
+          "relation": "manyToMany",
+          "target": "api::process-role.process-role",
+          "mappedBy": "user"
+        },
+        "requests": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::request.request",
+          "mappedBy": "user"
+        },
+        "status_logs": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::status-log.status-log",
+          "mappedBy": "changed_by_user"
+        },
+        "request_adjustments": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::request-adjustment.request-adjustment",
+          "mappedBy": "adjusted_by_user"
+        },
+        "approvals": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::approval.approval",
+          "mappedBy": "approved_by_user"
+        },
+        "cyber_security": {
+          "type": "boolean",
+          "default": false
+        },
+        "request_assigned": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::request.request",
+          "mappedBy": "assigned_to"
+        },
+        "legal_advice_requests": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::legal-advice-request.legal-advice-request",
+          "mappedBy": "users"
+        },
+        "legal_advice_request_assigned": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::legal-advice-request.legal-advice-request",
+          "mappedBy": "assigned_to"
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -2283,6 +2335,58 @@
           "Ethical_Awareness": {
             "type": "boolean",
             "default": false
+          },
+          "process_role": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::process-role.process-role",
+            "mappedBy": "user"
+          },
+          "requests": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::request.request",
+            "mappedBy": "user"
+          },
+          "status_logs": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::status-log.status-log",
+            "mappedBy": "changed_by_user"
+          },
+          "request_adjustments": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::request-adjustment.request-adjustment",
+            "mappedBy": "adjusted_by_user"
+          },
+          "approvals": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::approval.approval",
+            "mappedBy": "approved_by_user"
+          },
+          "cyber_security": {
+            "type": "boolean",
+            "default": false
+          },
+          "request_assigned": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::request.request",
+            "mappedBy": "assigned_to"
+          },
+          "legal_advice_requests": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::legal-advice-request.legal-advice-request",
+            "mappedBy": "users"
+          },
+          "legal_advice_request_assigned": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::legal-advice-request.legal-advice-request",
+            "mappedBy": "assigned_to"
           }
         },
         "kind": "collectionType"
@@ -2638,6 +2742,22 @@
           "target": "api::comment.comment",
           "mappedBy": "announcement"
         },
+        "documents": {
+          "type": "media",
+          "multiple": true,
+          "required": false,
+          "allowedTypes": [
+            "images",
+            "files",
+            "videos",
+            "audios"
+          ],
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -2775,6 +2895,22 @@
             "relation": "oneToMany",
             "target": "api::comment.comment",
             "mappedBy": "announcement"
+          },
+          "documents": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": [
+              "images",
+              "files",
+              "videos",
+              "audios"
+            ],
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           }
         },
         "kind": "collectionType"
@@ -2785,6 +2921,140 @@
       "uid": "api::announcement.announcement",
       "apiName": "announcement",
       "globalId": "Announcement",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::approval.approval": {
+      "kind": "collectionType",
+      "collectionName": "approvals",
+      "info": {
+        "singularName": "approval",
+        "pluralName": "approvals",
+        "displayName": "Approval"
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "request": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::request.request",
+          "inversedBy": "approvals"
+        },
+        "approved_by_user": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "plugin::users-permissions.user",
+          "inversedBy": "approvals"
+        },
+        "approval_status": {
+          "type": "enumeration",
+          "enum": [
+            "Pending",
+            "Approved",
+            "Rejected"
+          ]
+        },
+        "comments": {
+          "type": "richtext"
+        },
+        "approved_at": {
+          "type": "datetime"
+        },
+        "legal_advice_request": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::legal-advice-request.legal-advice-request",
+          "inversedBy": "approvals"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "approvals",
+        "info": {
+          "singularName": "approval",
+          "pluralName": "approvals",
+          "displayName": "Approval"
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "request": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::request.request",
+            "inversedBy": "approvals"
+          },
+          "approved_by_user": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user",
+            "inversedBy": "approvals"
+          },
+          "approval_status": {
+            "type": "enumeration",
+            "enum": [
+              "Pending",
+              "Approved",
+              "Rejected"
+            ]
+          },
+          "comments": {
+            "type": "richtext"
+          },
+          "approved_at": {
+            "type": "datetime"
+          },
+          "legal_advice_request": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::legal-advice-request.legal-advice-request",
+            "inversedBy": "approvals"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "approval",
+      "connection": "default",
+      "uid": "api::approval.approval",
+      "apiName": "approval",
+      "globalId": "Approval",
       "actions": {},
       "lifecycles": {}
     },
@@ -3656,6 +3926,130 @@
       "actions": {},
       "lifecycles": {}
     },
+    "api::competition.competition": {
+      "kind": "collectionType",
+      "collectionName": "competitions",
+      "info": {
+        "singularName": "competition",
+        "pluralName": "competitions",
+        "displayName": "competition"
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "ProjectName": {
+          "type": "string"
+        },
+        "BidOpeningDate": {
+          "type": "date"
+        },
+        "QueriesDeadline": {
+          "type": "date"
+        },
+        "BidClosingDate": {
+          "type": "date"
+        },
+        "ContactEmail": {
+          "type": "richtext"
+        },
+        "ProjectBrief": {
+          "type": "richtext"
+        },
+        "Status": {
+          "type": "boolean"
+        },
+        "Location": {
+          "type": "string"
+        },
+        "NoteToSupplier": {
+          "type": "richtext"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "competitions",
+        "info": {
+          "singularName": "competition",
+          "pluralName": "competitions",
+          "displayName": "competition"
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "ProjectName": {
+            "type": "string"
+          },
+          "BidOpeningDate": {
+            "type": "date"
+          },
+          "QueriesDeadline": {
+            "type": "date"
+          },
+          "BidClosingDate": {
+            "type": "date"
+          },
+          "ContactEmail": {
+            "type": "richtext"
+          },
+          "ProjectBrief": {
+            "type": "richtext"
+          },
+          "Status": {
+            "type": "boolean"
+          },
+          "Location": {
+            "type": "string"
+          },
+          "NoteToSupplier": {
+            "type": "richtext"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "competition",
+      "connection": "default",
+      "uid": "api::competition.competition",
+      "apiName": "competition",
+      "globalId": "Competition",
+      "actions": {},
+      "lifecycles": {}
+    },
     "api::cv.cv": {
       "kind": "collectionType",
       "collectionName": "cvs",
@@ -3872,6 +4266,12 @@
           },
           "type": "text"
         },
+        "processes": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::process.process",
+          "mappedBy": "department"
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -4043,6 +4443,12 @@
               }
             },
             "type": "text"
+          },
+          "processes": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::process.process",
+            "mappedBy": "department"
           }
         },
         "kind": "collectionType"
@@ -5956,6 +6362,272 @@
       "actions": {},
       "lifecycles": {}
     },
+    "api::legal-advice-request.legal-advice-request": {
+      "kind": "collectionType",
+      "collectionName": "legal_advice_requests",
+      "info": {
+        "singularName": "legal-advice-request",
+        "pluralName": "legal-advice-requests",
+        "displayName": "Legal Advice Request",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "process": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::process.process",
+          "inversedBy": "legal_advice_requests"
+        },
+        "users": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "plugin::users-permissions.user",
+          "inversedBy": "legal_advice_requests"
+        },
+        "status_logs": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::status-log.status-log",
+          "mappedBy": "legal_advice_request"
+        },
+        "request_adjustments": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::request-adjustment.request-adjustment",
+          "mappedBy": "legal_advice_request"
+        },
+        "approvals": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::approval.approval",
+          "mappedBy": "legal_advice_request"
+        },
+        "request_announcements": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::request-announcement.request-announcement",
+          "mappedBy": "legal_advice_request"
+        },
+        "process_step": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::process-step.process-step"
+        },
+        "assigned_to": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "plugin::users-permissions.user",
+          "inversedBy": "legal_advice_request_assigned"
+        },
+        "requestType": {
+          "type": "string"
+        },
+        "ContractType": {
+          "type": "string"
+        },
+        "RequestedContractAdvice": {
+          "type": "string"
+        },
+        "ClearSummaryofTheRequest": {
+          "type": "text"
+        },
+        "financialAspects": {
+          "type": "string"
+        },
+        "financialaspectstext": {
+          "type": "text"
+        },
+        "istheRequestlinkedtopreviousrequests": {
+          "type": "string"
+        },
+        "previousRequestDetails": {
+          "type": "string"
+        },
+        "aretherelevantdocumentsattached": {
+          "type": "string"
+        },
+        "relevantDocuments": {
+          "type": "media",
+          "multiple": true,
+          "required": false,
+          "allowedTypes": [
+            "images",
+            "files",
+            "videos",
+            "audios"
+          ]
+        },
+        "advice": {
+          "type": "text"
+        },
+        "approval_note": {
+          "type": "text"
+        },
+        "resolution": {
+          "type": "text"
+        },
+        "SLA": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "legal_advice_requests",
+        "info": {
+          "singularName": "legal-advice-request",
+          "pluralName": "legal-advice-requests",
+          "displayName": "Legal Advice Request",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "process": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::process.process",
+            "inversedBy": "legal_advice_requests"
+          },
+          "users": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user",
+            "inversedBy": "legal_advice_requests"
+          },
+          "status_logs": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::status-log.status-log",
+            "mappedBy": "legal_advice_request"
+          },
+          "request_adjustments": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::request-adjustment.request-adjustment",
+            "mappedBy": "legal_advice_request"
+          },
+          "approvals": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::approval.approval",
+            "mappedBy": "legal_advice_request"
+          },
+          "request_announcements": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::request-announcement.request-announcement",
+            "mappedBy": "legal_advice_request"
+          },
+          "process_step": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::process-step.process-step"
+          },
+          "assigned_to": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "plugin::users-permissions.user",
+            "inversedBy": "legal_advice_request_assigned"
+          },
+          "requestType": {
+            "type": "string"
+          },
+          "ContractType": {
+            "type": "string"
+          },
+          "RequestedContractAdvice": {
+            "type": "string"
+          },
+          "ClearSummaryofTheRequest": {
+            "type": "text"
+          },
+          "financialAspects": {
+            "type": "string"
+          },
+          "financialaspectstext": {
+            "type": "text"
+          },
+          "istheRequestlinkedtopreviousrequests": {
+            "type": "string"
+          },
+          "previousRequestDetails": {
+            "type": "string"
+          },
+          "aretherelevantdocumentsattached": {
+            "type": "string"
+          },
+          "relevantDocuments": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": [
+              "images",
+              "files",
+              "videos",
+              "audios"
+            ]
+          },
+          "advice": {
+            "type": "text"
+          },
+          "approval_note": {
+            "type": "text"
+          },
+          "resolution": {
+            "type": "text"
+          },
+          "SLA": {
+            "type": "integer"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "legal-advice-request",
+      "connection": "default",
+      "uid": "api::legal-advice-request.legal-advice-request",
+      "apiName": "legal-advice-request",
+      "globalId": "LegalAdviceRequest",
+      "actions": {},
+      "lifecycles": {}
+    },
     "api::like.like": {
       "kind": "collectionType",
       "collectionName": "likes",
@@ -6846,7 +7518,8 @@
               "localized": true
             }
           },
-          "type": "string"
+          "type": "string",
+          "required": true
         },
         "body": {
           "pluginOptions": {
@@ -6860,7 +7533,7 @@
         "media": {
           "type": "media",
           "multiple": true,
-          "required": true,
+          "required": false,
           "allowedTypes": [
             "images",
             "videos"
@@ -6895,6 +7568,22 @@
             }
           },
           "type": "text"
+        },
+        "attachments": {
+          "type": "media",
+          "multiple": true,
+          "required": false,
+          "allowedTypes": [
+            "images",
+            "files",
+            "videos",
+            "audios"
+          ],
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "createdAt": {
           "type": "datetime"
@@ -6968,7 +7657,8 @@
                 "localized": true
               }
             },
-            "type": "string"
+            "type": "string",
+            "required": true
           },
           "body": {
             "pluginOptions": {
@@ -6982,7 +7672,7 @@
           "media": {
             "type": "media",
             "multiple": true,
-            "required": true,
+            "required": false,
             "allowedTypes": [
               "images",
               "videos"
@@ -7017,6 +7707,22 @@
               }
             },
             "type": "text"
+          },
+          "attachments": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": [
+              "images",
+              "files",
+              "videos",
+              "audios"
+            ],
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           }
         },
         "kind": "collectionType"
@@ -7179,6 +7885,1310 @@
       "uid": "api::policy.policy",
       "apiName": "policy",
       "globalId": "Policy",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::process.process": {
+      "kind": "collectionType",
+      "collectionName": "processes",
+      "info": {
+        "singularName": "process",
+        "pluralName": "processes",
+        "displayName": "Process",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "process_name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "richtext"
+        },
+        "requests": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::request.request",
+          "mappedBy": "process"
+        },
+        "department": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::department.department",
+          "inversedBy": "processes"
+        },
+        "process_steps": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::process-step.process-step",
+          "mappedBy": "process"
+        },
+        "fields": {
+          "type": "json"
+        },
+        "legal_advice_requests": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::legal-advice-request.legal-advice-request",
+          "mappedBy": "process"
+        },
+        "process_role": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::process-role.process-role",
+          "mappedBy": "processes"
+        },
+        "complete_field": {
+          "type": "json"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "processes",
+        "info": {
+          "singularName": "process",
+          "pluralName": "processes",
+          "displayName": "Process",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "process_name": {
+            "type": "string",
+            "required": true
+          },
+          "description": {
+            "type": "richtext"
+          },
+          "requests": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::request.request",
+            "mappedBy": "process"
+          },
+          "department": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::department.department",
+            "inversedBy": "processes"
+          },
+          "process_steps": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::process-step.process-step",
+            "mappedBy": "process"
+          },
+          "fields": {
+            "type": "json"
+          },
+          "legal_advice_requests": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::legal-advice-request.legal-advice-request",
+            "mappedBy": "process"
+          },
+          "process_role": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::process-role.process-role",
+            "mappedBy": "processes"
+          },
+          "complete_field": {
+            "type": "json"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "process",
+      "connection": "default",
+      "uid": "api::process.process",
+      "apiName": "process",
+      "globalId": "Process",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::process-role.process-role": {
+      "kind": "collectionType",
+      "collectionName": "process_roles",
+      "info": {
+        "singularName": "process-role",
+        "pluralName": "process-roles",
+        "displayName": "ProcessRole",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "user": {
+          "type": "relation",
+          "relation": "manyToMany",
+          "target": "plugin::users-permissions.user",
+          "inversedBy": "process_role"
+        },
+        "processes": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::process.process",
+          "inversedBy": "process_role"
+        },
+        "process_step": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::process-step.process-step",
+          "mappedBy": "process_role"
+        },
+        "name": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "process_roles",
+        "info": {
+          "singularName": "process-role",
+          "pluralName": "process-roles",
+          "displayName": "ProcessRole",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "user": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "plugin::users-permissions.user",
+            "inversedBy": "process_role"
+          },
+          "processes": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::process.process",
+            "inversedBy": "process_role"
+          },
+          "process_step": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::process-step.process-step",
+            "mappedBy": "process_role"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "process-role",
+      "connection": "default",
+      "uid": "api::process-role.process-role",
+      "apiName": "process-role",
+      "globalId": "ProcessRole",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::process-step.process-step": {
+      "kind": "collectionType",
+      "collectionName": "process_steps",
+      "info": {
+        "singularName": "process-step",
+        "pluralName": "process-steps",
+        "displayName": "ProcessStep",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "name": {
+          "type": "string"
+        },
+        "process": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::process.process",
+          "inversedBy": "process_steps"
+        },
+        "process_role": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::process-role.process-role",
+          "inversedBy": "process_step"
+        },
+        "stepType": {
+          "type": "string"
+        },
+        "yes": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::process-step.process-step"
+        },
+        "no": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::process-step.process-step"
+        },
+        "process_step_notifications": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::process-step-notification.process-step-notification",
+          "mappedBy": "process_step"
+        },
+        "approval_users": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "plugin::users-permissions.user"
+        },
+        "statusName": {
+          "type": "string"
+        },
+        "read_fields": {
+          "type": "json"
+        },
+        "write_fields": {
+          "type": "json"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "process_steps",
+        "info": {
+          "singularName": "process-step",
+          "pluralName": "process-steps",
+          "displayName": "ProcessStep",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "name": {
+            "type": "string"
+          },
+          "process": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::process.process",
+            "inversedBy": "process_steps"
+          },
+          "process_role": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::process-role.process-role",
+            "inversedBy": "process_step"
+          },
+          "stepType": {
+            "type": "string"
+          },
+          "yes": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::process-step.process-step"
+          },
+          "no": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::process-step.process-step"
+          },
+          "process_step_notifications": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::process-step-notification.process-step-notification",
+            "mappedBy": "process_step"
+          },
+          "approval_users": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "plugin::users-permissions.user"
+          },
+          "statusName": {
+            "type": "string"
+          },
+          "read_fields": {
+            "type": "json"
+          },
+          "write_fields": {
+            "type": "json"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "process-step",
+      "connection": "default",
+      "uid": "api::process-step.process-step",
+      "apiName": "process-step",
+      "globalId": "ProcessStep",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::process-step-notification.process-step-notification": {
+      "kind": "collectionType",
+      "collectionName": "process_step_notifications",
+      "info": {
+        "singularName": "process-step-notification",
+        "pluralName": "process-step-notifications",
+        "displayName": "ProcessStepNotification",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "custom_users": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "plugin::users-permissions.user"
+        },
+        "process_step": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::process-step.process-step",
+          "inversedBy": "process_step_notifications"
+        },
+        "notify_before_creation": {
+          "type": "boolean"
+        },
+        "notify_after_creation": {
+          "type": "boolean"
+        },
+        "notify_requester": {
+          "type": "boolean"
+        },
+        "notify_process_step_process_role": {
+          "type": "boolean"
+        },
+        "notify_my_custom_user": {
+          "type": "boolean"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "template": {
+          "type": "text"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "process_step_notifications",
+        "info": {
+          "singularName": "process-step-notification",
+          "pluralName": "process-step-notifications",
+          "displayName": "ProcessStepNotification",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "custom_users": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "plugin::users-permissions.user"
+          },
+          "process_step": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::process-step.process-step",
+            "inversedBy": "process_step_notifications"
+          },
+          "notify_before_creation": {
+            "type": "boolean"
+          },
+          "notify_after_creation": {
+            "type": "boolean"
+          },
+          "notify_requester": {
+            "type": "boolean"
+          },
+          "notify_process_step_process_role": {
+            "type": "boolean"
+          },
+          "notify_my_custom_user": {
+            "type": "boolean"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "template": {
+            "type": "text"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "process-step-notification",
+      "connection": "default",
+      "uid": "api::process-step-notification.process-step-notification",
+      "apiName": "process-step-notification",
+      "globalId": "ProcessStepNotification",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::request.request": {
+      "kind": "collectionType",
+      "collectionName": "requests",
+      "info": {
+        "singularName": "request",
+        "pluralName": "requests",
+        "displayName": "Request",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "process": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::process.process",
+          "inversedBy": "requests"
+        },
+        "user": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "plugin::users-permissions.user",
+          "inversedBy": "requests"
+        },
+        "category": {
+          "type": "string",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "required": true
+        },
+        "summary": {
+          "type": "richtext"
+        },
+        "objectives": {
+          "type": "richtext"
+        },
+        "draft": {
+          "type": "richtext"
+        },
+        "target_audience": {
+          "type": "string"
+        },
+        "preferred_date": {
+          "type": "date"
+        },
+        "status": {
+          "type": "enumeration",
+          "enum": [
+            "New",
+            "Raised",
+            "Under Review",
+            "Adjustments Needed",
+            "Approved",
+            "Completed",
+            "Closed"
+          ]
+        },
+        "status_logs": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::status-log.status-log",
+          "mappedBy": "request"
+        },
+        "request_adjustments": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::request-adjustment.request-adjustment",
+          "mappedBy": "request"
+        },
+        "approvals": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::approval.approval",
+          "mappedBy": "request"
+        },
+        "request_announcements": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::request-announcement.request-announcement",
+          "mappedBy": "request"
+        },
+        "other_target_audience": {
+          "type": "string"
+        },
+        "attachements": {
+          "type": "media",
+          "multiple": false,
+          "required": false,
+          "allowedTypes": [
+            "images",
+            "files",
+            "videos",
+            "audios"
+          ]
+        },
+        "process_step": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::process-step.process-step"
+        },
+        "partners": {
+          "type": "text"
+        },
+        "assigned_to": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "plugin::users-permissions.user",
+          "inversedBy": "request_assigned"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "requests",
+        "info": {
+          "singularName": "request",
+          "pluralName": "requests",
+          "displayName": "Request",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "process": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::process.process",
+            "inversedBy": "requests"
+          },
+          "user": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user",
+            "inversedBy": "requests"
+          },
+          "category": {
+            "type": "string",
+            "required": true
+          },
+          "type": {
+            "type": "string",
+            "required": true
+          },
+          "summary": {
+            "type": "richtext"
+          },
+          "objectives": {
+            "type": "richtext"
+          },
+          "draft": {
+            "type": "richtext"
+          },
+          "target_audience": {
+            "type": "string"
+          },
+          "preferred_date": {
+            "type": "date"
+          },
+          "status": {
+            "type": "enumeration",
+            "enum": [
+              "New",
+              "Raised",
+              "Under Review",
+              "Adjustments Needed",
+              "Approved",
+              "Completed",
+              "Closed"
+            ]
+          },
+          "status_logs": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::status-log.status-log",
+            "mappedBy": "request"
+          },
+          "request_adjustments": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::request-adjustment.request-adjustment",
+            "mappedBy": "request"
+          },
+          "approvals": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::approval.approval",
+            "mappedBy": "request"
+          },
+          "request_announcements": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::request-announcement.request-announcement",
+            "mappedBy": "request"
+          },
+          "other_target_audience": {
+            "type": "string"
+          },
+          "attachements": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+              "images",
+              "files",
+              "videos",
+              "audios"
+            ]
+          },
+          "process_step": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::process-step.process-step"
+          },
+          "partners": {
+            "type": "text"
+          },
+          "assigned_to": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "plugin::users-permissions.user",
+            "inversedBy": "request_assigned"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "request",
+      "connection": "default",
+      "uid": "api::request.request",
+      "apiName": "request",
+      "globalId": "Request",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::request-adjustment.request-adjustment": {
+      "kind": "collectionType",
+      "collectionName": "request_adjustments",
+      "info": {
+        "singularName": "request-adjustment",
+        "pluralName": "request-adjustments",
+        "displayName": "RequestAdjustment"
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "request": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::request.request",
+          "inversedBy": "request_adjustments"
+        },
+        "adjusted_by_user": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "plugin::users-permissions.user",
+          "inversedBy": "request_adjustments"
+        },
+        "adjustment_details": {
+          "type": "richtext"
+        },
+        "adjusted_at": {
+          "type": "datetime"
+        },
+        "legal_advice_request": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::legal-advice-request.legal-advice-request",
+          "inversedBy": "request_adjustments"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "request_adjustments",
+        "info": {
+          "singularName": "request-adjustment",
+          "pluralName": "request-adjustments",
+          "displayName": "RequestAdjustment"
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "request": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::request.request",
+            "inversedBy": "request_adjustments"
+          },
+          "adjusted_by_user": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user",
+            "inversedBy": "request_adjustments"
+          },
+          "adjustment_details": {
+            "type": "richtext"
+          },
+          "adjusted_at": {
+            "type": "datetime"
+          },
+          "legal_advice_request": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::legal-advice-request.legal-advice-request",
+            "inversedBy": "request_adjustments"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "request-adjustment",
+      "connection": "default",
+      "uid": "api::request-adjustment.request-adjustment",
+      "apiName": "request-adjustment",
+      "globalId": "RequestAdjustment",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::request-announcement.request-announcement": {
+      "kind": "collectionType",
+      "collectionName": "request_announcements",
+      "info": {
+        "singularName": "request-announcement",
+        "pluralName": "request-announcements",
+        "displayName": "RequestAnnouncement"
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "request": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::request.request",
+          "inversedBy": "request_announcements"
+        },
+        "announcement_details": {
+          "type": "richtext"
+        },
+        "announced_at": {
+          "type": "datetime"
+        },
+        "legal_advice_request": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::legal-advice-request.legal-advice-request",
+          "inversedBy": "request_announcements"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "request_announcements",
+        "info": {
+          "singularName": "request-announcement",
+          "pluralName": "request-announcements",
+          "displayName": "RequestAnnouncement"
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "request": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::request.request",
+            "inversedBy": "request_announcements"
+          },
+          "announcement_details": {
+            "type": "richtext"
+          },
+          "announced_at": {
+            "type": "datetime"
+          },
+          "legal_advice_request": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::legal-advice-request.legal-advice-request",
+            "inversedBy": "request_announcements"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "request-announcement",
+      "connection": "default",
+      "uid": "api::request-announcement.request-announcement",
+      "apiName": "request-announcement",
+      "globalId": "RequestAnnouncement",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::session.session": {
+      "kind": "singleType",
+      "collectionName": "sessions",
+      "info": {
+        "singularName": "session",
+        "pluralName": "sessions",
+        "displayName": "session",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "token": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "sessions",
+        "info": {
+          "singularName": "session",
+          "pluralName": "sessions",
+          "displayName": "session",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "token": {
+            "type": "string"
+          }
+        },
+        "kind": "singleType"
+      },
+      "modelType": "contentType",
+      "modelName": "session",
+      "connection": "default",
+      "uid": "api::session.session",
+      "apiName": "session",
+      "globalId": "Session",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::status-log.status-log": {
+      "kind": "collectionType",
+      "collectionName": "status_logs",
+      "info": {
+        "singularName": "status-log",
+        "pluralName": "status-logs",
+        "displayName": "StatusLog"
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "request": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::request.request",
+          "inversedBy": "status_logs"
+        },
+        "old_status": {
+          "type": "enumeration",
+          "enum": [
+            "Raised",
+            "Under Review",
+            "Adjustments Needed",
+            "Approved",
+            "Completed",
+            "Closed"
+          ]
+        },
+        "new_status": {
+          "type": "enumeration",
+          "enum": [
+            "Raised",
+            "Under Review",
+            "Adjustments Needed",
+            "Approved",
+            "Completed",
+            "Closed"
+          ]
+        },
+        "changed_by_user": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "plugin::users-permissions.user",
+          "inversedBy": "status_logs"
+        },
+        "changed_at": {
+          "type": "datetime"
+        },
+        "legal_advice_request": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::legal-advice-request.legal-advice-request",
+          "inversedBy": "status_logs"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "status_logs",
+        "info": {
+          "singularName": "status-log",
+          "pluralName": "status-logs",
+          "displayName": "StatusLog"
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "request": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::request.request",
+            "inversedBy": "status_logs"
+          },
+          "old_status": {
+            "type": "enumeration",
+            "enum": [
+              "Raised",
+              "Under Review",
+              "Adjustments Needed",
+              "Approved",
+              "Completed",
+              "Closed"
+            ]
+          },
+          "new_status": {
+            "type": "enumeration",
+            "enum": [
+              "Raised",
+              "Under Review",
+              "Adjustments Needed",
+              "Approved",
+              "Completed",
+              "Closed"
+            ]
+          },
+          "changed_by_user": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user",
+            "inversedBy": "status_logs"
+          },
+          "changed_at": {
+            "type": "datetime"
+          },
+          "legal_advice_request": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::legal-advice-request.legal-advice-request",
+            "inversedBy": "status_logs"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "status-log",
+      "connection": "default",
+      "uid": "api::status-log.status-log",
+      "apiName": "status-log",
+      "globalId": "StatusLog",
       "actions": {},
       "lifecycles": {}
     },
@@ -7557,6 +9567,14 @@
           ]
         },
         "EthicalAwareness": {
+          "type": "media",
+          "multiple": false,
+          "required": false,
+          "allowedTypes": [
+            "files"
+          ]
+        },
+        "CyberSecurity": {
           "allowedTypes": [
             "files"
           ],
@@ -7642,6 +9660,14 @@
             ]
           },
           "EthicalAwareness": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+              "files"
+            ]
+          },
+          "CyberSecurity": {
             "allowedTypes": [
               "files"
             ],
@@ -7718,6 +9744,14 @@
           },
           "type": "boolean",
           "default": false
+        },
+        "videoURL": {
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          },
+          "type": "string"
         },
         "createdAt": {
           "type": "datetime"
@@ -7825,6 +9859,14 @@
             },
             "type": "boolean",
             "default": false
+          },
+          "videoURL": {
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            },
+            "type": "string"
           }
         },
         "kind": "collectionType"

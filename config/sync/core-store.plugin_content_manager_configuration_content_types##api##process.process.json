@@ -1,0 +1,247 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::process.process",
+  "value": {
+    "uid": "api::process.process",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "process_name",
+      "defaultSortBy": "process_name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "process_name": {
+        "edit": {
+          "label": "process_name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "process_name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "description",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "description",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "requests": {
+        "edit": {
+          "label": "requests",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "category"
+        },
+        "list": {
+          "label": "requests",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "department": {
+        "edit": {
+          "label": "department",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "title"
+        },
+        "list": {
+          "label": "department",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "process_steps": {
+        "edit": {
+          "label": "process_steps",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "process_steps",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "fields": {
+        "edit": {
+          "label": "fields",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "fields",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "legal_advice_requests": {
+        "edit": {
+          "label": "legal_advice_requests",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "requestType"
+        },
+        "list": {
+          "label": "legal_advice_requests",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "process_role": {
+        "edit": {
+          "label": "process_role",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "process_role",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "complete_field": {
+        "edit": {
+          "label": "complete_field",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "complete_field",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "process_name",
+        "createdAt",
+        "updatedAt"
+      ],
+      "edit": [
+        [
+          {
+            "name": "process_name",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "process_role",
+            "size": 6
+          },
+          {
+            "name": "requests",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "department",
+            "size": 6
+          },
+          {
+            "name": "process_steps",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "fields",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "legal_advice_requests",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "complete_field",
+            "size": 12
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

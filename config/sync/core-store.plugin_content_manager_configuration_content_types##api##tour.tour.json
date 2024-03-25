@@ -90,6 +90,20 @@
           "sortable": false
         }
       },
+      "CyberSecurity": {
+        "edit": {
+          "label": "CyberSecurity",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "CyberSecurity",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -150,6 +164,10 @@
         [
           {
             "name": "EthicalAwareness",
+            "size": 6
+          },
+          {
+            "name": "CyberSecurity",
             "size": 6
           }
         ]

@@ -8,8 +8,8 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "title",
-      "defaultSortBy": "title",
-      "defaultSortOrder": "ASC"
+      "defaultSortBy": "id",
+      "defaultSortOrder": "DESC"
     },
     "metadatas": {
       "id": {
@@ -149,12 +149,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "title",
-        "document",
-        "thumbnail"
-      ],
       "edit": [
         [
           {
@@ -192,6 +186,12 @@
             "size": 6
           }
         ]
+      ],
+      "list": [
+        "id",
+        "title",
+        "document",
+        "thumbnail"
       ]
     }
   },

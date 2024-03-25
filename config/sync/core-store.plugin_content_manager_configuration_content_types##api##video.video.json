@@ -92,6 +92,20 @@
           "sortable": true
         }
       },
+      "videoURL": {
+        "edit": {
+          "label": "videoURL",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "videoURL",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -122,6 +136,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "media",
+        "title",
+        "likes"
+      ],
       "edit": [
         [
           {
@@ -147,14 +167,12 @@
           {
             "name": "mentions",
             "size": 6
+          },
+          {
+            "name": "videoURL",
+            "size": 6
           }
         ]
-      ],
-      "list": [
-        "id",
-        "media",
-        "title",
-        "likes"
       ]
     }
   },

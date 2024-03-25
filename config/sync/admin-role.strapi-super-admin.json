@@ -94,7 +94,8 @@
           "department",
           "link",
           "body",
-          "comments"
+          "comments",
+          "documents"
         ],
         "locales": [
           "en",
@@ -137,7 +138,8 @@
           "department",
           "link",
           "body",
-          "comments"
+          "comments",
+          "documents"
         ],
         "locales": [
           "en",
@@ -158,11 +160,69 @@
           "department",
           "link",
           "body",
-          "comments"
+          "comments",
+          "documents"
         ],
         "locales": [
           "en",
           "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::approval.approval",
+      "properties": {
+        "fields": [
+          "request",
+          "approved_by_user",
+          "approval_status",
+          "comments",
+          "approved_at",
+          "legal_advice_request"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::approval.approval",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::approval.approval",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::approval.approval",
+      "properties": {
+        "fields": [
+          "request",
+          "approved_by_user",
+          "approval_status",
+          "comments",
+          "approved_at",
+          "legal_advice_request"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::approval.approval",
+      "properties": {
+        "fields": [
+          "request",
+          "approved_by_user",
+          "approval_status",
+          "comments",
+          "approved_at",
+          "legal_advice_request"
         ]
       },
       "conditions": []
@@ -532,6 +592,72 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::competition.competition",
+      "properties": {
+        "fields": [
+          "ProjectName",
+          "BidOpeningDate",
+          "QueriesDeadline",
+          "BidClosingDate",
+          "ContactEmail",
+          "ProjectBrief",
+          "Status",
+          "Location",
+          "NoteToSupplier"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::competition.competition",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::competition.competition",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::competition.competition",
+      "properties": {
+        "fields": [
+          "ProjectName",
+          "BidOpeningDate",
+          "QueriesDeadline",
+          "BidClosingDate",
+          "ContactEmail",
+          "ProjectBrief",
+          "Status",
+          "Location",
+          "NoteToSupplier"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::competition.competition",
+      "properties": {
+        "fields": [
+          "ProjectName",
+          "BidOpeningDate",
+          "QueriesDeadline",
+          "BidClosingDate",
+          "ContactEmail",
+          "ProjectBrief",
+          "Status",
+          "Location",
+          "NoteToSupplier"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::cv.cv",
       "properties": {
         "fields": [
@@ -734,7 +860,8 @@
           "children",
           "parent",
           "announcements",
-          "about"
+          "about",
+          "processes"
         ],
         "locales": [
           "en",
@@ -772,7 +899,8 @@
           "children",
           "parent",
           "announcements",
-          "about"
+          "about",
+          "processes"
         ],
         "locales": [
           "en",
@@ -799,7 +927,8 @@
           "children",
           "parent",
           "announcements",
-          "about"
+          "about",
+          "processes"
         ],
         "locales": [
           "en",
@@ -1424,6 +1553,111 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::legal-advice-request.legal-advice-request",
+      "properties": {
+        "fields": [
+          "process",
+          "users",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "request_announcements",
+          "process_step",
+          "assigned_to",
+          "requestType",
+          "ContractType",
+          "RequestedContractAdvice",
+          "ClearSummaryofTheRequest",
+          "financialAspects",
+          "financialaspectstext",
+          "istheRequestlinkedtopreviousrequests",
+          "previousRequestDetails",
+          "aretherelevantdocumentsattached",
+          "relevantDocuments",
+          "advice",
+          "approval_note",
+          "resolution",
+          "SLA"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::legal-advice-request.legal-advice-request",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::legal-advice-request.legal-advice-request",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::legal-advice-request.legal-advice-request",
+      "properties": {
+        "fields": [
+          "process",
+          "users",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "request_announcements",
+          "process_step",
+          "assigned_to",
+          "requestType",
+          "ContractType",
+          "RequestedContractAdvice",
+          "ClearSummaryofTheRequest",
+          "financialAspects",
+          "financialaspectstext",
+          "istheRequestlinkedtopreviousrequests",
+          "previousRequestDetails",
+          "aretherelevantdocumentsattached",
+          "relevantDocuments",
+          "advice",
+          "approval_note",
+          "resolution",
+          "SLA"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::legal-advice-request.legal-advice-request",
+      "properties": {
+        "fields": [
+          "process",
+          "users",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "request_announcements",
+          "process_step",
+          "assigned_to",
+          "requestType",
+          "ContractType",
+          "RequestedContractAdvice",
+          "ClearSummaryofTheRequest",
+          "financialAspects",
+          "financialaspectstext",
+          "istheRequestlinkedtopreviousrequests",
+          "previousRequestDetails",
+          "aretherelevantdocumentsattached",
+          "relevantDocuments",
+          "advice",
+          "approval_note",
+          "resolution",
+          "SLA"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::like.like",
       "properties": {
         "fields": [
@@ -1773,7 +2007,8 @@
           "media",
           "is_mailable",
           "pinned",
-          "description"
+          "description",
+          "attachments"
         ],
         "locales": [
           "en",
@@ -1814,7 +2049,8 @@
           "media",
           "is_mailable",
           "pinned",
-          "description"
+          "description",
+          "attachments"
         ],
         "locales": [
           "en",
@@ -1833,7 +2069,8 @@
           "media",
           "is_mailable",
           "pinned",
-          "description"
+          "description",
+          "attachments"
         ],
         "locales": [
           "en",
@@ -1908,6 +2145,561 @@
         "locales": [
           "en",
           "ar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::process-role.process-role",
+      "properties": {
+        "fields": [
+          "user",
+          "processes",
+          "process_step",
+          "name"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::process-role.process-role",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::process-role.process-role",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::process-role.process-role",
+      "properties": {
+        "fields": [
+          "user",
+          "processes",
+          "process_step",
+          "name"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::process-role.process-role",
+      "properties": {
+        "fields": [
+          "user",
+          "processes",
+          "process_step",
+          "name"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::process-step-notification.process-step-notification",
+      "properties": {
+        "fields": [
+          "custom_users",
+          "process_step",
+          "notify_before_creation",
+          "notify_after_creation",
+          "notify_requester",
+          "notify_process_step_process_role",
+          "notify_my_custom_user",
+          "subject",
+          "template"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::process-step-notification.process-step-notification",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::process-step-notification.process-step-notification",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::process-step-notification.process-step-notification",
+      "properties": {
+        "fields": [
+          "custom_users",
+          "process_step",
+          "notify_before_creation",
+          "notify_after_creation",
+          "notify_requester",
+          "notify_process_step_process_role",
+          "notify_my_custom_user",
+          "subject",
+          "template"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::process-step-notification.process-step-notification",
+      "properties": {
+        "fields": [
+          "custom_users",
+          "process_step",
+          "notify_before_creation",
+          "notify_after_creation",
+          "notify_requester",
+          "notify_process_step_process_role",
+          "notify_my_custom_user",
+          "subject",
+          "template"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::process-step.process-step",
+      "properties": {
+        "fields": [
+          "name",
+          "process",
+          "process_role",
+          "stepType",
+          "yes",
+          "no",
+          "process_step_notifications",
+          "approval_users",
+          "statusName",
+          "read_fields",
+          "write_fields"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::process-step.process-step",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::process-step.process-step",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::process-step.process-step",
+      "properties": {
+        "fields": [
+          "name",
+          "process",
+          "process_role",
+          "stepType",
+          "yes",
+          "no",
+          "process_step_notifications",
+          "approval_users",
+          "statusName",
+          "read_fields",
+          "write_fields"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::process-step.process-step",
+      "properties": {
+        "fields": [
+          "name",
+          "process",
+          "process_role",
+          "stepType",
+          "yes",
+          "no",
+          "process_step_notifications",
+          "approval_users",
+          "statusName",
+          "read_fields",
+          "write_fields"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::process.process",
+      "properties": {
+        "fields": [
+          "process_name",
+          "description",
+          "requests",
+          "department",
+          "process_steps",
+          "fields",
+          "legal_advice_requests",
+          "process_role",
+          "complete_field"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::process.process",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::process.process",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::process.process",
+      "properties": {
+        "fields": [
+          "process_name",
+          "description",
+          "requests",
+          "department",
+          "process_steps",
+          "fields",
+          "legal_advice_requests",
+          "process_role",
+          "complete_field"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::process.process",
+      "properties": {
+        "fields": [
+          "process_name",
+          "description",
+          "requests",
+          "department",
+          "process_steps",
+          "fields",
+          "legal_advice_requests",
+          "process_role",
+          "complete_field"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::request-adjustment.request-adjustment",
+      "properties": {
+        "fields": [
+          "request",
+          "adjusted_by_user",
+          "adjustment_details",
+          "adjusted_at",
+          "legal_advice_request"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::request-adjustment.request-adjustment",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::request-adjustment.request-adjustment",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::request-adjustment.request-adjustment",
+      "properties": {
+        "fields": [
+          "request",
+          "adjusted_by_user",
+          "adjustment_details",
+          "adjusted_at",
+          "legal_advice_request"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::request-adjustment.request-adjustment",
+      "properties": {
+        "fields": [
+          "request",
+          "adjusted_by_user",
+          "adjustment_details",
+          "adjusted_at",
+          "legal_advice_request"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::request-announcement.request-announcement",
+      "properties": {
+        "fields": [
+          "request",
+          "announcement_details",
+          "announced_at",
+          "legal_advice_request"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::request-announcement.request-announcement",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::request-announcement.request-announcement",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::request-announcement.request-announcement",
+      "properties": {
+        "fields": [
+          "request",
+          "announcement_details",
+          "announced_at",
+          "legal_advice_request"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::request-announcement.request-announcement",
+      "properties": {
+        "fields": [
+          "request",
+          "announcement_details",
+          "announced_at",
+          "legal_advice_request"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::request.request",
+      "properties": {
+        "fields": [
+          "process",
+          "user",
+          "category",
+          "type",
+          "summary",
+          "objectives",
+          "draft",
+          "target_audience",
+          "preferred_date",
+          "status",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "request_announcements",
+          "other_target_audience",
+          "attachements",
+          "process_step",
+          "partners",
+          "assigned_to"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::request.request",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::request.request",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::request.request",
+      "properties": {
+        "fields": [
+          "process",
+          "user",
+          "category",
+          "type",
+          "summary",
+          "objectives",
+          "draft",
+          "target_audience",
+          "preferred_date",
+          "status",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "request_announcements",
+          "other_target_audience",
+          "attachements",
+          "process_step",
+          "partners",
+          "assigned_to"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::request.request",
+      "properties": {
+        "fields": [
+          "process",
+          "user",
+          "category",
+          "type",
+          "summary",
+          "objectives",
+          "draft",
+          "target_audience",
+          "preferred_date",
+          "status",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "request_announcements",
+          "other_target_audience",
+          "attachements",
+          "process_step",
+          "partners",
+          "assigned_to"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::session.session",
+      "properties": {
+        "fields": [
+          "token"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::session.session",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::session.session",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::session.session",
+      "properties": {
+        "fields": [
+          "token"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::session.session",
+      "properties": {
+        "fields": [
+          "token"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::status-log.status-log",
+      "properties": {
+        "fields": [
+          "request",
+          "old_status",
+          "new_status",
+          "changed_by_user",
+          "changed_at",
+          "legal_advice_request"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::status-log.status-log",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::status-log.status-log",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::status-log.status-log",
+      "properties": {
+        "fields": [
+          "request",
+          "old_status",
+          "new_status",
+          "changed_by_user",
+          "changed_at",
+          "legal_advice_request"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::status-log.status-log",
+      "properties": {
+        "fields": [
+          "request",
+          "old_status",
+          "new_status",
+          "changed_by_user",
+          "changed_at",
+          "legal_advice_request"
         ]
       },
       "conditions": []
@@ -2048,7 +2840,8 @@
           "employeeCodeOfConduct",
           "cyberSecurityAgreement",
           "DiversityandInclusion",
-          "EthicalAwareness"
+          "EthicalAwareness",
+          "CyberSecurity"
         ]
       },
       "conditions": []
@@ -2074,7 +2867,8 @@
           "employeeCodeOfConduct",
           "cyberSecurityAgreement",
           "DiversityandInclusion",
-          "EthicalAwareness"
+          "EthicalAwareness",
+          "CyberSecurity"
         ]
       },
       "conditions": []
@@ -2088,7 +2882,8 @@
           "employeeCodeOfConduct",
           "cyberSecurityAgreement",
           "DiversityandInclusion",
-          "EthicalAwareness"
+          "EthicalAwareness",
+          "CyberSecurity"
         ]
       },
       "conditions": []
@@ -2102,7 +2897,8 @@
           "title",
           "likes",
           "mentions",
-          "is_proprietary"
+          "is_proprietary",
+          "videoURL"
         ],
         "locales": [
           "en",
@@ -2142,7 +2938,8 @@
           "title",
           "likes",
           "mentions",
-          "is_proprietary"
+          "is_proprietary",
+          "videoURL"
         ],
         "locales": [
           "en",
@@ -2160,7 +2957,8 @@
           "title",
           "likes",
           "mentions",
-          "is_proprietary"
+          "is_proprietary",
+          "videoURL"
         ],
         "locales": [
           "en",
@@ -2388,7 +3186,16 @@
           "notifications",
           "comment",
           "Hr_Survey",
-          "Ethical_Awareness"
+          "Ethical_Awareness",
+          "process_role",
+          "requests",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "cyber_security",
+          "request_assigned",
+          "legal_advice_requests",
+          "legal_advice_request_assigned"
         ]
       },
       "conditions": []
@@ -2432,7 +3239,16 @@
           "notifications",
           "comment",
           "Hr_Survey",
-          "Ethical_Awareness"
+          "Ethical_Awareness",
+          "process_role",
+          "requests",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "cyber_security",
+          "request_assigned",
+          "legal_advice_requests",
+          "legal_advice_request_assigned"
         ]
       },
       "conditions": []
@@ -2470,7 +3286,16 @@
           "notifications",
           "comment",
           "Hr_Survey",
-          "Ethical_Awareness"
+          "Ethical_Awareness",
+          "process_role",
+          "requests",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "cyber_security",
+          "request_assigned",
+          "legal_advice_requests",
+          "legal_advice_request_assigned"
         ]
       },
       "conditions": []

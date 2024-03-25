@@ -1,0 +1,240 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::process-step-notification.process-step-notification",
+  "value": {
+    "uid": "api::process-step-notification.process-step-notification",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "custom_users": {
+        "edit": {
+          "label": "custom_users",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "custom_users",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "process_step": {
+        "edit": {
+          "label": "process_step",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "process_step",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "notify_before_creation": {
+        "edit": {
+          "label": "notify_before_creation",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "notify_before_creation",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "notify_after_creation": {
+        "edit": {
+          "label": "notify_after_creation",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "notify_after_creation",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "notify_requester": {
+        "edit": {
+          "label": "notify_requester",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "notify_requester",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "notify_process_step_process_role": {
+        "edit": {
+          "label": "notify_process_step_process_role",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "notify_process_step_process_role",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "notify_my_custom_user": {
+        "edit": {
+          "label": "notify_my_custom_user",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "notify_my_custom_user",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "subject": {
+        "edit": {
+          "label": "subject",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "subject",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "template": {
+        "edit": {
+          "label": "template",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "template",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "createdAt",
+        "updatedAt",
+        "custom_users"
+      ],
+      "edit": [
+        [
+          {
+            "name": "subject",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "process_step",
+            "size": 6
+          },
+          {
+            "name": "custom_users",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "notify_before_creation",
+            "size": 4
+          },
+          {
+            "name": "notify_after_creation",
+            "size": 4
+          },
+          {
+            "name": "notify_requester",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "notify_process_step_process_role",
+            "size": 4
+          },
+          {
+            "name": "notify_my_custom_user",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "template",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,183 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::status-log.status-log",
+  "value": {
+    "uid": "api::status-log.status-log",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "request": {
+        "edit": {
+          "label": "request",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "category"
+        },
+        "list": {
+          "label": "request",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "old_status": {
+        "edit": {
+          "label": "old_status",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "old_status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "new_status": {
+        "edit": {
+          "label": "new_status",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "new_status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "changed_by_user": {
+        "edit": {
+          "label": "changed_by_user",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "changed_by_user",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "changed_at": {
+        "edit": {
+          "label": "changed_at",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "changed_at",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "legal_advice_request": {
+        "edit": {
+          "label": "legal_advice_request",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "requestType"
+        },
+        "list": {
+          "label": "legal_advice_request",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "request",
+        "old_status",
+        "new_status"
+      ],
+      "edit": [
+        [
+          {
+            "name": "request",
+            "size": 6
+          },
+          {
+            "name": "old_status",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "new_status",
+            "size": 6
+          },
+          {
+            "name": "changed_by_user",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "changed_at",
+            "size": 6
+          },
+          {
+            "name": "legal_advice_request",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,492 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::legal-advice-request.legal-advice-request",
+  "value": {
+    "uid": "api::legal-advice-request.legal-advice-request",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "requestType",
+      "defaultSortBy": "requestType",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "process": {
+        "edit": {
+          "label": "process",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "process_name"
+        },
+        "list": {
+          "label": "process",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "users": {
+        "edit": {
+          "label": "users",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "users",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "status_logs": {
+        "edit": {
+          "label": "status_logs",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "status_logs",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "request_adjustments": {
+        "edit": {
+          "label": "request_adjustments",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "request_adjustments",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "approvals": {
+        "edit": {
+          "label": "approvals",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "approvals",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "request_announcements": {
+        "edit": {
+          "label": "request_announcements",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "request_announcements",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "process_step": {
+        "edit": {
+          "label": "process_step",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "process_step",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "assigned_to": {
+        "edit": {
+          "label": "assigned_to",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "assigned_to",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "requestType": {
+        "edit": {
+          "label": "requestType",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "requestType",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "ContractType": {
+        "edit": {
+          "label": "ContractType",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ContractType",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "RequestedContractAdvice": {
+        "edit": {
+          "label": "RequestedContractAdvice",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "RequestedContractAdvice",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "ClearSummaryofTheRequest": {
+        "edit": {
+          "label": "ClearSummaryofTheRequest",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ClearSummaryofTheRequest",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "financialAspects": {
+        "edit": {
+          "label": "financialAspects",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "financialAspects",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "financialaspectstext": {
+        "edit": {
+          "label": "financialaspectstext",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "financialaspectstext",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "istheRequestlinkedtopreviousrequests": {
+        "edit": {
+          "label": "istheRequestlinkedtopreviousrequests",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "istheRequestlinkedtopreviousrequests",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "previousRequestDetails": {
+        "edit": {
+          "label": "previousRequestDetails",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "previousRequestDetails",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "aretherelevantdocumentsattached": {
+        "edit": {
+          "label": "aretherelevantdocumentsattached",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "aretherelevantdocumentsattached",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "relevantDocuments": {
+        "edit": {
+          "label": "relevantDocuments",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "relevantDocuments",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "advice": {
+        "edit": {
+          "label": "advice",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "advice",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "approval_note": {
+        "edit": {
+          "label": "approval_note",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "approval_note",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "resolution": {
+        "edit": {
+          "label": "resolution",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "resolution",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "SLA": {
+        "edit": {
+          "label": "SLA",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "SLA",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "process",
+        "users",
+        "status_logs"
+      ],
+      "edit": [
+        [
+          {
+            "name": "process",
+            "size": 6
+          },
+          {
+            "name": "users",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "status_logs",
+            "size": 6
+          },
+          {
+            "name": "request_adjustments",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "approvals",
+            "size": 6
+          },
+          {
+            "name": "request_announcements",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "process_step",
+            "size": 6
+          },
+          {
+            "name": "assigned_to",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "requestType",
+            "size": 6
+          },
+          {
+            "name": "ContractType",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "RequestedContractAdvice",
+            "size": 6
+          },
+          {
+            "name": "ClearSummaryofTheRequest",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "financialAspects",
+            "size": 6
+          },
+          {
+            "name": "financialaspectstext",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "istheRequestlinkedtopreviousrequests",
+            "size": 6
+          },
+          {
+            "name": "previousRequestDetails",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "aretherelevantdocumentsattached",
+            "size": 6
+          },
+          {
+            "name": "relevantDocuments",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "advice",
+            "size": 6
+          },
+          {
+            "name": "approval_note",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "resolution",
+            "size": 6
+          },
+          {
+            "name": "SLA",
+            "size": 4
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

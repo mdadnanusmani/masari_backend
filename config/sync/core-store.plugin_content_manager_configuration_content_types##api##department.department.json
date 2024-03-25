@@ -63,20 +63,6 @@
           "sortable": true
         }
       },
-      "about": {
-        "edit": {
-          "label": "about",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "about",
-          "searchable": false,
-          "sortable": false
-        }
-      },
       "representative_name": {
         "edit": {
           "label": "representative_name",
@@ -221,6 +207,35 @@
           "sortable": false
         }
       },
+      "about": {
+        "edit": {
+          "label": "about",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "about",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "processes": {
+        "edit": {
+          "label": "processes",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "process_name"
+        },
+        "list": {
+          "label": "processes",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -329,6 +344,10 @@
         [
           {
             "name": "announcements",
+            "size": 6
+          },
+          {
+            "name": "processes",
             "size": 6
           }
         ]
