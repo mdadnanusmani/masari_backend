@@ -8208,11 +8208,6 @@
           "target": "api::process-step-notification.process-step-notification",
           "mappedBy": "process_step"
         },
-        "approval_users": {
-          "type": "relation",
-          "relation": "oneToMany",
-          "target": "plugin::users-permissions.user"
-        },
         "statusName": {
           "type": "string"
         },
@@ -8301,11 +8296,6 @@
             "relation": "oneToMany",
             "target": "api::process-step-notification.process-step-notification",
             "mappedBy": "process_step"
-          },
-          "approval_users": {
-            "type": "relation",
-            "relation": "oneToMany",
-            "target": "plugin::users-permissions.user"
           },
           "statusName": {
             "type": "string"

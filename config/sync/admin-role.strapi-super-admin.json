@@ -2278,7 +2278,6 @@
           "yes",
           "no",
           "process_step_notifications",
-          "approval_users",
           "statusName",
           "read_fields",
           "write_fields"
@@ -2310,7 +2309,6 @@
           "yes",
           "no",
           "process_step_notifications",
-          "approval_users",
           "statusName",
           "read_fields",
           "write_fields"
@@ -2330,7 +2328,6 @@
           "yes",
           "no",
           "process_step_notifications",
-          "approval_users",
           "statusName",
           "read_fields",
           "write_fields"

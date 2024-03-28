@@ -123,21 +123,6 @@
           "sortable": false
         }
       },
-      "approval_users": {
-        "edit": {
-          "label": "approval_users",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "username"
-        },
-        "list": {
-          "label": "approval_users",
-          "searchable": false,
-          "sortable": false
-        }
-      },
       "statusName": {
         "edit": {
           "label": "statusName",
@@ -210,6 +195,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "name",
+        "process",
+        "process_role"
+      ],
       "edit": [
         [
           {
@@ -245,10 +236,6 @@
           {
             "name": "process_step_notifications",
             "size": 6
-          },
-          {
-            "name": "approval_users",
-            "size": 6
           }
         ],
         [
@@ -269,12 +256,6 @@
             "size": 12
           }
         ]
-      ],
-      "list": [
-        "id",
-        "name",
-        "process",
-        "process_role"
       ]
     }
   },
