@@ -54,6 +54,12 @@
     },
     "complete_field": {
       "type": "json"
+    },
+    "trasnlation_requests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trasnlation-request.trasnlation-request",
+      "mappedBy": "process"
     }
   }
 }

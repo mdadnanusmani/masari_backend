@@ -192,6 +192,18 @@
       "relation": "oneToOne",
       "target": "api::legal-advice-request.legal-advice-request",
       "mappedBy": "assigned_to"
+    },
+    "trasnlation_requests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trasnlation-request.trasnlation-request",
+      "mappedBy": "users"
+    },
+    "trasnlation_request": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::trasnlation-request.trasnlation-request",
+      "mappedBy": "users_permissions_user"
     }
   }
 }

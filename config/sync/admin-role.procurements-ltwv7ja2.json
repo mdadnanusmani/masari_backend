@@ -12,10 +12,10 @@
           "BidOpeningDate",
           "QueriesDeadline",
           "BidClosingDate",
-          "ContactEmail",
-          "ProjectBrief",
-          "Status",
+          "IsOpen",
           "Location",
+          "ProjectBrief",
+          "ContactEmail",
           "NoteToSupplier"
         ]
       },
@@ -42,10 +42,10 @@
           "BidOpeningDate",
           "QueriesDeadline",
           "BidClosingDate",
-          "ContactEmail",
-          "ProjectBrief",
-          "Status",
+          "IsOpen",
           "Location",
+          "ProjectBrief",
+          "ContactEmail",
           "NoteToSupplier"
         ]
       },
@@ -60,10 +60,10 @@
           "BidOpeningDate",
           "QueriesDeadline",
           "BidClosingDate",
-          "ContactEmail",
-          "ProjectBrief",
-          "Status",
+          "IsOpen",
           "Location",
+          "ProjectBrief",
+          "ContactEmail",
           "NoteToSupplier"
         ]
       },

@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "qualifications",
+  "info": {
+    "singularName": "qualification",
+    "pluralName": "qualifications",
+    "displayName": "qualification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ProjectName": {
+      "type": "string"
+    },
+    "ProjectBrief": {
+      "type": "text"
+    },
+    "BidOpeningDate": {
+      "type": "date",
+      "required": true
+    },
+    "BidClosingDate": {
+      "type": "date",
+      "required": true
+    },
+    "QueriesDeadline": {
+      "type": "date",
+      "required": true
+    },
+    "ContactEmail": {
+      "type": "text",
+      "required": true
+    },
+    "NoteToSupplier": {
+      "type": "text"
+    },
+    "Location": {
+      "type": "richtext",
+      "default": "Email",
+      "required": true
+    },
+    "IsOpen": {
+      "type": "boolean",
+      "required": true
+    },
+    "attachments": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

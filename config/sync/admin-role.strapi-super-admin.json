@@ -180,7 +180,8 @@
           "approval_status",
           "comments",
           "approved_at",
-          "legal_advice_request"
+          "legal_advice_request",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -207,7 +208,8 @@
           "approval_status",
           "comments",
           "approved_at",
-          "legal_advice_request"
+          "legal_advice_request",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -222,7 +224,8 @@
           "approval_status",
           "comments",
           "approved_at",
-          "legal_advice_request"
+          "legal_advice_request",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -599,11 +602,12 @@
           "BidOpeningDate",
           "QueriesDeadline",
           "BidClosingDate",
-          "ContactEmail",
-          "ProjectBrief",
-          "Status",
+          "IsOpen",
           "Location",
-          "NoteToSupplier"
+          "ProjectBrief",
+          "ContactEmail",
+          "NoteToSupplier",
+          "attachments"
         ]
       },
       "conditions": []
@@ -629,11 +633,12 @@
           "BidOpeningDate",
           "QueriesDeadline",
           "BidClosingDate",
-          "ContactEmail",
-          "ProjectBrief",
-          "Status",
+          "IsOpen",
           "Location",
-          "NoteToSupplier"
+          "ProjectBrief",
+          "ContactEmail",
+          "NoteToSupplier",
+          "attachments"
         ]
       },
       "conditions": []
@@ -647,11 +652,12 @@
           "BidOpeningDate",
           "QueriesDeadline",
           "BidClosingDate",
-          "ContactEmail",
-          "ProjectBrief",
-          "Status",
+          "IsOpen",
           "Location",
-          "NoteToSupplier"
+          "ProjectBrief",
+          "ContactEmail",
+          "NoteToSupplier",
+          "attachments"
         ]
       },
       "conditions": []
@@ -2348,7 +2354,8 @@
           "fields",
           "legal_advice_requests",
           "process_role",
-          "complete_field"
+          "complete_field",
+          "trasnlation_requests"
         ]
       },
       "conditions": []
@@ -2378,7 +2385,8 @@
           "fields",
           "legal_advice_requests",
           "process_role",
-          "complete_field"
+          "complete_field",
+          "trasnlation_requests"
         ]
       },
       "conditions": []
@@ -2396,7 +2404,77 @@
           "fields",
           "legal_advice_requests",
           "process_role",
-          "complete_field"
+          "complete_field",
+          "trasnlation_requests"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::qualification.qualification",
+      "properties": {
+        "fields": [
+          "ProjectName",
+          "ProjectBrief",
+          "BidOpeningDate",
+          "BidClosingDate",
+          "QueriesDeadline",
+          "ContactEmail",
+          "NoteToSupplier",
+          "Location",
+          "IsOpen",
+          "attachments"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::qualification.qualification",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::qualification.qualification",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::qualification.qualification",
+      "properties": {
+        "fields": [
+          "ProjectName",
+          "ProjectBrief",
+          "BidOpeningDate",
+          "BidClosingDate",
+          "QueriesDeadline",
+          "ContactEmail",
+          "NoteToSupplier",
+          "Location",
+          "IsOpen",
+          "attachments"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::qualification.qualification",
+      "properties": {
+        "fields": [
+          "ProjectName",
+          "ProjectBrief",
+          "BidOpeningDate",
+          "BidClosingDate",
+          "QueriesDeadline",
+          "ContactEmail",
+          "NoteToSupplier",
+          "Location",
+          "IsOpen",
+          "attachments"
         ]
       },
       "conditions": []
@@ -2410,7 +2488,8 @@
           "adjusted_by_user",
           "adjustment_details",
           "adjusted_at",
-          "legal_advice_request"
+          "legal_advice_request",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -2436,7 +2515,8 @@
           "adjusted_by_user",
           "adjustment_details",
           "adjusted_at",
-          "legal_advice_request"
+          "legal_advice_request",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -2450,7 +2530,8 @@
           "adjusted_by_user",
           "adjustment_details",
           "adjusted_at",
-          "legal_advice_request"
+          "legal_advice_request",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -2463,7 +2544,8 @@
           "request",
           "announcement_details",
           "announced_at",
-          "legal_advice_request"
+          "legal_advice_request",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -2488,7 +2570,8 @@
           "request",
           "announcement_details",
           "announced_at",
-          "legal_advice_request"
+          "legal_advice_request",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -2501,7 +2584,8 @@
           "request",
           "announcement_details",
           "announced_at",
-          "legal_advice_request"
+          "legal_advice_request",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -2654,7 +2738,8 @@
           "new_status",
           "changed_by_user",
           "changed_at",
-          "legal_advice_request"
+          "legal_advice_request",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -2681,7 +2766,8 @@
           "new_status",
           "changed_by_user",
           "changed_at",
-          "legal_advice_request"
+          "legal_advice_request",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -2696,7 +2782,8 @@
           "new_status",
           "changed_by_user",
           "changed_at",
-          "legal_advice_request"
+          "legal_advice_request",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -2881,6 +2968,96 @@
           "DiversityandInclusion",
           "EthicalAwareness",
           "CyberSecurity"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::trasnlation-request.trasnlation-request",
+      "properties": {
+        "fields": [
+          "RequestType",
+          "LanguagePair",
+          "DocumentType",
+          "DocumentTitle",
+          "DeliverableFormat",
+          "IsLegalNature",
+          "RequesterAttachments",
+          "users",
+          "process",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "request_announcements",
+          "process_step",
+          "users_permissions_user",
+          "Note",
+          "TranslationAttachments"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::trasnlation-request.trasnlation-request",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::trasnlation-request.trasnlation-request",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::trasnlation-request.trasnlation-request",
+      "properties": {
+        "fields": [
+          "RequestType",
+          "LanguagePair",
+          "DocumentType",
+          "DocumentTitle",
+          "DeliverableFormat",
+          "IsLegalNature",
+          "RequesterAttachments",
+          "users",
+          "process",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "request_announcements",
+          "process_step",
+          "users_permissions_user",
+          "Note",
+          "TranslationAttachments"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::trasnlation-request.trasnlation-request",
+      "properties": {
+        "fields": [
+          "RequestType",
+          "LanguagePair",
+          "DocumentType",
+          "DocumentTitle",
+          "DeliverableFormat",
+          "IsLegalNature",
+          "RequesterAttachments",
+          "users",
+          "process",
+          "status_logs",
+          "request_adjustments",
+          "approvals",
+          "request_announcements",
+          "process_step",
+          "users_permissions_user",
+          "Note",
+          "TranslationAttachments"
         ]
       },
       "conditions": []
@@ -3192,7 +3369,9 @@
           "cyber_security",
           "request_assigned",
           "legal_advice_requests",
-          "legal_advice_request_assigned"
+          "legal_advice_request_assigned",
+          "trasnlation_requests",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -3245,7 +3424,9 @@
           "cyber_security",
           "request_assigned",
           "legal_advice_requests",
-          "legal_advice_request_assigned"
+          "legal_advice_request_assigned",
+          "trasnlation_requests",
+          "trasnlation_request"
         ]
       },
       "conditions": []
@@ -3292,7 +3473,9 @@
           "cyber_security",
           "request_assigned",
           "legal_advice_requests",
-          "legal_advice_request_assigned"
+          "legal_advice_request_assigned",
+          "trasnlation_requests",
+          "trasnlation_request"
         ]
       },
       "conditions": []

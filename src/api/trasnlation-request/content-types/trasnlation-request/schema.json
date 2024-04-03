@@ -1,0 +1,123 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trasnlation_requests",
+  "info": {
+    "singularName": "trasnlation-request",
+    "pluralName": "trasnlation-requests",
+    "displayName": "Trasnlation Request",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "RequestType": {
+      "type": "enumeration",
+      "enum": [
+        "Translation",
+        "Proofreading",
+        "Others"
+      ]
+    },
+    "LanguagePair": {
+      "type": "enumeration",
+      "enum": [
+        "Arabic to English",
+        "English to Arabic",
+        "other"
+      ]
+    },
+    "DocumentType": {
+      "type": "enumeration",
+      "enum": [
+        "Open-source document (PPT, Word, Excel, etc.)",
+        "Closed-source document (PDF, pictures, etc.)"
+      ]
+    },
+    "DocumentTitle": {
+      "type": "string"
+    },
+    "DeliverableFormat": {
+      "type": "enumeration",
+      "enum": [
+        "Bilingual",
+        "Monolingual"
+      ]
+    },
+    "IsLegalNature": {
+      "type": "boolean"
+    },
+    "RequesterAttachments": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "trasnlation_requests"
+    },
+    "process": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::process.process",
+      "inversedBy": "trasnlation_requests"
+    },
+    "status_logs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::status-log.status-log",
+      "mappedBy": "trasnlation_request"
+    },
+    "request_adjustments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::request-adjustment.request-adjustment",
+      "mappedBy": "trasnlation_request"
+    },
+    "approvals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::approval.approval",
+      "mappedBy": "trasnlation_request"
+    },
+    "request_announcements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::request-announcement.request-announcement",
+      "mappedBy": "trasnlation_request"
+    },
+    "process_step": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::process-step.process-step"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "trasnlation_request"
+    },
+    "Note": {
+      "type": "text"
+    },
+    "TranslationAttachments": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

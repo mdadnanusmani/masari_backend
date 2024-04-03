@@ -1,0 +1,398 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::trasnlation-request.trasnlation-request",
+  "value": {
+    "uid": "api::trasnlation-request.trasnlation-request",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "DocumentTitle",
+      "defaultSortBy": "DocumentTitle",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "RequestType": {
+        "edit": {
+          "label": "RequestType",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "RequestType",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "LanguagePair": {
+        "edit": {
+          "label": "LanguagePair",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "LanguagePair",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "DocumentType": {
+        "edit": {
+          "label": "DocumentType",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "DocumentType",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "DocumentTitle": {
+        "edit": {
+          "label": "DocumentTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "DocumentTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "DeliverableFormat": {
+        "edit": {
+          "label": "DeliverableFormat",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "DeliverableFormat",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "IsLegalNature": {
+        "edit": {
+          "label": "IsLegalNature",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "IsLegalNature",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "RequesterAttachments": {
+        "edit": {
+          "label": "RequesterAttachments",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "RequesterAttachments",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "users": {
+        "edit": {
+          "label": "users",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "users",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "process": {
+        "edit": {
+          "label": "process",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "process_name"
+        },
+        "list": {
+          "label": "process",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "status_logs": {
+        "edit": {
+          "label": "status_logs",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "status_logs",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "request_adjustments": {
+        "edit": {
+          "label": "request_adjustments",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "request_adjustments",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "approvals": {
+        "edit": {
+          "label": "approvals",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "approvals",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "request_announcements": {
+        "edit": {
+          "label": "request_announcements",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "request_announcements",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "process_step": {
+        "edit": {
+          "label": "process_step",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "process_step",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "users_permissions_user": {
+        "edit": {
+          "label": "users_permissions_user",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "users_permissions_user",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "Note": {
+        "edit": {
+          "label": "Note",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Note",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "TranslationAttachments": {
+        "edit": {
+          "label": "TranslationAttachments",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "TranslationAttachments",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "RequestType",
+        "LanguagePair",
+        "DocumentType"
+      ],
+      "edit": [
+        [
+          {
+            "name": "RequestType",
+            "size": 6
+          },
+          {
+            "name": "LanguagePair",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "DocumentType",
+            "size": 6
+          },
+          {
+            "name": "DocumentTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "DeliverableFormat",
+            "size": 6
+          },
+          {
+            "name": "IsLegalNature",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "users",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "process",
+            "size": 6
+          },
+          {
+            "name": "status_logs",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "request_adjustments",
+            "size": 6
+          },
+          {
+            "name": "approvals",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "request_announcements",
+            "size": 6
+          },
+          {
+            "name": "process_step",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "users_permissions_user",
+            "size": 6
+          },
+          {
+            "name": "RequesterAttachments",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "Note",
+            "size": 6
+          },
+          {
+            "name": "TranslationAttachments",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

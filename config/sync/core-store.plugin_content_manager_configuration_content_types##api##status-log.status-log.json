@@ -107,6 +107,21 @@
           "sortable": true
         }
       },
+      "trasnlation_request": {
+        "edit": {
+          "label": "trasnlation_request",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "DocumentTitle"
+        },
+        "list": {
+          "label": "trasnlation_request",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -171,6 +186,12 @@
           },
           {
             "name": "legal_advice_request",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "trasnlation_request",
             "size": 6
           }
         ]

@@ -53,6 +53,12 @@
       "relation": "manyToOne",
       "target": "api::legal-advice-request.legal-advice-request",
       "inversedBy": "status_logs"
+    },
+    "trasnlation_request": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::trasnlation-request.trasnlation-request",
+      "inversedBy": "status_logs"
     }
   }
 }

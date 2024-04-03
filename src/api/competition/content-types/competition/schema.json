@@ -4,7 +4,8 @@
   "info": {
     "singularName": "competition",
     "pluralName": "competitions",
-    "displayName": "competition"
+    "displayName": "competition",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,31 +13,46 @@
   "pluginOptions": {},
   "attributes": {
     "ProjectName": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "BidOpeningDate": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "QueriesDeadline": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "BidClosingDate": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
-    "ContactEmail": {
-      "type": "richtext"
-    },
-    "ProjectBrief": {
-      "type": "richtext"
-    },
-    "Status": {
-      "type": "boolean"
+    "IsOpen": {
+      "type": "boolean",
+      "required": true
     },
     "Location": {
+      "type": "string",
+      "default": "SBF Alghadeer Office"
+    },
+    "ProjectBrief": {
+      "type": "text",
+      "required": true
+    },
+    "ContactEmail": {
       "type": "string"
     },
     "NoteToSupplier": {
-      "type": "richtext"
+      "type": "text"
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
     }
   }
 }

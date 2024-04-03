@@ -76,44 +76,16 @@
           "sortable": true
         }
       },
-      "ContactEmail": {
+      "IsOpen": {
         "edit": {
-          "label": "ContactEmail",
+          "label": "IsOpen",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "ContactEmail",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "ProjectBrief": {
-        "edit": {
-          "label": "ProjectBrief",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "ProjectBrief",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "Status": {
-        "edit": {
-          "label": "Status",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Status",
+          "label": "IsOpen",
           "searchable": true,
           "sortable": true
         }
@@ -132,6 +104,34 @@
           "sortable": true
         }
       },
+      "ProjectBrief": {
+        "edit": {
+          "label": "ProjectBrief",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ProjectBrief",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "ContactEmail": {
+        "edit": {
+          "label": "ContactEmail",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ContactEmail",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "NoteToSupplier": {
         "edit": {
           "label": "NoteToSupplier",
@@ -142,6 +142,20 @@
         },
         "list": {
           "label": "NoteToSupplier",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "attachments": {
+        "edit": {
+          "label": "attachments",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "attachments",
           "searchable": false,
           "sortable": false
         }
@@ -217,10 +231,6 @@
         ],
         [
           {
-            "name": "Status",
-            "size": 4
-          },
-          {
             "name": "Location",
             "size": 6
           }
@@ -229,6 +239,16 @@
           {
             "name": "NoteToSupplier",
             "size": 12
+          }
+        ],
+        [
+          {
+            "name": "IsOpen",
+            "size": 4
+          },
+          {
+            "name": "attachments",
+            "size": 6
           }
         ]
       ]

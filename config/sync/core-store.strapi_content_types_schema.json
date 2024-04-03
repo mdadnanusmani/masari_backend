@@ -2152,6 +2152,18 @@
           "target": "api::legal-advice-request.legal-advice-request",
           "mappedBy": "assigned_to"
         },
+        "trasnlation_requests": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::trasnlation-request.trasnlation-request",
+          "mappedBy": "users"
+        },
+        "trasnlation_request": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::trasnlation-request.trasnlation-request",
+          "mappedBy": "users_permissions_user"
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -2387,6 +2399,18 @@
             "relation": "oneToOne",
             "target": "api::legal-advice-request.legal-advice-request",
             "mappedBy": "assigned_to"
+          },
+          "trasnlation_requests": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::trasnlation-request.trasnlation-request",
+            "mappedBy": "users"
+          },
+          "trasnlation_request": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::trasnlation-request.trasnlation-request",
+            "mappedBy": "users_permissions_user"
           }
         },
         "kind": "collectionType"
@@ -2969,6 +2993,12 @@
           "target": "api::legal-advice-request.legal-advice-request",
           "inversedBy": "approvals"
         },
+        "trasnlation_request": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::trasnlation-request.trasnlation-request",
+          "inversedBy": "approvals"
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -3044,6 +3074,12 @@
             "type": "relation",
             "relation": "manyToOne",
             "target": "api::legal-advice-request.legal-advice-request",
+            "inversedBy": "approvals"
+          },
+          "trasnlation_request": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::trasnlation-request.trasnlation-request",
             "inversedBy": "approvals"
           }
         },
@@ -3932,7 +3968,8 @@
       "info": {
         "singularName": "competition",
         "pluralName": "competitions",
-        "displayName": "competition"
+        "displayName": "competition",
+        "description": ""
       },
       "options": {
         "draftAndPublish": true
@@ -3940,31 +3977,46 @@
       "pluginOptions": {},
       "attributes": {
         "ProjectName": {
-          "type": "string"
+          "type": "string",
+          "required": true
         },
         "BidOpeningDate": {
-          "type": "date"
+          "type": "date",
+          "required": true
         },
         "QueriesDeadline": {
-          "type": "date"
+          "type": "date",
+          "required": true
         },
         "BidClosingDate": {
-          "type": "date"
+          "type": "date",
+          "required": true
         },
-        "ContactEmail": {
-          "type": "richtext"
-        },
-        "ProjectBrief": {
-          "type": "richtext"
-        },
-        "Status": {
-          "type": "boolean"
+        "IsOpen": {
+          "type": "boolean",
+          "required": true
         },
         "Location": {
+          "type": "string",
+          "default": "SBF Alghadeer Office"
+        },
+        "ProjectBrief": {
+          "type": "text",
+          "required": true
+        },
+        "ContactEmail": {
           "type": "string"
         },
         "NoteToSupplier": {
-          "type": "richtext"
+          "type": "text"
+        },
+        "attachments": {
+          "type": "media",
+          "multiple": true,
+          "required": false,
+          "allowedTypes": [
+            "files"
+          ]
         },
         "createdAt": {
           "type": "datetime"
@@ -4004,7 +4056,8 @@
         "info": {
           "singularName": "competition",
           "pluralName": "competitions",
-          "displayName": "competition"
+          "displayName": "competition",
+          "description": ""
         },
         "options": {
           "draftAndPublish": true
@@ -4012,31 +4065,46 @@
         "pluginOptions": {},
         "attributes": {
           "ProjectName": {
-            "type": "string"
+            "type": "string",
+            "required": true
           },
           "BidOpeningDate": {
-            "type": "date"
+            "type": "date",
+            "required": true
           },
           "QueriesDeadline": {
-            "type": "date"
+            "type": "date",
+            "required": true
           },
           "BidClosingDate": {
-            "type": "date"
+            "type": "date",
+            "required": true
           },
-          "ContactEmail": {
-            "type": "richtext"
-          },
-          "ProjectBrief": {
-            "type": "richtext"
-          },
-          "Status": {
-            "type": "boolean"
+          "IsOpen": {
+            "type": "boolean",
+            "required": true
           },
           "Location": {
+            "type": "string",
+            "default": "SBF Alghadeer Office"
+          },
+          "ProjectBrief": {
+            "type": "text",
+            "required": true
+          },
+          "ContactEmail": {
             "type": "string"
           },
           "NoteToSupplier": {
-            "type": "richtext"
+            "type": "text"
+          },
+          "attachments": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": [
+              "files"
+            ]
           }
         },
         "kind": "collectionType"
@@ -7945,6 +8013,12 @@
         "complete_field": {
           "type": "json"
         },
+        "trasnlation_requests": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::trasnlation-request.trasnlation-request",
+          "mappedBy": "process"
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -8033,6 +8107,12 @@
           },
           "complete_field": {
             "type": "json"
+          },
+          "trasnlation_requests": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::trasnlation-request.trasnlation-request",
+            "mappedBy": "process"
           }
         },
         "kind": "collectionType"
@@ -8454,6 +8534,164 @@
       "actions": {},
       "lifecycles": {}
     },
+    "api::qualification.qualification": {
+      "kind": "collectionType",
+      "collectionName": "qualifications",
+      "info": {
+        "singularName": "qualification",
+        "pluralName": "qualifications",
+        "displayName": "qualification"
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "ProjectName": {
+          "type": "string"
+        },
+        "ProjectBrief": {
+          "type": "text"
+        },
+        "BidOpeningDate": {
+          "type": "date",
+          "required": true
+        },
+        "BidClosingDate": {
+          "type": "date",
+          "required": true
+        },
+        "QueriesDeadline": {
+          "type": "date",
+          "required": true
+        },
+        "ContactEmail": {
+          "type": "text",
+          "required": true
+        },
+        "NoteToSupplier": {
+          "type": "text"
+        },
+        "Location": {
+          "type": "richtext",
+          "default": "Email",
+          "required": true
+        },
+        "IsOpen": {
+          "type": "boolean",
+          "required": true
+        },
+        "attachments": {
+          "allowedTypes": [
+            "images",
+            "files",
+            "videos",
+            "audios"
+          ],
+          "type": "media",
+          "multiple": true
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "qualifications",
+        "info": {
+          "singularName": "qualification",
+          "pluralName": "qualifications",
+          "displayName": "qualification"
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "ProjectName": {
+            "type": "string"
+          },
+          "ProjectBrief": {
+            "type": "text"
+          },
+          "BidOpeningDate": {
+            "type": "date",
+            "required": true
+          },
+          "BidClosingDate": {
+            "type": "date",
+            "required": true
+          },
+          "QueriesDeadline": {
+            "type": "date",
+            "required": true
+          },
+          "ContactEmail": {
+            "type": "text",
+            "required": true
+          },
+          "NoteToSupplier": {
+            "type": "text"
+          },
+          "Location": {
+            "type": "richtext",
+            "default": "Email",
+            "required": true
+          },
+          "IsOpen": {
+            "type": "boolean",
+            "required": true
+          },
+          "attachments": {
+            "allowedTypes": [
+              "images",
+              "files",
+              "videos",
+              "audios"
+            ],
+            "type": "media",
+            "multiple": true
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "qualification",
+      "connection": "default",
+      "uid": "api::qualification.qualification",
+      "apiName": "qualification",
+      "globalId": "Qualification",
+      "actions": {},
+      "lifecycles": {}
+    },
     "api::request.request": {
       "kind": "collectionType",
       "collectionName": "requests",
@@ -8761,6 +8999,12 @@
           "target": "api::legal-advice-request.legal-advice-request",
           "inversedBy": "request_adjustments"
         },
+        "trasnlation_request": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::trasnlation-request.trasnlation-request",
+          "inversedBy": "request_adjustments"
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -8829,6 +9073,12 @@
             "relation": "manyToOne",
             "target": "api::legal-advice-request.legal-advice-request",
             "inversedBy": "request_adjustments"
+          },
+          "trasnlation_request": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::trasnlation-request.trasnlation-request",
+            "inversedBy": "request_adjustments"
           }
         },
         "kind": "collectionType"
@@ -8871,6 +9121,12 @@
           "type": "relation",
           "relation": "manyToOne",
           "target": "api::legal-advice-request.legal-advice-request",
+          "inversedBy": "request_announcements"
+        },
+        "trasnlation_request": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::trasnlation-request.trasnlation-request",
           "inversedBy": "request_announcements"
         },
         "createdAt": {
@@ -8934,6 +9190,12 @@
             "type": "relation",
             "relation": "manyToOne",
             "target": "api::legal-advice-request.legal-advice-request",
+            "inversedBy": "request_announcements"
+          },
+          "trasnlation_request": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::trasnlation-request.trasnlation-request",
             "inversedBy": "request_announcements"
           }
         },
@@ -9082,6 +9344,12 @@
           "target": "api::legal-advice-request.legal-advice-request",
           "inversedBy": "status_logs"
         },
+        "trasnlation_request": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::trasnlation-request.trasnlation-request",
+          "inversedBy": "status_logs"
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -9168,6 +9436,12 @@
             "type": "relation",
             "relation": "manyToOne",
             "target": "api::legal-advice-request.legal-advice-request",
+            "inversedBy": "status_logs"
+          },
+          "trasnlation_request": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::trasnlation-request.trasnlation-request",
             "inversedBy": "status_logs"
           }
         },
@@ -9673,6 +9947,292 @@
       "uid": "api::tour.tour",
       "apiName": "tour",
       "globalId": "Tour",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::trasnlation-request.trasnlation-request": {
+      "kind": "collectionType",
+      "collectionName": "trasnlation_requests",
+      "info": {
+        "singularName": "trasnlation-request",
+        "pluralName": "trasnlation-requests",
+        "displayName": "Trasnlation Request",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "RequestType": {
+          "type": "enumeration",
+          "enum": [
+            "Translation",
+            "Proofreading",
+            "Others"
+          ]
+        },
+        "LanguagePair": {
+          "type": "enumeration",
+          "enum": [
+            "Arabic to English",
+            "English to Arabic",
+            "other"
+          ]
+        },
+        "DocumentType": {
+          "type": "enumeration",
+          "enum": [
+            "Open-source document (PPT, Word, Excel, etc.)",
+            "Closed-source document (PDF, pictures, etc.)"
+          ]
+        },
+        "DocumentTitle": {
+          "type": "string"
+        },
+        "DeliverableFormat": {
+          "type": "enumeration",
+          "enum": [
+            "Bilingual",
+            "Monolingual"
+          ]
+        },
+        "IsLegalNature": {
+          "type": "boolean"
+        },
+        "RequesterAttachments": {
+          "type": "media",
+          "multiple": true,
+          "required": false,
+          "allowedTypes": [
+            "images",
+            "files",
+            "videos",
+            "audios"
+          ]
+        },
+        "users": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "plugin::users-permissions.user",
+          "inversedBy": "trasnlation_requests"
+        },
+        "process": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::process.process",
+          "inversedBy": "trasnlation_requests"
+        },
+        "status_logs": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::status-log.status-log",
+          "mappedBy": "trasnlation_request"
+        },
+        "request_adjustments": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::request-adjustment.request-adjustment",
+          "mappedBy": "trasnlation_request"
+        },
+        "approvals": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::approval.approval",
+          "mappedBy": "trasnlation_request"
+        },
+        "request_announcements": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::request-announcement.request-announcement",
+          "mappedBy": "trasnlation_request"
+        },
+        "process_step": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::process-step.process-step"
+        },
+        "users_permissions_user": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "plugin::users-permissions.user",
+          "inversedBy": "trasnlation_request"
+        },
+        "Note": {
+          "type": "text"
+        },
+        "TranslationAttachments": {
+          "allowedTypes": [
+            "images",
+            "files",
+            "videos",
+            "audios"
+          ],
+          "type": "media",
+          "multiple": true
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "trasnlation_requests",
+        "info": {
+          "singularName": "trasnlation-request",
+          "pluralName": "trasnlation-requests",
+          "displayName": "Trasnlation Request",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "RequestType": {
+            "type": "enumeration",
+            "enum": [
+              "Translation",
+              "Proofreading",
+              "Others"
+            ]
+          },
+          "LanguagePair": {
+            "type": "enumeration",
+            "enum": [
+              "Arabic to English",
+              "English to Arabic",
+              "other"
+            ]
+          },
+          "DocumentType": {
+            "type": "enumeration",
+            "enum": [
+              "Open-source document (PPT, Word, Excel, etc.)",
+              "Closed-source document (PDF, pictures, etc.)"
+            ]
+          },
+          "DocumentTitle": {
+            "type": "string"
+          },
+          "DeliverableFormat": {
+            "type": "enumeration",
+            "enum": [
+              "Bilingual",
+              "Monolingual"
+            ]
+          },
+          "IsLegalNature": {
+            "type": "boolean"
+          },
+          "RequesterAttachments": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": [
+              "images",
+              "files",
+              "videos",
+              "audios"
+            ]
+          },
+          "users": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user",
+            "inversedBy": "trasnlation_requests"
+          },
+          "process": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::process.process",
+            "inversedBy": "trasnlation_requests"
+          },
+          "status_logs": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::status-log.status-log",
+            "mappedBy": "trasnlation_request"
+          },
+          "request_adjustments": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::request-adjustment.request-adjustment",
+            "mappedBy": "trasnlation_request"
+          },
+          "approvals": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::approval.approval",
+            "mappedBy": "trasnlation_request"
+          },
+          "request_announcements": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::request-announcement.request-announcement",
+            "mappedBy": "trasnlation_request"
+          },
+          "process_step": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::process-step.process-step"
+          },
+          "users_permissions_user": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "plugin::users-permissions.user",
+            "inversedBy": "trasnlation_request"
+          },
+          "Note": {
+            "type": "text"
+          },
+          "TranslationAttachments": {
+            "allowedTypes": [
+              "images",
+              "files",
+              "videos",
+              "audios"
+            ],
+            "type": "media",
+            "multiple": true
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "trasnlation-request",
+      "connection": "default",
+      "uid": "api::trasnlation-request.trasnlation-request",
+      "apiName": "trasnlation-request",
+      "globalId": "TrasnlationRequest",
       "actions": {},
       "lifecycles": {}
     },
